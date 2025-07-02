@@ -5,7 +5,7 @@ setup(name="sincho-gen-gui",
       py_modules=["gui_controller"],
       entry_points={
           "console_scripts":[
-              "myapp = gui_controller:main"
+              "sincho-gen-gui = gui_controller:main"
           ]
       },
       install_requires=[
