@@ -15,6 +15,5 @@ setup(name="sincho-gen-gui",
             "py3Dmol",
             "pandas",
             "numpy",
-            "shutil",
             "rdkit",
       ],)
