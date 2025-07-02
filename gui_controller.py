@@ -13,19 +13,15 @@ from GUI_Util.output_controller import OutputController
 
 
 
-def main():
-    #Initialize
-    initialize.init()
+#Initialize
+initialize.init()
 
-    #tab settings
-    main_tab, sub_tab = tab_manager.init_tabs()
+#tab settings
+main_tab, sub_tab = tab_manager.init_tabs()
 
-    if main_tab == "Input":
-        InputController().process(sub_tab)
+if main_tab == "Input":
+    InputController().process(sub_tab)
 
-    if main_tab == "Output":
-        OutputController().process(sub_tab)
+if main_tab == "Output":
+    OutputController().process(sub_tab)
         
-
-if __name__ == "__main__":
-    main()
