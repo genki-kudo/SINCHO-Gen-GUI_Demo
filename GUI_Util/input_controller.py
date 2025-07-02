@@ -5,7 +5,6 @@ import tempfile
 import io
 from Bio.PDB import PDBParser
 from fractions import Fraction
-from stmol import showmol
 import py3Dmol
 from streamlit.components.v1 import html
 import yaml
@@ -398,7 +397,7 @@ class InputController:
             view.setStyle({'resi':zoomres.split(" ")[1]}, {"stick":{}})
         else:
             view.zoomTo()
-        showmol(view, height=500, width=800)
+        html(view._make_html(), height=500, width=800)
         return
     
 

@@ -11,7 +11,6 @@ setup(name="sincho-gen-gui",
       install_requires=[
           "streamlit",
             "biopython",
-            "stmol",
             "py3Dmol",
             "pandas",
             "numpy",
