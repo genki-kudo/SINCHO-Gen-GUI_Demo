@@ -1,0 +1,20 @@
+from setuptools import setup
+
+setup(name="sincho-gen-gui",
+      version="0.1.0",
+      py_modules=["gui_controller"],
+      entry_points={
+          "console_scripts":[
+              "myapp = gui_controller:main"
+          ]
+      },
+      install_requires=[
+          "streamlit",
+            "biopython",
+            "stmol",
+            "py3Dmol",
+            "pandas",
+            "numpy",
+            "shutil",
+            "rdkit",
+      ],)
