@@ -44,7 +44,7 @@ class InputController:
                     if os.path.exists(wdir):
                         st.session_state.general_settings["dir_step"] = "confirm"
                         try:
-                            st.run()
+                            st.rerun()
                         except Exception as e:
                             st.experimental_rerun()
                     else:
@@ -53,7 +53,7 @@ class InputController:
                             st.session_state.general_settings["tmp_dir"] = os.path.join(wdir, "99_TMP")
                             st.session_state.general_settings["dir_step"] = "done"
                             try:
-                                st.run()
+                                st.rerun()
                             except Exception as e:
                                 st.experimental_rerun()
                         except Exception as e:
@@ -67,7 +67,7 @@ class InputController:
                         st.session_state.general_settings["tmp_dir"] = os.path.join(wdir, "99_TMP")
                         st.session_state.general_settings["dir_step"] = "done"
                         try:
-                            st.run()
+                            st.rerun()
                         except Exception as e:
                             st.experimental_rerun()
                     except Exception as e:
@@ -98,7 +98,7 @@ class InputController:
                     st.session_state.uploaded_pdb_file = None
                     uploaded_file = None
                     try:
-                        st.run()
+                        st.rerun()
                     except Exception as e:
                         st.experimental_rerun()
                 """
@@ -367,7 +367,7 @@ class InputController:
                 st.session_state.yaml_content = None
                 st.success("YAML内容が初期化されました。")
                 try:
-                    st.run()
+                    st.rerun()
                 except Exception as e:
                     st.experimental_rerun()
             if st.button("Save YAML to File"):
