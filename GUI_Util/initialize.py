@@ -29,6 +29,8 @@ def init():
         st.session_state.general_settings = {}
     if "output_settings" not in st.session_state:
         st.session_state.output_settings = {}
+    if "yaml_content" not in st.session_state:
+        st.session_state.yaml_content = None
     st.session_state.general_settings.setdefault("dir_checker", False)
     st.session_state.general_settings.setdefault("dir_overwrite_confirm", False)
 

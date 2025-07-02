@@ -43,13 +43,19 @@ class InputController:
                 if st.button("上記のディレクトリに設定する"):
                     if os.path.exists(wdir):
                         st.session_state.general_settings["dir_step"] = "confirm"
-                        st.rerun()
+                        try:
+                            st.run()
+                        except Exception as e:
+                            st.experimental_rerun()
                     else:
                         try:
                             os.makedirs(os.path.join(wdir, "99_TMP"), exist_ok=True)
                             st.session_state.general_settings["tmp_dir"] = os.path.join(wdir, "99_TMP")
                             st.session_state.general_settings["dir_step"] = "done"
-                            st.rerun()
+                            try:
+                                st.run()
+                            except Exception as e:
+                                st.experimental_rerun()
                         except Exception as e:
                             st.error(f"作成に失敗しました: {e}")
 
@@ -60,7 +66,10 @@ class InputController:
                         os.makedirs(os.path.join(wdir, "99_TMP"), exist_ok=True)
                         st.session_state.general_settings["tmp_dir"] = os.path.join(wdir, "99_TMP")
                         st.session_state.general_settings["dir_step"] = "done"
-                        st.rerun()
+                        try:
+                            st.run()
+                        except Exception as e:
+                            st.experimental_rerun()
                     except Exception as e:
                         st.error(f"作成に失敗しました: {e}")
 
@@ -88,7 +97,10 @@ class InputController:
                 if st.button("アップロードしたファイルをキャンセルする"):
                     st.session_state.uploaded_pdb_file = None
                     uploaded_file = None
-                    st.experimental_rerun()
+                    try:
+                        st.run()
+                    except Exception as e:
+                        st.experimental_rerun()
                 """
             else:
                 if st.session_state.uploaded_pdb_file:
@@ -333,43 +345,70 @@ class InputController:
 
             st.title("設定の確認と実行")
             st.write(f"現在の作業ディレクトリ：{os.getcwd()}に、入力ファイルを作成します。")
-            input_yaml = st.text_input("入力ファイル名を指定", value="conditions_test.yaml")
-            yaml_file = os.path.join(os.getcwd(), input_yaml)
+            st.session_state.yaml_name = st.text_input("YAMLファイル名", value="conditions_lala.yaml")
+            if st.session_state.yaml_content is None:
+                with open(os.path.join(os.path.dirname(__file__), "conditions_tmp.yaml"), 'r') as file:
+                    yaml_content = file.read()
+                    for k, v in replace_dict.items():
+                        yaml_content = yaml_content.replace(k, v)
+                st.session_state.yaml_content = yaml_content
+                for k in replace_dict.keys():
+                    if k in st.session_state.yaml_content:
+                        st.warning(f"{k} が 指定されていません。他のタブで設定し直してください。")
 
-            if "yaml_content" not in st.session_state:
+
+            st.session_state.yaml_content = st.text_area(
+                    "Edit YAML content: 追加で編集したい場合は以下を変更してください。",
+                    value=st.session_state.yaml_content,
+                    height=600,
+                    key="edited_yaml"
+                )
+            if st.button("yamlの初期化"):
                 st.session_state.yaml_content = None
-
-            if st.button("上記の条件で入力ファイルを作成する"): #キャンセルボタン
-                #if not os.path.exists(yaml_file):
-                os.makedirs(os.path.dirname(yaml_file), exist_ok=True)
-                #st.write(__file__)
-                shutil.copy(os.path.join(os.path.dirname(__file__), "conditions_tmp.yaml"), yaml_file)
-
+                st.success("YAML内容が初期化されました。")
                 try:
-                    with open(yaml_file, 'r') as file:
-                        yaml_content = file.read()
-                        for k,v in replace_dict.items():
-                            yaml_content = yaml_content.replace(k, v)
-                    st.session_state.yaml_content = yaml_content
+                    st.run()
                 except Exception as e:
-                    st.warning(f"置換処理中のエラー{e}")
+                    st.experimental_rerun()
+            if st.button("Save YAML to File"):
+                overwrite_avoider = 0
+                yaml_file = os.path.join(os.getcwd(), st.session_state.yaml_name)
+                if not yaml_file.endswith(".yaml"):
+                    yaml_file += ".yaml"
+                    st.session_state.yaml_name += ".yaml"
+                # ファイル名が既に存在する場合は、連番を付けて保存
+                while os.path.exists(yaml_file):
+                    overwrite_avoider += 1
+                    yaml_file = os.path.join(os.getcwd(), f"{st.session_state.yaml_name[:-5]}_{overwrite_avoider}.yaml")
 
 
-                st.write(f"編集したい場合は、以下を直接編集し、Saveボタンを押してください")
-
-                edited_text = st.text_area("Edit YAML content", value=st.session_state.yaml_content, height=600)
-                    
-                if st.button("Save YAML"):
+                edited_text = st.session_state.yaml_content
+                with open(yaml_file, 'w') as f:
+                    f.write(edited_text)
+                st.success(f"YAMLファイルを保存しました: {yaml_file}")
+                if overwrite_avoider > 0:
+                    st.warning(f"ファイル名が重複したため、ファイル名に'_{overwrite_avoider}'を付加しました。")
+                try:
+                    shutil.copy(yaml_file, os.path.join(st.session_state.general_settings['directory'], st.session_state.general_settings['tmp_dir']))
+                    st.success(f"{yaml_file}を{os.path.join(st.session_state.general_settings['directory'], st.session_state.general_settings['tmp_dir'])}にバックアップしました。")
+                except:
+                    st.error(f"{yaml_file}の{os.path.join(st.session_state.general_settings['directory'], st.session_state.general_settings['tmp_dir'])}に対するバックアップに失敗しました。手動でバックアップしてください。")
+                #extend_driver.pyがos.getcwd()になければ、コピーしてくる。
+                if not os.path.exists(os.path.join(os.getcwd(), "extend_driver.py")):
                     try:
-                        parsed = yaml.safe_load(edited_text)
-                        if parsed is None:
-                            raise ValueError("YAMLが空もしくはフォーマット不正。内容を確認してください。")
-                        with open(yaml_file, 'w') as file:
-                            yaml.safe_dump(parsed, file, default_flow_style=False, allow_unicode=True)
-                        st.success(f"YAMLファイルが上記内容で保存されました: {yaml_file}")
-                        st.session_state.yaml_content = yaml.safe_dump(parsed, default_flow_style=False, allow_unicode=True)
+                        shutil.copy(os.path.join(os.path.dirname(__file__), "extend_driver.py"), os.getcwd())
+                        st.success("extend_driver.pyを現在の作業ディレクトリにコピーしました。")
+                        st.success("これで全ての設定が完了しました。以下のコマンドを実行して処理を開始してください。")
+                        st.code(f"python extend_driver.py {yaml_file.split('/')[-1]}")
                     except Exception as e:
-                        st.exception(e)
+                        st.error(f"extend_driver.pyのコピーに失敗しました: {e}")
+                else:
+                    st.success("extend_driver.pyは既に現在の作業ディレクトリに存在します。")
+                    st.success("これで全ての設定が完了しました。以下のコマンドを実行して処理を開始してください。")
+                    st.code(f"python extend_driver.py {yaml_file.split('/')[-1]}")
+
+
+        
 
 
 
