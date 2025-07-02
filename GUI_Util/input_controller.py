@@ -316,7 +316,7 @@ class InputController:
                         "__HIT_RESNAME__": str(st.session_state.hit_residue.split(" ")[0]),
                         "__FORCE_FIELD_PROTEIN__": str(st.session_state.md_settings["force_field"][0]),
                         "__FORCE_FIELD_LIGAND__": str(st.session_state.md_settings["force_field"][1]),
-                        "__FORCE_FIELD_WATER__": str(st.session_state.md_settings["force_field"][2]),
+                        "__FORCE_FIELD_WATER__": str(st.session_state.md_settings["force_field"][2].lower()),
                         "__BOX_SHAPE__": str(st.session_state.md_settings["box_shape"]),
                         "__BOX_SIZE__": str(st.session_state.md_settings["box_size"]),
                         "__BUFFER__": str(st.session_state.md_settings["buffer"]),
