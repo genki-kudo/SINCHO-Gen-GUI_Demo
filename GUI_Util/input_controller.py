@@ -147,7 +147,7 @@ class InputController:
             if "md_settings" not in st.session_state:
                 st.session_state.md_settings = {}
             if "force_field" not in st.session_state.md_settings or len(st.session_state.md_settings["force_field"]) != 4:
-                st.session_state.md_settings["force_field"] = ["ff14SB", "gaff2", "TIP3P", "OL3"]
+                st.session_state.md_settings["force_field"] = ["ff14SB", "gaff2", "tip3p", "OL3"]
             if "temperature" not in st.session_state.md_settings:
                 st.session_state.md_settings["temperature"] = 300
             if "additional_parameters" not in st.session_state.md_settings:
@@ -168,7 +168,7 @@ class InputController:
             with st.expander("力場パラメータ設定"):
                 st.session_state.md_settings["force_field"] = [st.selectbox("タンパク質",["ff14SB", "ff99SB", "ff19SB"], index=["ff14SB", "ff99SB", "ff19SB"].index(st.session_state.md_settings["force_field"][0])),
                                                                st.selectbox("化合物",["gaff2", "gaff"], index=["gaff2", "gaff"].index(st.session_state.md_settings["force_field"][1])),
-                                                               st.selectbox("水分子",["TIP3P", "SPC"], index=["TIP3P", "SPC"].index(st.session_state.md_settings["force_field"][2])),
+                                                               st.selectbox("水分子",["tip3p", "spc"], index=["tip3p", "spc"].index(st.session_state.md_settings["force_field"][2])),
                                                                st.selectbox("RNA (if any)",["OL3", "OL4"], index=["OL3", "OL4"].index(st.session_state.md_settings["force_field"][3]))]
             st.success(f"選択された力場: {st.session_state.md_settings['force_field']}")
             with st.expander("MD系オプション（平衡化過程等は固定値を使用します。今後軽量版平衡化も選択可能にする予定。）"):
