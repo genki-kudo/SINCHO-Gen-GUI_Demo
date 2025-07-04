@@ -16,6 +16,25 @@ from GUI_Util.output_controller import OutputController
 #Initialize
 initialize.init()
 
+st.markdown(
+    """
+    <style>
+    .stButton>button {
+        background-color: #6B8E23;
+        color: white;
+        border-radius: 8px;
+        border: none;
+    }
+    .stButton>button:hover {
+        background-color: #A9BA9D;
+        transform: scale(1.05);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 #tab settings
 main_tab, sub_tab = tab_manager.init_tabs()
 

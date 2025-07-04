@@ -14,6 +14,8 @@ import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 
@@ -153,7 +155,131 @@ class OutputController:
 
         elif sub_tab == "ChemTS":
             st.title("ChemTS結果の可視化")
-            hr_tabs = st.tabs(["Summary", "Reward Transition", "Components"])
+
+            chemts_df = pd.DataFrame([], columns=['trajectory_num', 'rank_num'])
+            trajectories = glob.glob(os.path.join(os.getcwd(), st.session_state.output_settings["output_dir"], st.session_state.output_settings["ChemTSdir_name"], "trajectory_*/rank_*"))
+            index = 0
+            for tra in trajectories:
+                tnum = tra.split("/")[-2]
+                rnum = tra.split("/")[-1]
+                chemts_df.loc[index] = [tnum, rnum]
+                index+=1
+            chemts_df = chemts_df.sort_values(by=['trajectory_num', 'rank_num']).reset_index(drop=True)
+
+            st.write("各SINCHO結果からのChemTS生成について、生成化合物群のプロパティを表示します。")
+            # 選択肢を作成
+            run_options = chemts_df.apply(
+                lambda row: f"{row['trajectory_num']}: {row['rank_num']}", axis=1
+            ).tolist()
+
+            selected_run = st.selectbox("表示するRUNを選んでください", run_options)
+
+            # 選んだRUNの詳細
+            selected_row = chemts_df.iloc[run_options.index(selected_run)]
+
+            selected_dir = os.path.join(
+                os.getcwd(),
+                st.session_state.output_settings["output_dir"],
+                st.session_state.output_settings["ChemTSdir_name"],
+                f"{selected_row['trajectory_num']}",
+                f"{selected_row['rank_num']}"
+            )
+
+            sincho_result_file = os.path.join(os.getcwd(),st.session_state.output_settings["output_dir"],st.session_state.output_settings["SINCHOdir_name"],f"{selected_row['trajectory_num']}", "sincho_result.yaml")
+            sincho_result = yaml.safe_load(open(sincho_result_file, 'r'))
+            p_mw = sincho_result['SINCHO_result'][selected_row['rank_num']]["mw"]
+            p_logp = sincho_result['SINCHO_result'][selected_row['rank_num']]["logp"]
+
+            st.write("ChemTS 計算log:")
+            run_df = pd.read_csv( os.path.join(selected_dir, "results.csv"))
+            st.dataframe(run_df, use_container_width=True, height=150)
+            run_df = run_df[run_df['reward'] >= 0.0]
+            st.write(f"ChemTS 生成化合物数(reward≧0.0) … {run_df.shape[0]}")
+
+            st.write("ChemTS 生成化合物のプロパティ:")
+            thresh = st.slider("reward=X以上の化合物のプロパティを表示", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
+            col1, col2, col3 = st.columns([1,1,1])
+            with col1:
+                st.write("reward")
+                #reward≧0.0の化合物のrewardのリスト
+                reward = run_df[run_df["reward"]>=thresh]['reward'].tolist()
+                min_reward = run_df['reward'].min()
+                max_reward = run_df['reward'].max()
+                self._histgram(reward, "reward", min_value=min_reward, max_value=max_reward, color="royalblue")
+            with col2:
+                st.write("分子量(母核からの増分)")
+                #reward≧0.0の化合物の分子量のリスト
+                mw = run_df[run_df["reward"]>=thresh]['SINCHO_MW'].tolist()
+                min_mw = run_df['SINCHO_MW'].min()
+                max_mw = run_df['SINCHO_MW'].max()
+                self._histgram(mw, "MW", threshold=p_mw, color="orange", min_value=min_mw, max_value=max_mw)
+            with col3:
+                st.write("logP(母核からの増分)")
+                #reward≧0.0の化合物のlogPのリスト
+                logp = run_df[run_df["reward"]>=thresh]['SINCHO_LogP'].tolist()
+                min_logp = run_df['SINCHO_LogP'].min()
+                max_logp = run_df['SINCHO_LogP'].max()
+                self._histgram(logp, "logP", threshold=p_logp, color="orange", min_value=min_logp, max_value=max_logp)
+
+            st.write("ChemTS 生成過程のプロパティTransition：")
+            
+            trials = run_df['trial'].unique()
+            fig, ax = plt.subplots()
+            ax.set_ylim(0, 1.0)
+            ax.set_xlabel("generated_id")
+            ax.set_ylabel("Reward")
+            ax.set_title("Reward Transition")
+            colors = plt.cm.rainbow(np.linspace(0, 1, len(trials)))  # 色のリストを生成
+
+            for i, trial in enumerate(trials):
+                trial_df = run_df[run_df['trial'] == trial].sort_values(by='generated_id')
+                trial_df_id = trial_df['generated_id'].tolist()
+                trial_df_rew = trial_df["reward"].tolist()
+
+                smoothing_val = pd.Series(trial_df_rew).rolling(window=100).mean()
+
+                ax.plot(range(len(smoothing_val)), smoothing_val, color=colors[i], label=f"Trial {trial}", alpha=0.5, linewidth=1 )
+                ax.legend(loc='lower right')
+                #ax.scatter(trial_df_id, trial_df_rew, marker="o", color=colors[i], s=5, alpha=0.5)
+            st.pyplot(fig)
+            col2_1, col2_2 = st.columns([1,1])
+            with col2_1:
+                st.write("分子量のTransition")
+                fig, ax = plt.subplots()
+                ax.set_xlabel("generated_id")
+                ax.set_ylabel("MW")
+                ax.set_title("MW Transition")
+                for i, trial in enumerate(trials):
+                    trial_df = run_df[run_df['trial'] == trial].sort_values(by='generated_id')
+                    trial_df_id = trial_df['generated_id'].tolist()
+                    trial_df_mw = trial_df["SINCHO_MW"].tolist()
+
+                    smoothing_val = pd.Series(trial_df_mw).rolling(window=100).mean()
+
+                    ax.plot(range(len(smoothing_val)), smoothing_val, color=colors[i], label=f"Trial {trial}", alpha=0.5, linewidth=1 )
+                    ax.legend(loc='upper right')
+                    #y軸定数の設定
+                    ax.axhline(y=p_mw, color='gray', linestyle='--')
+                st.pyplot(fig)
+            with col2_2:
+                st.write("logPのTransition")
+                fig, ax = plt.subplots()
+                ax.set_xlabel("generated_id")
+                ax.set_ylabel("logP")
+                ax.set_title("logP Transition")
+                for i, trial in enumerate(trials):
+                    trial_df = run_df[run_df['trial'] == trial].sort_values(by='generated_id')
+                    trial_df_id = trial_df['generated_id'].tolist()
+                    trial_df_logp = trial_df["SINCHO_LogP"].tolist()
+
+                    smoothing_val = pd.Series(trial_df_logp).rolling(window=100).mean()
+
+                    ax.plot(range(len(smoothing_val)), smoothing_val, color=colors[i], label=f"Trial {trial}", alpha=0.5, linewidth=1 )
+                    ax.legend(loc='upper right')
+                    #y軸定数の設定
+                    ax.axhline(y=p_logp, color='gray', linestyle='--')
+                st.pyplot(fig)
+
 
         elif sub_tab == "AAScore":
             st.title("スコアリング結果の可視化")
@@ -258,6 +384,19 @@ class OutputController:
 
 
 
+    def _histgram(self, lists, xlabel, ylabel="Frequency", threshold=None, color="royalblue", min_value=None, max_value=None):
+        # ヒストグラムを描画する関数
+        fig, ax = plt.subplots()
+        if min_value is not None and max_value is not None:
+            ax.set_xlim(min_value, max_value)
+        else:
+            ax.set_xlim(min(lists), max(lists))
+        ax.hist(lists, color=color)
+        ax.set_xlabel(xlabel)
+        ax.set_ylabel(ylabel)
+        if threshold is not None:
+            ax.axvline(x=threshold, color='red', linestyle='--')
+        st.pyplot(fig)
 
 
     def _summary_2Dview(self, suppl, start, end, states):
