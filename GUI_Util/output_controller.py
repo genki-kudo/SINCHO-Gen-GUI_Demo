@@ -145,9 +145,14 @@ class OutputController:
                     self._ligfile_3dview(lig)
 
             with hr_tabs[1]:
-                st.write("個別のSINCHO結果について可視化")
-                tra = st.selectbox("トラジェクトリを選択", sincho_df['trajectory_num'].unique())
-                ran = st.selectbox("ランクを選択", sincho_df[sincho_df['trajectory_num'] == tra]['sincho_rank'].unique())
+                #st.write("個別のSINCHO結果について可視化")
+                #tra = st.selectbox("トラジェクトリを選択", sincho_df['trajectory_num'].unique())
+                #ran = st.selectbox("ランクを選択", sincho_df[sincho_df['trajectory_num'] == tra]['sincho_rank'].unique())
+                run_options = sincho_df.apply(
+                    lambda row: f"trajectory_{row['trajectory_num']}: rank_{row['sincho_rank']}", axis=1
+                ).tolist()
+                selected_run = st.selectbox("表示するRUNを選んでください", run_options)
+                tra, ran = selected_run.split(": ")[0].split("_")[1], selected_run.split(": ")[1].split("_")[1]
                 sincho_row = sincho_df[(sincho_df['trajectory_num'] == tra) & (sincho_df['sincho_rank'] == ran)]
                 st.write(sincho_row)
                 self._sincho_3dview(sincho_row)
@@ -192,34 +197,9 @@ class OutputController:
 
             st.write("ChemTS 計算log:")
             run_df = pd.read_csv( os.path.join(selected_dir, "results.csv"))
-            st.dataframe(run_df, use_container_width=True, height=150)
+            st.dataframe(run_df, use_container_width=True, height=75)
             run_df = run_df[run_df['reward'] >= 0.0]
-            st.write(f"ChemTS 生成化合物数(reward≧0.0) … {run_df.shape[0]}")
-
-            st.write("ChemTS 生成化合物のプロパティ:")
-            thresh = st.slider("reward=X以上の化合物のプロパティを表示", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
-            col1, col2, col3 = st.columns([1,1,1])
-            with col1:
-                st.write("reward")
-                #reward≧0.0の化合物のrewardのリスト
-                reward = run_df[run_df["reward"]>=thresh]['reward'].tolist()
-                min_reward = run_df['reward'].min()
-                max_reward = run_df['reward'].max()
-                self._histgram(reward, "reward", min_value=min_reward, max_value=max_reward, color="royalblue")
-            with col2:
-                st.write("分子量(母核からの増分)")
-                #reward≧0.0の化合物の分子量のリスト
-                mw = run_df[run_df["reward"]>=thresh]['SINCHO_MW'].tolist()
-                min_mw = run_df['SINCHO_MW'].min()
-                max_mw = run_df['SINCHO_MW'].max()
-                self._histgram(mw, "MW", threshold=p_mw, color="orange", min_value=min_mw, max_value=max_mw)
-            with col3:
-                st.write("logP(母核からの増分)")
-                #reward≧0.0の化合物のlogPのリスト
-                logp = run_df[run_df["reward"]>=thresh]['SINCHO_LogP'].tolist()
-                min_logp = run_df['SINCHO_LogP'].min()
-                max_logp = run_df['SINCHO_LogP'].max()
-                self._histgram(logp, "logP", threshold=p_logp, color="orange", min_value=min_logp, max_value=max_logp)
+            
 
             st.write("ChemTS 生成過程のプロパティTransition：")
             
@@ -280,10 +260,52 @@ class OutputController:
                     ax.axhline(y=p_logp, color='gray', linestyle='--')
                 st.pyplot(fig)
 
+            st.write(f"ChemTS 生成化合物数(reward≧0.0) … {run_df.shape[0]}")
+
+            st.write("ChemTS 生成化合物のプロパティ:")
+            thresh = st.slider("reward=X以上の化合物のプロパティを表示", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
+            col1, col2, col3 = st.columns([1,1,1])
+            with col1:
+                st.write("reward")
+                #reward≧0.0の化合物のrewardのリスト
+                reward = run_df[run_df["reward"]>=thresh]['reward'].tolist()
+                min_reward = run_df['reward'].min()
+                max_reward = run_df['reward'].max()
+                self._histgram(reward, "reward", min_value=min_reward, max_value=max_reward, color="royalblue")
+            with col2:
+                st.write("分子量(母核からの増分)")
+                #reward≧0.0の化合物の分子量のリスト
+                mw = run_df[run_df["reward"]>=thresh]['SINCHO_MW'].tolist()
+                min_mw = run_df['SINCHO_MW'].min()
+                max_mw = run_df['SINCHO_MW'].max()
+                self._histgram(mw, "MW", threshold=p_mw, color="orange", min_value=min_mw, max_value=max_mw)
+            with col3:
+                st.write("logP(母核からの増分)")
+                #reward≧0.0の化合物のlogPのリスト
+                logp = run_df[run_df["reward"]>=thresh]['SINCHO_LogP'].tolist()
+                min_logp = run_df['SINCHO_LogP'].min()
+                max_logp = run_df['SINCHO_LogP'].max()
+                self._histgram(logp, "logP", threshold=p_logp, color="orange", min_value=min_logp, max_value=max_logp)
+
 
         elif sub_tab == "AAScore":
             st.title("スコアリング結果の可視化")
             hr_tabs = st.tabs(["General", "Ligand Efficiency"])
+
+            #highlight用の分子を取得
+            trajectories = glob.glob(os.path.join(os.getcwd(), st.session_state.output_settings["output_dir"], st.session_state.output_settings["ChemTSdir_name"], "trajectory_*/rank_*"))[0]
+            ref_lig = os.path.join(trajectories, "run.log")
+            for line in open(ref_lig, 'r'):
+                if "input SMILES =" in line:
+                    ref_smi = line.split(" ")[-2]
+                    break
+            if ref_smi is None:
+                ref_mol = None
+            else:
+                ref_mol = Chem.MolFromSmiles(ref_smi)
+                AllChem.Compute2DCoords(ref_mol)
+
+            
 
             with hr_tabs[0]:
                 states = "General"
@@ -307,7 +329,7 @@ class OutputController:
                     with c2:
                         end = st.number_input("End index",min_value=start,max_value=min(start + 50, df_gen.shape[0]),value=min(start + 50, df_gen.shape[0]),step=1, key="end_index_gen")
                     if st.button(f"選択範囲: {start} - {end}で２次元描画する", key="gen_2dview_button"):
-                        img = self._summary_2Dview(suppl, int(start), int(end), states)
+                        img = self._summary_2Dview(suppl, int(start), int(end), states, hl_mol=ref_mol)
 
                 elif st.session_state.output_settings["mode"] == "3D View":
                     st.write("スコアリング結果を3D形式で表示します。")
@@ -319,7 +341,7 @@ class OutputController:
                         step=1,
                         key="general_3dview_idx"
                     )
-                    st.write(df_gen.iloc[idx][["trajectory_num", "rank_num", "lead_num", "AAScore"]])
+                    st.dataframe(pd.DataFrame(df_gen.iloc[idx][["trajectory_num", "rank_num", "lead_num", "AAScore"]]).T)
 
                     mol = suppl[idx]
                     if mol is None:
@@ -399,16 +421,30 @@ class OutputController:
         st.pyplot(fig)
 
 
-    def _summary_2Dview(self, suppl, start, end, states):
+    def _summary_2Dview(self, suppl, start, end, states, hl_mol=None):
         mols = list(suppl)[start:end]
         ind = start+1
         for mol in mols:
             AllChem.Compute2DCoords(mol)
             mol.SetProp("rank", str(ind))
             ind+=1
+        
+        match = []
+        if hl_mol is not None:
+            for mol in mols:
+                if mol.HasSubstructMatch(hl_mol):
+                    try:
+                        AllChem.GenerateDepictionMatching2DStructure(mol, hl_mol)
+                        match.append(mol.GetSubstructMatch(hl_mol))
+                    except Exception as e:
+                        match.append(())
+                else:
+                    match.append(())
+
         if states=="General":
             img = Draw.MolsToGridImage(mols,molsPerRow=10, useSVG=False, 
-            subImgSize=(200,150),legends=["rank"+mol.GetProp('rank')+": "+str(round(float(mol.GetProp('AAScore')),3))+" kcal/mol" for mol in mols], legendFontSize=40)
+            subImgSize=(200,150),legends=["rank"+mol.GetProp('rank')+": "+str(round(float(mol.GetProp('AAScore')),3))+" kcal/mol" for mol in mols], legendFontSize=40,
+            highlightAtomLists=match if hl_mol else None)
         elif states=="Ligand Efficiency":
             img = Draw.MolsToGridImage(mols,molsPerRow=10, useSVG=False, 
             subImgSize=(200,150),legends=["rank"+mol.GetProp('rank')+": "+str(round(float(mol.GetProp('AAScore_LE')),3)) for mol in mols], legendFontSize=40)
@@ -472,10 +508,14 @@ class OutputController:
                 lz = float(line[46:54])
 
         view.setStyle({'model':0, 'atom': anchor_atom}, {"stick": {"colorscheme": "greenCarbon"}, "sphere": {"color": "orange", "scale":0.3}})
-        view.addLine({"start": {"x": lx, "y": ly, "z": lz},
-                        "end": {"x": px, "y": py, "z": pz},
-                        "color": "orange",
-                        "linewidth": 7.5})
+        view.addCylinder({
+            "start": {"x": lx, "y": ly, "z": lz},
+            "end": {"x": px, "y": py, "z": pz},
+            "radius": 0.1,  # 太さを調整
+            "fromCap": 1,
+            "toCap": 1,
+            "color": "orange"
+        })
 
         html(view._make_html(), height=500, width=700)
 
