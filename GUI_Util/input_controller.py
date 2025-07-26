@@ -9,6 +9,7 @@ import py3Dmol
 from streamlit.components.v1 import html
 import yaml
 import shutil
+import glob
 
 
 
@@ -18,6 +19,7 @@ class InputController:
 
     
     def process(self, sub_tab):
+
 
         #"General", "Upload Complex", "Select Hit Ligand", "MD Settings", "SINCHO Settings", "ChemTS Settings", "AAScore Settings", "Summary"
 
@@ -174,9 +176,45 @@ class InputController:
             st.success(f"選択された力場: {st.session_state.md_settings['force_field']}")
             with st.expander("MD系オプション（平衡化過程等は固定値を使用します。今後軽量版平衡化も選択可能にする予定。）"):
                 st.session_state.md_settings["temperature"] = st.number_input("温度 (K)(動的変数未実装：現状300K固定です)", value=st.session_state.md_settings["temperature"], step=1)
-                st.write("化合物のパラメータファイルの追加アップロード➡無い場合はGasteiger chargeを使用")
-                additional_parameters = st.file_uploader("追加のMDパラメータファイル(does not applied)", type=["frcmod", "prep"], accept_multiple_files=True)
-                st.session_state.md_settings["additional_parameters"] = additional_parameters
+                
+                st.write("化合物のパラメータファイルの追加アップロード（残基ごと）➡無い場合はGasteiger chargeを使用")
+                selected_residues = st.multiselect(        
+                    "パラメータを設定したい残基を選んでください（複数可）",
+                    st.session_state.residues_list,
+                    default=[st.session_state.hit_residue])
+
+                # 残基 → ファイルリストの辞書を初期化
+                if "additional_parameters" not in st.session_state.md_settings:
+                    st.session_state.md_settings["additional_parameters"] = {}
+                tmp_dir = st.session_state.general_settings["tmp_dir"]
+
+                # 各残基についてアップロード UI と保存処理
+                saved_paths = []
+                for resname in selected_residues:
+                    st.markdown(f"### 🔹 残基 `{resname}` のパラメータファイル")
+                    files = st.file_uploader(
+                        f"{resname} に対応する .prep / .frcmod ファイルをアップロード",
+                        type=["prep", "frcmod"],
+                        accept_multiple_files=True,
+                        key=f"uploader_{resname}"
+                    )
+
+                    if files:
+                        for file in files:
+                            tmp_path = os.path.join(tmp_dir, resname.split(" ")[0]+os.path.splitext(file.name)[1])
+                            with open(tmp_path, "wb") as f:
+                                f.write(file.getvalue())
+                            saved_paths.append(resname.split(" ")[0]+os.path.splitext(file.name)[1])
+
+                # 保存
+                st.session_state.md_settings["additional_parameters"] = saved_paths
+
+                st.success(f"{selected_residues} に対応するファイルを保存しました")
+                st.success(glob.glob(os.path.join(tmp_dir, "*.prep")) + glob.glob(os.path.join(tmp_dir, "*.frcmod")))
+
+
+
+
                 st.session_state.md_settings["box_shape"] = st.selectbox("ボックス形状", ["rectangular", "cube"], index=["rectangular", "cube"].index(st.session_state.md_settings["box_shape"]))
                 if st.session_state.md_settings["box_shape"] == "cube":
                     st.session_state.md_settings["box_size"] = st.number_input("ボックスサイズ (Å)", value=st.session_state.md_settings["box_size"], step=1.0)
@@ -310,6 +348,10 @@ class InputController:
 
         if sub_tab == "Summary":
 
+            param_lines = ""
+            for addparam in st.session_state.md_settings["additional_parameters"]:
+                param_lines += "- "+os.path.join(st.session_state.general_settings["directory"], "99_TMP", addparam)+"\n      "
+
             replace_dict = {
                         "__OUTDIR__": str(st.session_state.general_settings["directory"]),
                         "__NUM_THREADS__": str(st.session_state.general_settings["use_num_threads"]),
@@ -318,6 +360,7 @@ class InputController:
                         "__FORCE_FIELD_PROTEIN__": str(st.session_state.md_settings["force_field"][0]),
                         "__FORCE_FIELD_LIGAND__": str(st.session_state.md_settings["force_field"][1]),
                         "__FORCE_FIELD_WATER__": str(st.session_state.md_settings["force_field"][2].lower()),
+                        "#__ADDITIONAL_PARAMS__": param_lines,
                         "__BOX_SHAPE__": str(st.session_state.md_settings["box_shape"]),
                         "__BOX_SIZE__": str(st.session_state.md_settings["box_size"]),
                         "__BUFFER__": str(st.session_state.md_settings["buffer"]),

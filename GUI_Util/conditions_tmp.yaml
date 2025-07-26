@@ -48,6 +48,7 @@ MD:
     ff_ligand  : __FORCE_FIELD_LIGAND__
     ff_water   : __FORCE_FIELD_WATER__
     ligand_parameter : 
+      #__ADDITIONAL_PARAMS__
       #- examples/Q4H.prep
       #- examples/Q4H.frcmod
     #if you prepare lig.prep and lig.frcmod for accurate parameter use.

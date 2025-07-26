@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import tempfile
 import io
+import base64
 from Bio.PDB import PDBParser
 from fractions import Fraction
 import py3Dmol
@@ -34,10 +35,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.image(os.path.join(os.path.dirname(__file__),"GUI_Util/sincho-gen_logo_transparent.png"), use_column_width=True)
 
-#tab settings
+
 main_tab, sub_tab = tab_manager.init_tabs()
-
 if main_tab == "Input":
     InputController().process(sub_tab)
 

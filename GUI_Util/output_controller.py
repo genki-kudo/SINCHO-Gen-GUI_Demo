@@ -33,6 +33,7 @@ class OutputController:
     
     def process(self, sub_tab):
 
+
         #"Details", ["General", "MD", "SINCHO", "ChemTS", "AAScore"]
 
         if sub_tab == "General":

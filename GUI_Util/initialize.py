@@ -36,4 +36,10 @@ def init():
 
     st.session_state.input_state = False  # 初期化フラグ
 
+    st.set_page_config(page_title="SINCHO-Gen-GUI", page_icon=os.path.join(os.path.dirname(__file__), "GEN_icon.png"), layout="wide")
+
+    #if "main_tab" not in st.session_state:
+    #    st.session_state["main_tab"] = "Home"
+
+
     return st
