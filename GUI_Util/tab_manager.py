@@ -57,7 +57,7 @@ def init_tabs():
 
         root_col1, root_col2 = st.columns([1, 1])
         with root_col1:
-            st.image(os.path.join(os.path.dirname(__file__), "Input.png"), use_column_width=True)
+            st.image(os.path.join(os.path.dirname(__file__), "Input.png"), use_container_width=True)
             if st.button("Go to Input Generator"):
                 st.session_state["main_tab"] = "Input"
                 try:
@@ -65,7 +65,7 @@ def init_tabs():
                 except Exception as e:
                     st.experimental_rerun()
         with root_col2:
-            st.image(os.path.join(os.path.dirname(__file__), "Output.png"), use_column_width=True)
+            st.image(os.path.join(os.path.dirname(__file__), "Output.png"), use_container_width=True)
             if st.button("Go to Output Analyzer"):
                 st.session_state["main_tab"] = "Output"
                 try:
@@ -79,7 +79,7 @@ def init_tabs():
     elif main_tab == "Input":
         st.sidebar.title("")
         # 表示画像
-        st.sidebar.image(os.path.join(os.path.dirname(__file__), main_tab + ".png"), use_column_width=True)
+        st.sidebar.image(os.path.join(os.path.dirname(__file__), main_tab + ".png"), use_container_width=True)
         sub_tab = st.sidebar.radio("Details", [
             "General", "Upload Complex", "Select Hit Ligand", "MD Settings",
             "SINCHO Settings", "ChemTS Settings", "AAScore Settings", "Summary"
@@ -87,7 +87,7 @@ def init_tabs():
     elif main_tab == "Output":
         st.sidebar.title("")
         # 表示画像
-        st.sidebar.image(os.path.join(os.path.dirname(__file__), main_tab + ".png"), use_column_width=True)
+        st.sidebar.image(os.path.join(os.path.dirname(__file__), main_tab + ".png"), use_container_width=True)
         sub_tab = st.sidebar.radio("Details", [
             "General", "MD", "SINCHO", "ChemTS", "AAScore"
         ])
