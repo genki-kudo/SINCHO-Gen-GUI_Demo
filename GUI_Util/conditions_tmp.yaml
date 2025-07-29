@@ -137,7 +137,7 @@ ChemTS:
   sascore_filter:
     module: filter.sascore_filter
     class: SascoreFilter
-    threshold: 3.5
+    threshold: 4.5
   use_ring_size_filter: False
   ring_size_filter:
     module: filter.ring_size_filter
@@ -148,7 +148,7 @@ ChemTS:
     module: filter.pains_filter
     class: PainsFilter
     type: [pains_a]
-  use_donor_acceptor_filter: True
+  use_donor_acceptor_filter: False
   donor_acceptor_filter: 
     module: filter.donor_acceptor_filter
     class: Donor_Acceptor

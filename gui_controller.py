@@ -35,7 +35,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.image(os.path.join(os.path.dirname(__file__),"GUI_Util/sincho-gen_logo_transparent.png"), use_container_width=True)
+try:
+    st.image(os.path.join(os.path.dirname(__file__),"GUI_Util/sincho-gen_logo_transparent.png"), use_container_width=True)
+except Exception as e:
+    st.image(os.path.join(os.path.dirname(__file__),"GUI_Util/sincho-gen_logo_transparent.png"), use_column_width=True)
+
 
 
 main_tab, sub_tab = tab_manager.init_tabs()
