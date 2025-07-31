@@ -175,8 +175,8 @@ ChemTS:
   Dscore_parameters: 
     ## MW_LogP
     # muをSINCHOの結果から取得する
-    SINCHO_MW: {type: trapezoid, top_range_left: 30, top_range_right: 30, bottom_range_left: 80, bottom_range_right: 80, weight: 1}
-    SINCHO_LogP: {type: trapezoid, top_range_left: 2, top_range_right: 2, bottom_range_left: 5, bottom_range_right: 5, weight: 1}
+    SINCHO_MW: {type: trapezoid, top_range_left: 50, top_range_right: 50, bottom_range_left: 100, bottom_range_right: 100, weight: 1}
+    SINCHO_LogP: {type: trapezoid, top_range_left: 1, top_range_right: 1, bottom_range_left: 2, bottom_range_right: 2, weight: 1}
     
     # ## CNS
     #SINCHO_MW: {type: trapezoid, top_range_left: 50, top_range_right: 50, bottom_range_left: 100, bottom_range_right: 100, weight: 1}
