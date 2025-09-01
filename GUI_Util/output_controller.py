@@ -430,7 +430,7 @@ class OutputController:
         st.pyplot(fig)
 
 
-    def _summary_2Dview(self, suppl, start, end, states, hl_mol=None):
+    """def _summary_2Dview(self, suppl, start, end, states, hl_mol=None):
         mols = list(suppl)[start:end]
         ind = start+1
         for mol in mols:
@@ -472,7 +472,130 @@ class OutputController:
             file_name="SINCHO-Gen_2DView.png",
             mime=os.getcwd()
         )
-        return
+        return"""
+    def _summary_2Dview(self, suppl, start, end, states, hl_mol=None, per_column=5):
+        import json
+        import streamlit as st
+        from streamlit.components.v1 import html
+        from rdkit import Chem
+        from rdkit.Chem import AllChem
+    
+        mols = list(suppl)[start:end]
+    
+        # ラベル（legend）と SMILES, ハイライト原子IDを準備
+        data = []
+        ind = start + 1
+        hl_query = hl_mol  # サブ構造ハイライト用（任意）
+        for mol in mols:
+            # 2D座標（後段のJSでは不要だが一応）
+            try:
+                AllChem.Compute2DCoords(mol)
+            except Exception:
+                pass
+    
+            legend = None
+            if states == "General":
+                legend = f"rank{ind}: {float(mol.GetProp('AAScore')):.3f} kcal/mol" if mol.HasProp("AAScore") else f"rank{ind}"
+            elif states == "Ligand Efficiency":
+                legend = f"rank{ind}: {float(mol.GetProp('AAScore_LE')):.3f}" if mol.HasProp("AAScore_LE") else f"rank{ind}"
+            else:
+                legend = f"rank{ind}"
+    
+            # サブ構造ハイライト（インデックス配列）
+            highlight_atoms = []
+            if hl_query is not None and mol.HasSubstructMatch(hl_query):
+                try:
+                    match = mol.GetSubstructMatch(hl_query)
+                    highlight_atoms = list(match)
+                except Exception:
+                    highlight_atoms = []
+    
+            smi = Chem.MolToSmiles(mol)
+            data.append({
+                "smiles": smi,
+                "legend": legend,
+                "highlightAtoms": highlight_atoms
+            })
+            ind += 1
+    
+        # JSに渡すデータ
+        payload = {
+            "items": data,
+            "perColumn": per_column,
+            "width": 200,
+            "height": 150
+        }
+    
+        # RDKit.js (WASM) を使って各 SMILES を <canvas> に描画
+        # 外部スクリプトは unpkg の MinimalLib を利用
+        html(f'
+    <div id="rdkit-grid" style="display:grid;grid-template-columns: repeat({per_column}, {payload['width']}px); gap: 12px;"></div>
+    <link rel="preload" href="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.wasm" as="fetch" crossorigin>
+    <script src="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.js"></script>
+    <script>
+      const payload = {json.dumps(payload)};
+      const container = document.getElementById("rdkit-grid");
+    
+      function drawGrid(RDKit) {{
+        const W = payload.width, H = payload.height;
+        payload.items.forEach((item, idx) => {{
+          // wrapper
+          const wrap = document.createElement('div');
+          wrap.style.width = W + 'px';
+          wrap.style.textAlign = 'center';
+    
+          // canvas
+          const cv = document.createElement('canvas');
+          cv.width = W;
+          cv.height = H;
+          cv.style.border = '1px solid #eee';
+          wrap.appendChild(cv);
+    
+          // legend
+          const cap = document.createElement('div');
+          cap.textContent = item.legend || '';
+          cap.style.fontSize = '12px';
+          cap.style.marginTop = '4px';
+          wrap.appendChild(cap);
+    
+          container.appendChild(wrap);
+    
+          try {{
+            const mol = RDKit.get_mol(item.smiles);
+            const drawer = new RDKit.CanvasMolDrawer(W, H);
+            const opts = {{
+              'backgroundColour': 'white',
+              'addAtomIndices': false,
+              'highlightColour': [1.0, 0.4, 0.0], // オレンジ
+              'kekulize': true
+            }};
+            drawer.draw_mol(mol, ' ', item.highlightAtoms || [], [], opts);
+            drawer.finish_drawing();
+            drawer.canvas = cv;  // CanvasMolDrawerは内部 canvas を持つため書き出し
+            const ctx = cv.getContext('2d');
+            ctx.drawImage(drawer.canvas, 0, 0);
+            mol.delete();
+            drawer.delete();
+          }} catch (e) {{
+            // 失敗時はテキストを表示
+            const ctx = cv.getContext('2d');
+            ctx.font = '12px sans-serif';
+            ctx.fillText('Render error', 10, 20);
+          }}
+        }});
+      }}
+    
+      // RDKit wasm 初期化
+      window.initRDKitModule().then((RDKit) => {{
+        try {{
+          drawGrid(RDKit);
+        }} catch (e) {{
+          console.error(e);
+        }}
+      }});
+    </script>
+    ', height=((len(data) + payload["perColumn"] - 1)//payload["perColumn"])*(payload["height"] + 34) + 10)
+
     
     def _sincho_3dview(self, sincho_row):
         # SINCHO結果の3D表示
