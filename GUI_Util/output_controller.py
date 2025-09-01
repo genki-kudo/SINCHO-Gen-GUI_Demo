@@ -474,15 +474,16 @@ class OutputController:
         )
         return"""
     def _summary_2Dview(self, suppl, start, end, states, hl_mol=None, per_column=5):
-        import json
-        from streamlit.components.v1 import html
         from rdkit import Chem
         from rdkit.Chem import AllChem
+        from streamlit.components.v1 import html
+        import json
     
         mols = list(suppl)[start:end]
     
         items = []
         idx = start + 1
+        # サブ構造ハイライトのために、対象の分子を RDKit 側でマッチして index を作る
         for mol in mols:
             try:
                 AllChem.Compute2DCoords(mol)
@@ -499,8 +500,7 @@ class OutputController:
             highlight_atoms = []
             if hl_mol is not None and mol.HasSubstructMatch(hl_mol):
                 try:
-                    match = mol.GetSubstructMatch(hl_mol)
-                    highlight_atoms = list(match)
+                    highlight_atoms = list(mol.GetSubstructMatch(hl_mol))
                 except Exception:
                     highlight_atoms = []
     
@@ -518,102 +518,105 @@ class OutputController:
             "tileHeight": 150
         }
     
-        cdn = "https://unpkg.com/@rdkit/rdkit@2022.9.5/Code/MinimalLib/dist"
-    
-        html(f'''
-    <div id="rdk-status" style="font:12px sans-serif;color:#555;margin-bottom:8px">Loading RDKit...</div>
-    <div id="rdk-grid" style="
+        # SmilesDrawer（純JS）で描画。WASM不要、iframeでも安定。
+        html(f"""
+    <div id="sd-status" style="font:12px sans-serif;color:#555;margin-bottom:8px">Rendering molecules…</div>
+    <div id="sd-grid" style="
       display:grid;
       grid-template-columns: repeat({payload['perColumn']}, {payload['tileWidth']}px);
       gap:12px;">
     </div>
     
-    <link rel="preload" href="{cdn}/RDKit_minimal.wasm" as="fetch" crossorigin>
-    <script src="{cdn}/RDKit_minimal.js"></script>
+    <!-- SmilesDrawer CDN -->
+    <script src="https://unpkg.com/smiles-drawer@2.0.1/dist/smiles-drawer.min.js"></script>
     <script>
       const payload = {json.dumps(payload)};
       const W = payload.tileWidth, H = payload.tileHeight;
     
-      function setSvgSize(svgEl, w, h) {{
-        svgEl.setAttribute('width', w + 'px');
-        svgEl.setAttribute('height', h + 'px');
-        svgEl.style.background = 'white';
-        svgEl.style.display = 'block';
-        svgEl.style.margin = '0 auto';
-      }}
+      // テーマにハイライト色を追加（原子ごとに適用）
+      const theme = SmilesDrawer.Drawer.getTheme('light'); // ベーステーマ
+      theme.CUSTOM_HIGHLIGHT = '#ff7b00';
     
-      function draw(RDKit) {{
-        const grid = document.getElementById('rdk-grid');
-        const status = document.getElementById('rdk-status');
-        grid.innerHTML = '';
-        if (status) status.textContent = '';
+      const grid = document.getElementById('sd-grid');
+      const status = document.getElementById('sd-status');
     
-        payload.items.forEach(item => {{
-          const wrap = document.createElement('div');
-          wrap.style.width = W + 'px';
-          wrap.style.textAlign = 'center';
+      function addTile(smiles, legend, highlightAtoms) {{
+        const wrap = document.createElement('div');
+        wrap.style.width = W + 'px';
+        wrap.style.textAlign = 'center';
     
-          const svgHolder = document.createElement('div');
-          svgHolder.style.width = W + 'px';
-          svgHolder.style.height = H + 'px';
-          svgHolder.style.border = '1px solid #eee';
-          svgHolder.style.boxSizing = 'border-box';
-          wrap.appendChild(svgHolder);
+        const cvs = document.createElement('canvas');
+        cvs.width = W; cvs.height = H;
+        cvs.style.border = '1px solid #eee';
+        wrap.appendChild(cvs);
     
-          const cap = document.createElement('div');
-          cap.textContent = item.legend || '';
-          cap.style.fontSize = '12px';
-          cap.style.marginTop = '4px';
-          wrap.appendChild(cap);
+        const cap = document.createElement('div');
+        cap.textContent = legend || '';
+        cap.style.fontSize = '12px';
+        cap.style.marginTop = '4px';
+        wrap.appendChild(cap);
     
-          grid.appendChild(wrap);
+        grid.appendChild(wrap);
     
-          try {{
-            const mol = RDKit.get_mol(item.smiles);
-            let svg;
-            if (item.highlightAtoms && item.highlightAtoms.length) {{
-              const hi = {{
-                atoms: item.highlightAtoms,
-                bonds: [],
-                atomHighlights: Object.fromEntries(
-                  item.highlightAtoms.map(i => [i, [1.0, 0.4, 0.0]]) // オレンジ
-                )
-              }};
-              svg = mol.get_svg_with_highlights(JSON.stringify(hi));
-            }} else {{
-              svg = mol.get_svg();
+        // パース → 描画
+        SmilesDrawer.parse(smiles, (tree) => {{
+          // ハイライト対象原子の配色設定
+          const opts = {{
+            width: W,
+            height: H,
+            themes: {{
+              custom: theme
+            }},
+            // atomVisualization: 'default'
+          }};
+          const drawer = new SmilesDrawer.Drawer(opts);
+          // 描画完了後にハイライトを重ねる
+          drawer.draw(tree, cvs, 'custom').then(() => {{
+            if (highlightAtoms && highlightAtoms.length) {{
+              const ctx = cvs.getContext('2d');
+              ctx.save();
+              ctx.lineWidth = 3;
+              ctx.strokeStyle = theme.CUSTOM_HIGHLIGHT;
+              // SmilesDrawer の内部座標は drawer.graph.atoms に格納される
+              // index は SMILES の原子順に概ね一致するが、キラリティ等で差が出る場合がある点は留意
+              highlightAtoms.forEach((ai) => {{
+                const atom = drawer.graph.atoms[ai];
+                if (atom) {{
+                  const x = atom.x, y = atom.y;
+                  // 目立つように円で囲む
+                  ctx.beginPath();
+                  ctx.arc(x, y, 7, 0, Math.PI*2);
+                  ctx.stroke();
+                }}
+              }});
+              ctx.restore();
             }}
-            svgHolder.innerHTML = svg;
-            const svgEl = svgHolder.querySelector('svg');
-            if (svgEl) setSvgSize(svgEl, W, H);
-            mol.delete();
-          }} catch (e) {{
-            svgHolder.innerHTML = '<div style="padding:8px;color:#a00;font:12px sans-serif">Render error</div>';
+          }}).catch((e) => {{
+            const ctx = cvs.getContext('2d');
+            ctx.font = '12px sans-serif';
+            ctx.fillStyle = '#a00';
+            ctx.fillText('Render error', 8, 18);
             console.error(e);
-          }}
+          }});
+        }}, (err) => {{
+          const ctx = cvs.getContext('2d');
+          ctx.font = '12px sans-serif';
+          ctx.fillStyle = '#a00';
+          ctx.fillText('Parse error', 8, 18);
+          console.error(err);
         }});
       }}
     
-      // 重要：.wasm の場所を明示
-      window.initRDKitModule({{
-        locateFile: (file) => "{cdn}/" + file
-      }}).then((RDKit) => {{
-        try {{
-          draw(RDKit);
-        }} catch (e) {{
-          console.error(e);
-          const status = document.getElementById('rdk-status');
-          if (status) status.textContent = 'RDKit initialized but drawing failed.';
-        }}
-      }}).catch(err => {{
-        console.error('RDKit init failed', err);
-        const status = document.getElementById('rdk-status');
-        if (status) status.textContent = 'Failed to load RDKit.';
-      }});
+      (function renderAll(){{
+        grid.innerHTML = '';
+        payload.items.forEach(it => addTile(it.smiles, it.legend, it.highlightAtoms));
+        if (status) status.textContent = '';
+      }})();
     </script>
-    ''',
-          height=((len(items)+payload["perColumn"]-1)//payload["perColumn"])*(payload["tileHeight"]+34)+30
+    """,
+          height=((len(items)+payload["perColumn"]-1)//payload["perColumn"])*(payload["tileHeight"]+34)+20
         )
+
 
 
     
