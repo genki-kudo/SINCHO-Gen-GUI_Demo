@@ -1,0 +1,40 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   109:
+HEADER 0  - Pocket Score                      : -0.0068
+HEADER 1  - Drug Score                        : 0.0003
+HEADER 2  - Number of alpha spheres           :    20
+HEADER 3  - Mean alpha-sphere radius          : 4.1068
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7233
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -0.2000
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 5.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 383.9502
+HEADER 10  -Pocket volume (convex hull)       : 24.3841
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 9.0000
+HEADER 13 - Number of apolar alpha sphere     :    10
+HEADER 14 - Proportion of apolar alpha sphere : 0.5000
+ATOM    788   OG SER    51      31.020  30.200  56.380  0.64  9.64           O 0
+ATOM   2537  CE1 TYR   158      24.880  30.660  55.220  0.00  0.00           C 0
+ATOM    826   CG GLU    54      26.650  28.390  59.350  0.00  0.00           C 0
+ATOM   2526    O ARG   157      28.460  34.520  53.980  0.00  0.00           O 0
+ATOM    785   CB SER    51      29.940  29.440  55.890  0.00  0.00           C 0
+ATOM    830  OE1 GLU    54      24.900  29.020  60.800  0.68  8.57           O 0
+ATOM   2540   OH TYR   158      22.650  31.670  55.230  0.71  6.43           O 0
+ATOM   2519  NH1 ARG   157      22.460  34.350  54.020  0.00  0.00           N 0
+ATOM   2507   CB ARG   157      25.610  35.410  52.790  0.00  0.00           C 0
+ATOM   2513   CD ARG   157      23.590  36.900  53.340  0.00  0.00           C 0
+ATOM   2160  NH1 ARG   133      26.560  39.950  53.670  0.67  7.66           N 0
+ATOM   2510   CG ARG   157      24.940  36.770  52.650  0.00  0.00           C 0
+ATOM   2535  CD1 TYR   158      26.060  30.380  54.520  0.00  0.00           C 0
+ATOM   2539   CZ TYR   158      23.810  31.320  54.590  0.00  0.00           C 0
+ATOM   2505   CA ARG   157      27.050  35.390  52.300  0.00  0.00           C 0
+ATOM   2529   CA TYR   158      28.360  31.860  52.830  0.00  0.00           C 0
+ATOM    823   CB GLU    54      25.910  28.200  58.040  0.00  0.00           C 0
+ATOM   2525    C ARG   157      27.830  34.270  52.950  0.00  0.00           C 0
+TER
+END

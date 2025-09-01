@@ -1,0 +1,36 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   185:
+HEADER 0  - Pocket Score                      : -0.0696
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    15
+HEADER 3  - Mean alpha-sphere radius          : 4.2108
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7304
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 15.5714
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 3.8571
+HEADER 9  - Pocket volume (Monte Carlo)       : 420.3427
+HEADER 10  -Pocket volume (convex hull)       : 6.3720
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     1
+HEADER 14 - Proportion of apolar alpha sphere : 0.0667
+ATOM   1742  CG2 THR   108      20.070  50.020  20.460  0.00  0.00           C 0
+ATOM   3761    O HIE   233      24.890  54.290  22.230  0.07  9.64           O 0
+ATOM   3780    O LEU   234      21.800  51.590  23.070  0.77  2.14           O 0
+ATOM   3764   CA LEU   234      24.150  51.630  22.680  0.00  0.00           C 0
+ATOM   3790    O ALA   235      21.520  55.000  24.250  0.64  1.07           O 0
+ATOM   3726  NH2 ARG   231      20.830  57.960  23.740  0.52  7.66           N 0
+ATOM   3795   CB SER   236      17.340  54.780  24.370  0.00  0.00           C 0
+ATOM   4382  OE2 GLU   271      16.530  51.120  22.450  0.00  0.00           O 0
+ATOM   3791    N SER   236      19.640  54.170  25.180  0.00  0.00           N 0
+ATOM   1746  OG1 THR   108      17.630  49.920  20.340  0.58  6.43           O 0
+ATOM   3775  CD2 LEU   234      24.970  49.770  20.210  0.00  0.00           C 0
+ATOM   3756  NE2 HIE   233      27.350  53.680  19.210  0.70  7.66           N 0
+ATOM   3793   CA SER   236      18.720  55.240  24.810  0.00  0.00           C 0
+ATOM   3789    C ALA   235      20.950  54.130  24.900  0.00  0.00           C 0
+TER
+END

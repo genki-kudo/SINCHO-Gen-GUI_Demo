@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    83:
+HEADER 0  - Pocket Score                      : 0.0164
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    11
+HEADER 3  - Mean alpha-sphere radius          : 3.6338
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5785
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -8.2000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 127.6093
+HEADER 10  -Pocket volume (convex hull)       : 2.5378
+HEADER 11 - Charge Score                      :    -2
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     0
+HEADER 14 - Proportion of apolar alpha sphere : 0.0000
+ATOM    830  OE1 GLU    54      24.900  29.020  60.800  0.68  8.57           O 0
+ATOM    877   CB GLU    57      20.500  26.510  58.200  0.00  0.00           C 0
+ATOM    884  OE1 GLU    57      19.420  25.510  60.720  0.00  0.00           O 0
+ATOM    880   CG GLU    57      19.410  27.180  59.040  0.00  0.00           C 0
+ATOM    831  OE2 GLU    54      26.140  27.440  61.570  0.00  0.00           O 0
+ATOM    818    O ASP    53      25.060  24.050  57.510  0.00  0.00           O 0
+ATOM    873    N GLU    57      21.200  25.040  56.430  0.67  1.09           N 0
+ATOM    929   NZ LYS    60      17.920  21.570  58.460  0.00  0.00           N 0
+ATOM    860  CG2 ILE    56      21.720  21.180  55.530  0.00  0.00           C 0
+ATOM    871    C ILE    56      21.040  24.050  55.550  0.00  0.00           C 0
+ATOM    821   CA GLU    54      25.360  26.810  57.740  0.00  0.00           C 0
+ATOM    829   CD GLU    54      25.870  28.250  60.660  0.00  0.00           C 0
+ATOM    858   CB ILE    56      22.810  22.240  55.380  0.00  0.00           C 0
+TER
+END

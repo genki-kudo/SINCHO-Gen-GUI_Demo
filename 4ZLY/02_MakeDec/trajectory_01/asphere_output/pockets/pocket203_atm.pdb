@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   203:
+HEADER 0  - Pocket Score                      : -0.0875
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    18
+HEADER 3  - Mean alpha-sphere radius          : 4.5342
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5883
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 13.1429
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 5.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 363.5859
+HEADER 10  -Pocket volume (convex hull)       : 5.2263
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 2.0000
+HEADER 13 - Number of apolar alpha sphere     :     3
+HEADER 14 - Proportion of apolar alpha sphere : 0.1667
+ATOM   4022  OE2 GLU   249      22.820  62.110  48.070  0.00  0.00           O 0
+ATOM   4014   CB GLU   249      22.000  59.610  46.790  0.00  0.00           C 0
+ATOM   3941  CE2 TYR   244      20.850  61.110  38.240  0.00  0.00           C 0
+ATOM   3939   OH TYR   244      22.830  62.490  38.070  0.00  0.00           O 0
+ATOM   4006  CD2 HID   248      17.230  59.320  41.740  0.00  0.00           C 0
+ATOM   4010    N GLU   249      20.540  58.440  45.430  0.52  2.19           N 0
+ATOM   4081  OE2 GLU   253      16.070  61.200  46.430  0.35  7.50           O 0
+ATOM   3619   CA GLY   226      27.140  61.660  43.030  0.00  0.00           C 0
+ATOM   3662  NH2 ARG   228      23.990  58.370  43.030  0.45  6.56           N 0
+ATOM   3623    O GLY   226      26.780  61.320  40.690  0.63  4.29           O 0
+ATOM   3658   CZ ARG   228      24.900  58.230  42.070  0.00  0.00           C 0
+ATOM   3992    O TRP   247      21.610  57.140  42.350  0.55  1.07           O 0
+ATOM   3995   CA HID   248      19.190  57.600  43.540  0.00  0.00           C 0
+ATOM   3943  CD2 TYR   244      20.160  59.970  37.800  0.00  0.00           C 0
+ATOM   3946    O TYR   244      19.350  56.890  39.290  0.00  0.00           O 0
+ATOM   3656   NE ARG   228      24.550  57.860  40.830  0.60  1.09           N 0
+TER
+END

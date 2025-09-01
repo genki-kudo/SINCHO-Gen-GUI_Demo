@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    69:
+HEADER 0  - Pocket Score                      : 0.0939
+HEADER 1  - Drug Score                        : 0.0033
+HEADER 2  - Number of alpha spheres           :    20
+HEADER 3  - Mean alpha-sphere radius          : 3.2736
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4143
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 57.6250
+HEADER 7  - Polarity Score                    :     2
+HEADER 8  - Amino Acid based volume Score     : 4.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 74.5702
+HEADER 10  -Pocket volume (convex hull)       : 3.1140
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 14.0000
+HEADER 13 - Number of apolar alpha sphere     :    15
+HEADER 14 - Proportion of apolar alpha sphere : 0.7500
+ATOM   1148  CD2 LEU    73      20.150  24.770  46.400  0.00  0.00           C 0
+ATOM    912    O ALA    59      18.410  25.340  49.770  0.70  2.14           O 0
+ATOM    972   CB MET    63      16.410  23.600  47.700  0.00  0.00           C 0
+ATOM   1177   CA GLY    75      20.020  20.120  46.170  0.00  0.00           C 0
+ATOM    913    N LYS    60      18.670  24.860  51.960  0.00  0.00           N 0
+ATOM     83   CB TRP     8      18.700  19.440  50.970  0.00  0.00           C 0
+ATOM    907   CB ALA    59      21.590  25.320  50.730  0.00  0.00           C 0
+ATOM    867  CD1 ILE    56      23.230  21.450  52.500  0.00  0.00           C 0
+ATOM    911    C ALA    59      19.060  25.410  50.810  0.00  0.00           C 0
+ATOM    915   CA LYS    60      17.300  24.380  51.990  0.00  0.00           C 0
+ATOM    978   SD MET    63      16.400  20.770  47.930  0.00  0.00           S 0
+ATOM    872    O ILE    56      21.010  24.010  53.940  0.00  0.00           O 0
+ATOM    920   CG LYS    60      17.620  22.810  53.910  0.00  0.00           C 0
+ATOM     86   CG TRP     8      19.210  19.070  52.320  0.00  0.00           C 0
+ATOM   1192  CG2 VAL    76      23.450  21.350  48.440  0.00  0.00           C 0
+ATOM   1182    N VAL    76      21.970  19.080  47.310  0.00  0.00           N 0
+TER
+END

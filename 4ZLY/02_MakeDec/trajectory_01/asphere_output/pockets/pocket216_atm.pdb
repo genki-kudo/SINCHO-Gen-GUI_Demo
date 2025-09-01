@@ -1,0 +1,36 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   216:
+HEADER 0  - Pocket Score                      : -0.1069
+HEADER 1  - Drug Score                        : 0.0006
+HEADER 2  - Number of alpha spheres           :    15
+HEADER 3  - Mean alpha-sphere radius          : 4.1522
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6829
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -15.1667
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.3333
+HEADER 9  - Pocket volume (Monte Carlo)       : 603.7405
+HEADER 10  -Pocket volume (convex hull)       : 22.4678
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 8.0000
+HEADER 13 - Number of apolar alpha sphere     :     9
+HEADER 14 - Proportion of apolar alpha sphere : 0.6000
+ATOM   3806   CB GLU   237      18.510  60.560  27.610  0.00  0.00           C 0
+ATOM   3824   CG LYS   238      13.720  58.190  26.580  0.00  0.00           C 0
+ATOM   3795   CB SER   236      17.760  56.230  24.570  0.00  0.00           C 0
+ATOM   3802    N GLU   237      18.930  58.380  26.580  0.80  4.37           N 0
+ATOM   3830   CE LYS   238      12.220  60.110  26.300  0.00  0.00           C 0
+ATOM   4381  OE1 GLU   271      14.790  55.500  23.920  0.61  5.36           O 0
+ATOM   3809   CG GLU   237      18.600  61.480  28.830  0.00  0.00           C 0
+ATOM   3833   NZ LYS   238      11.340  61.090  26.980  0.56  5.47           N 0
+ATOM   3827   CD LYS   238      12.830  59.170  27.330  0.00  0.00           C 0
+ATOM   3723  NH1 ARG   231      21.930  61.050  26.410  0.29  4.37           N 0
+ATOM   3726  NH2 ARG   231      23.260  60.630  24.590  0.00  0.00           N 0
+ATOM   3886  OG1 THR   241      16.010  58.850  31.780  0.82  3.21           O 0
+ATOM   3817    N LYS   238      16.380  58.100  27.910  0.00  0.00           N 0
+ATOM   3815    C GLU   237      17.480  58.460  28.570  0.00  0.00           C 0
+TER
+END

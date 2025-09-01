@@ -1,0 +1,32 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   195:
+HEADER 0  - Pocket Score                      : -0.1046
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :     9
+HEADER 3  - Mean alpha-sphere radius          : 4.5874
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7545
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -17.0000
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 456.5476
+HEADER 10  -Pocket volume (convex hull)       : 0.0000
+HEADER 11 - Charge Score                      :    -4
+HEADER 12 - Local hydrophobic density Score   : 5.0000
+HEADER 13 - Number of apolar alpha sphere     :     6
+HEADER 14 - Proportion of apolar alpha sphere : 0.6667
+ATOM    833    O GLU    54      22.990  27.140  56.190  0.71  4.29           O 0
+ATOM   2540   OH TYR   158      22.560  31.250  54.910  0.00  0.00           O 0
+ATOM    899  OE1 GLU    58      18.820  30.810  54.910  0.61  9.64           O 0
+ATOM    877   CB GLU    57      19.850  25.580  57.700  0.00  0.00           C 0
+ATOM    823   CB GLU    54      25.580  28.210  58.080  0.00  0.00           C 0
+ATOM    826   CG GLU    54      26.310  28.160  59.410  0.00  0.00           C 0
+ATOM    880   CG GLU    57      20.360  24.540  58.680  0.00  0.00           C 0
+ATOM    818    O ASP    53      24.330  24.300  58.190  0.45  7.50           O 0
+ATOM    831  OE2 GLU    54      27.740  26.730  60.710  0.00  0.00           O 0
+ATOM    821   CA GLU    54      24.940  26.920  57.580  0.00  0.00           C 0
+TER
+END

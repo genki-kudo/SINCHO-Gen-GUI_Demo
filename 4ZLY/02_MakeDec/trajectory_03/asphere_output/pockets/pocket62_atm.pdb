@@ -1,0 +1,43 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    62:
+HEADER 0  - Pocket Score                      : 0.1101
+HEADER 1  - Drug Score                        : 0.0051
+HEADER 2  - Number of alpha spheres           :    30
+HEADER 3  - Mean alpha-sphere radius          : 3.3085
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4476
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 66.4444
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 6.2222
+HEADER 9  - Pocket volume (Monte Carlo)       : 93.3210
+HEADER 10  -Pocket volume (convex hull)       : 5.2449
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 14.0000
+HEADER 13 - Number of apolar alpha sphere     :    15
+HEADER 14 - Proportion of apolar alpha sphere : 0.5000
+ATOM   3676  CD1 LEU   229      27.680  52.210  36.880  0.00  0.00           C 0
+ATOM   3109  NE1 TRP   194      25.500  51.930  43.380  0.60  2.19           N 0
+ATOM   3981  CE2 TRP   247      23.640  53.090  38.650  0.00  0.00           C 0
+ATOM   3170  CG2 VAL   198      26.160  49.540  39.410  0.00  0.00           C 0
+ATOM   3979  NE1 TRP   247      23.190  52.500  39.810  0.00  0.00           N 0
+ATOM   3976   CG TRP   247      22.490  54.610  39.950  0.00  0.00           C 0
+ATOM   3112  CZ2 TRP   194      25.400  54.380  44.030  0.00  0.00           C 0
+ATOM   3111  CE2 TRP   194      24.920  53.090  43.830  0.00  0.00           C 0
+ATOM   3990  CD2 TRP   247      23.190  54.440  38.690  0.00  0.00           C 0
+ATOM   3653   CD ARG   228      25.200  57.840  40.620  0.00  0.00           C 0
+ATOM   3394   OH TYR   211      29.640  55.390  40.050  0.39  1.07           O 0
+ATOM   3581  CG1 ILE   223      30.200  54.770  43.660  0.00  0.00           C 0
+ATOM   3584  CD1 ILE   223      30.520  53.270  43.740  0.00  0.00           C 0
+ATOM   2808    O ARG   175      29.490  49.920  41.150  0.49  1.07           O 0
+ATOM   3396  CE2 TYR   211      31.040  53.530  39.460  0.00  0.00           C 0
+ATOM   3642    O LEU   227      28.570  57.920  41.380  0.00  0.00           O 0
+ATOM   3645   CA ARG   228      27.630  57.740  38.700  0.00  0.00           C 0
+ATOM   3667    N LEU   229      28.070  56.170  36.840  0.00  0.00           N 0
+ATOM   3982  CZ2 TRP   247      24.290  52.630  37.490  0.00  0.00           C 0
+ATOM   3988  CE3 TRP   247      23.500  55.300  37.620  0.00  0.00           C 0
+ATOM   3977  CD1 TRP   247      22.510  53.410  40.590  0.00  0.00           C 0
+TER
+END

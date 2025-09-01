@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   210:
+HEADER 0  - Pocket Score                      : -0.1334
+HEADER 1  - Drug Score                        : 0.0006
+HEADER 2  - Number of alpha spheres           :    35
+HEADER 3  - Mean alpha-sphere radius          : 4.0824
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5302
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 27.8750
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.3750
+HEADER 9  - Pocket volume (Monte Carlo)       : 438.2464
+HEADER 10  -Pocket volume (convex hull)       : 25.2370
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 15.0000
+HEADER 13 - Number of apolar alpha sphere     :    16
+HEADER 14 - Proportion of apolar alpha sphere : 0.4571
+ATOM   2075   CB GLN   129      11.310  39.940  51.700  0.00  0.00           C 0
+ATOM   2121  CD2 LEU   131      17.540  41.950  50.590  0.00  0.00           C 0
+ATOM   2082  OE1 GLN   129       9.910  41.200  53.750  0.00  0.00           O 0
+ATOM   2087    O GLN   129      13.900  38.870  51.890  0.00  0.00           O 0
+ATOM   3017   CB SER   188      17.660  46.950  51.660  0.00  0.00           C 0
+ATOM   3015   CA SER   188      18.230  45.610  51.200  0.00  0.00           C 0
+ATOM   2987   NZ LYS   186      17.890  47.080  56.870  0.00  0.00           N 0
+ATOM   3012    O PHE   187      19.740  45.560  53.690  0.00  0.00           O 0
+ATOM   3028   CB SER   189      14.530  44.860  48.470  0.00  0.00           C 0
+ATOM   2086    C GLN   129      13.450  38.900  50.740  0.00  0.00           C 0
+ATOM   2088    N PHE   130      14.160  38.560  49.660  0.00  0.00           N 0
+ATOM   2107    O PHE   130      16.300  39.330  47.920  0.71  4.29           O 0
+ATOM   2073   CA GLN   129      12.040  39.430  50.470  0.00  0.00           C 0
+ATOM   2078   CG GLN   129      10.000  40.670  51.400  0.00  0.00           C 0
+ATOM   2037    O GLU   126      10.030  41.120  48.160  0.62  2.14           O 0
+ATOM   2025   CA GLU   126      11.550  41.130  46.320  0.00  0.00           C 0
+ATOM   2081   CD GLN   129       9.300  41.080  52.690  0.00  0.00           C 0
+ATOM   3031   OG SER   189      14.000  45.790  49.400  0.00  0.00           O 0
+ATOM   2030   CG GLU   126      10.480  43.480  45.940  0.00  0.00           C 0
+ATOM   3024    N SER   189      16.590  45.200  49.490  0.86  1.09           N 0
+ATOM   2117  CD1 LEU   131      19.510  42.060  52.100  0.00  0.00           C 0
+ATOM   2115   CG LEU   131      18.600  41.140  51.310  0.00  0.00           C 0
+TER
+END

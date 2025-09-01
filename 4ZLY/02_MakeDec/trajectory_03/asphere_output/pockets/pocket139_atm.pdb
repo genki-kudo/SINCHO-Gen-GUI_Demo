@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   139:
+HEADER 0  - Pocket Score                      : -0.0414
+HEADER 1  - Drug Score                        : 0.0004
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 3.7014
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4993
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 37.8571
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.2857
+HEADER 9  - Pocket volume (Monte Carlo)       : 302.0329
+HEADER 10  -Pocket volume (convex hull)       : 17.7309
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 6.0000
+HEADER 13 - Number of apolar alpha sphere     :     7
+HEADER 14 - Proportion of apolar alpha sphere : 0.3333
+ATOM   2747   CZ PHE   172      30.780  45.570  50.230  0.00  0.00           C 0
+ATOM   2745  CE1 PHE   172      31.250  44.370  50.780  0.00  0.00           C 0
+ATOM   2967   OG SER   185      28.670  47.090  56.440  0.52  9.64           O 0
+ATOM   3005   CZ PHE   187      26.640  43.870  51.860  0.00  0.00           C 0
+ATOM   2672   CB SER   167      33.060  46.860  53.390  0.00  0.00           C 0
+ATOM   2656    O THR   165      32.080  41.340  53.340  0.67  4.29           O 0
+ATOM   2668    N SER   167      34.150  44.680  53.620  0.00  0.00           N 0
+ATOM   3007  CE2 PHE   187      26.110  43.610  53.140  0.00  0.00           C 0
+ATOM   2163  NH2 ARG   133      26.270  40.230  53.200  0.42  9.84           N 0
+ATOM   2964   CB SER   185      27.320  46.670  56.400  0.00  0.00           C 0
+ATOM   2160  NH1 ARG   133      24.140  40.220  53.950  0.50  7.66           N 0
+ATOM   2970    O SER   185      24.720  46.190  55.470  0.00  0.00           O 0
+ATOM   3009  CD2 PHE   187      24.740  43.760  53.350  0.00  0.00           C 0
+ATOM   2962   CA SER   185      26.580  47.650  55.500  0.00  0.00           C 0
+ATOM   2902    O VAL   181      28.620  49.160  53.160  0.72  1.07           O 0
+ATOM   2893  CG1 VAL   181      27.220  47.580  50.470  0.00  0.00           C 0
+ATOM   2675   OG SER   167      32.550  47.860  52.550  0.62  4.29           O 0
+TER
+END

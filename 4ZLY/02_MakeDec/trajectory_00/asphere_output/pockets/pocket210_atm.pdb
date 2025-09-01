@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   210:
+HEADER 0  - Pocket Score                      : -0.1204
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    15
+HEADER 3  - Mean alpha-sphere radius          : 4.4307
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6570
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 27.8571
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 5.1429
+HEADER 9  - Pocket volume (Monte Carlo)       : 564.6804
+HEADER 10  -Pocket volume (convex hull)       : 18.7336
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.1333
+ATOM   2518   CZ ARG   157      21.950  35.020  52.970  0.00  0.00           C 0
+ATOM    900  OE2 GLU    58      19.620  32.470  53.260  0.63  5.36           O 0
+ATOM   2522  NH2 ARG   157      20.880  34.650  52.270  0.85  6.56           N 0
+ATOM   2519  NH1 ARG   157      22.460  34.350  54.020  0.00  0.00           N 0
+ATOM   2087    O GLN   129      14.220  38.310  51.860  0.00  0.00           O 0
+ATOM    941  CG1 VAL    61      14.910  30.400  52.540  0.00  0.00           C 0
+ATOM    899  OE1 GLU    58      18.920  30.980  54.710  0.42  6.43           O 0
+ATOM   2516   NE ARG   157      22.550  36.180  52.630  0.88  4.37           N 0
+ATOM   2096  CD1 PHE   130      16.750  34.400  50.050  0.00  0.00           C 0
+ATOM   2070    O LYS   128      11.960  36.280  50.350  0.82  9.64           O 0
+ATOM   2098  CE1 PHE   130      17.910  33.610  50.130  0.00  0.00           C 0
+ATOM   2121  CD2 LEU   131      20.560  41.760  51.050  0.00  0.00           C 0
+ATOM   2117  CD1 LEU   131      18.070  41.460  50.720  0.00  0.00           C 0
+ATOM   2112   CB LEU   131      19.790  39.880  49.660  0.00  0.00           C 0
+ATOM   2108    N LEU   131      17.870  38.450  49.260  0.62  1.09           N 0
+ATOM   2090   CA PHE   130      15.580  37.560  49.530  0.00  0.00           C 0
+TER
+END

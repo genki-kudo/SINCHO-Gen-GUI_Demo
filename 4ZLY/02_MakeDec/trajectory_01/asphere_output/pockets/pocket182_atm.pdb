@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   182:
+HEADER 0  - Pocket Score                      : -0.0626
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    18
+HEADER 3  - Mean alpha-sphere radius          : 4.1583
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6298
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -3.6667
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 3.6667
+HEADER 9  - Pocket volume (Monte Carlo)       : 238.5656
+HEADER 10  -Pocket volume (convex hull)       : 3.2227
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 3.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.2222
+ATOM   2328    O ASP   144      18.660  27.950  23.560  0.54  6.43           O 0
+ATOM   2331   CA GLN   145      16.770  29.670  24.370  0.00  0.00           C 0
+ATOM   2345    O GLN   145      16.860  32.080  23.980  0.00  0.00           O 0
+ATOM   2340  OE1 GLN   145      15.070  27.880  22.220  0.00  0.00           O 0
+ATOM   2344    C GLN   145      17.350  31.080  24.490  0.00  0.00           C 0
+ATOM   2346    N GLY   146      18.520  31.170  25.110  0.00  0.00           N 0
+ATOM   1668  CE1 HID   104      24.810  34.030  21.150  0.00  0.00           C 0
+ATOM   1461   CG ASN    92      23.720  29.310  24.850  0.00  0.00           C 0
+ATOM   1463  ND2 ASN    92      22.530  28.730  24.680  0.50  5.47           N 0
+ATOM   1462  OD1 ASN    92      24.630  29.300  24.040  0.76  5.36           O 0
+ATOM   1548  CE1 TYR    98      24.020  34.090  24.500  0.00  0.00           C 0
+ATOM   2348   CA GLY   146      19.200  32.420  25.390  0.00  0.00           C 0
+ATOM   1458   CB ASN    92      23.950  30.100  26.140  0.00  0.00           C 0
+ATOM   1551   OH TYR    98      22.270  35.290  23.200  0.00  0.00           O 0
+ATOM   1666  ND1 HID   104      24.170  34.950  20.410  0.00  0.00           N 0
+TER
+END

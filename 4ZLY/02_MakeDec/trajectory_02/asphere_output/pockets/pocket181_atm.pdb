@@ -1,0 +1,41 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   181:
+HEADER 0  - Pocket Score                      : -0.0866
+HEADER 1  - Drug Score                        : 0.0006
+HEADER 2  - Number of alpha spheres           :    23
+HEADER 3  - Mean alpha-sphere radius          : 3.8552
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5971
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 2.2500
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 3.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 493.3600
+HEADER 10  -Pocket volume (convex hull)       : 29.0792
+HEADER 11 - Charge Score                      :    -4
+HEADER 12 - Local hydrophobic density Score   : 10.0000
+HEADER 13 - Number of apolar alpha sphere     :    11
+HEADER 14 - Proportion of apolar alpha sphere : 0.4783
+ATOM    815  OD1 ASP    53      31.360  22.560  58.610  0.00  0.00           O 0
+ATOM    783   CA SER    51      31.480  27.450  54.800  0.00  0.00           C 0
+ATOM    785   CB SER    51      31.330  28.730  55.630  0.00  0.00           C 0
+ATOM   2573  CD1 LEU   160      36.100  28.170  54.720  0.00  0.00           C 0
+ATOM    811   CB ASP    53      29.350  23.780  58.410  0.00  0.00           C 0
+ATOM    831  OE2 GLU    54      28.210  28.800  61.980  0.00  0.00           O 0
+ATOM    830  OE1 GLU    54      27.720  29.990  60.260  0.64  3.21           O 0
+ATOM    829   CD GLU    54      27.690  28.880  60.850  0.00  0.00           C 0
+ATOM    826   CG GLU    54      27.250  27.620  60.130  0.00  0.00           C 0
+ATOM    823   CB GLU    54      26.770  28.060  58.750  0.00  0.00           C 0
+ATOM    780    O MET    50      33.140  25.990  53.110  0.45  3.21           O 0
+ATOM    748   CA GLY    48      38.090  25.580  52.640  0.00  0.00           C 0
+ATOM    742  OE1 GLU    47      36.450  21.500  53.030  0.58  6.43           O 0
+ATOM    746    N GLY    48      37.900  24.280  52.030  0.73  1.09           N 0
+ATOM    791    O SER    51      29.220  26.980  55.410  0.00  0.00           O 0
+ATOM    819    N GLU    54      27.130  25.860  57.650  0.00  0.00           N 0
+ATOM    804  OE2 GLU    52      32.340  23.210  54.230  0.28  7.50           O 0
+ATOM    788   OG SER    51      32.280  29.730  55.330  0.42  8.57           O 0
+ATOM    790    C SER    51      30.240  26.580  54.840  0.00  0.00           C 0
+TER
+END

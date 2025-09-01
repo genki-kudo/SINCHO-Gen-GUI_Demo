@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   169:
+HEADER 0  - Pocket Score                      : -0.1135
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    17
+HEADER 3  - Mean alpha-sphere radius          : 4.0547
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6755
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -7.6000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 3.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 282.5279
+HEADER 10  -Pocket volume (convex hull)       : 4.4941
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     0
+HEADER 14 - Proportion of apolar alpha sphere : 0.0000
+ATOM   1746  OG1 THR   108      17.900  49.380  21.130  0.71  5.36           O 0
+ATOM   1723   CB GLN   107      19.090  44.940  18.370  0.00  0.00           C 0
+ATOM   1750    N GLN   109      16.830  46.430  21.960  0.00  0.00           N 0
+ATOM   1730  OE1 GLN   107      17.020  44.500  16.350  0.55  8.57           O 0
+ATOM   4385    N NME   272      11.010  48.780  18.840  0.65  5.47           N 0
+ATOM   4387  CH3 NME   272      10.770  48.030  17.630  0.00  0.00           C 0
+ATOM   1761  OE1 GLN   109      12.380  45.850  19.520  0.66  6.43           O 0
+ATOM   1754   CB GLN   109      14.740  45.530  21.280  0.00  0.00           C 0
+ATOM   4382  OE2 GLU   271      15.270  49.360  22.220  0.78  4.29           O 0
+ATOM   4377   CG GLU   271      13.110  48.510  21.840  0.00  0.00           C 0
+ATOM   1736    N THR   108      19.400  46.900  20.850  0.76  1.09           N 0
+ATOM   4380   CD GLU   271      14.050  49.650  22.230  0.00  0.00           C 0
+ATOM   4381  OE1 GLU   271      13.680  50.800  22.510  0.71  5.36           O 0
+TER
+END

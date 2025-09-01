@@ -1,0 +1,21 @@
+SINCHO_result:
+  rank_00:
+    acceptor:
+      max: 3
+      min: 0
+    atom_num: cluster10.pqr_20_N1
+    donor:
+      max: 3
+      min: 0
+    logp: 1.687949761203936
+    mw: 225.08242673455635
+  rank_01:
+    acceptor:
+      max: 3
+      min: 0
+    atom_num: cluster10.pqr_4_C8
+    donor:
+      max: 3
+      min: 0
+    logp: 1.687949761203936
+    mw: 270.4571852116168

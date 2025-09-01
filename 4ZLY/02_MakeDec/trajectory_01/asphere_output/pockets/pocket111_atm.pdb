@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   111:
+HEADER 0  - Pocket Score                      : 0.0100
+HEADER 1  - Drug Score                        : 0.0006
+HEADER 2  - Number of alpha spheres           :    13
+HEADER 3  - Mean alpha-sphere radius          : 3.8220
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5899
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 26.0000
+HEADER 7  - Polarity Score                    :     2
+HEADER 8  - Amino Acid based volume Score     : 3.6000
+HEADER 9  - Pocket volume (Monte Carlo)       : 194.6738
+HEADER 10  -Pocket volume (convex hull)       : 2.1138
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 6.0000
+HEADER 13 - Number of apolar alpha sphere     :     7
+HEADER 14 - Proportion of apolar alpha sphere : 0.5385
+ATOM   4336   SD MET   268      10.080  45.720  27.550  0.00  0.00           S 0
+ATOM   4337   CE MET   268      11.710  44.940  27.680  0.00  0.00           C 0
+ATOM   1834  OE2 GLU   113      11.430  41.290  27.030  0.00  0.00           O 0
+ATOM   1754   CB GLN   109      14.180  46.310  22.080  0.00  0.00           C 0
+ATOM   4330   CB MET   268       9.260  48.090  26.330  0.00  0.00           C 0
+ATOM   1761  OE1 GLN   109      12.990  48.880  23.380  0.64  2.14           O 0
+ATOM   4342    O MET   268       8.600  49.730  23.900  0.00  0.00           O 0
+ATOM   4387  CH3 NME   272      10.260  50.040  20.570  0.00  0.00           C 0
+ATOM   1757   CG GLN   109      13.910  47.690  21.480  0.00  0.00           C 0
+ATOM   4333   CG MET   268      10.480  47.350  26.860  0.00  0.00           C 0
+ATOM   1766    O GLN   109      15.080  44.310  24.410  0.74  3.21           O 0
+ATOM   1826   CB GLU   113      14.150  41.380  26.170  0.00  0.00           C 0
+ATOM   1807   CB LEU   112      15.060  46.610  26.850  0.00  0.00           C 0
+TER
+END

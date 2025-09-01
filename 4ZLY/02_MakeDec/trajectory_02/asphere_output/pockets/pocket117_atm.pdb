@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   117:
+HEADER 0  - Pocket Score                      : -0.0002
+HEADER 1  - Drug Score                        : 0.0004
+HEADER 2  - Number of alpha spheres           :    16
+HEADER 3  - Mean alpha-sphere radius          : 3.4026
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5772
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 27.0000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 4.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 136.6844
+HEADER 10  -Pocket volume (convex hull)       : 3.9353
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 7.0000
+HEADER 13 - Number of apolar alpha sphere     :     8
+HEADER 14 - Proportion of apolar alpha sphere : 0.5000
+ATOM   4223   CG LEU   261       8.620  43.620  35.300  0.00  0.00           C 0
+ATOM   4229  CD2 LEU   261       7.980  42.510  36.140  0.00  0.00           C 0
+ATOM   4242   OG SER   262       5.320  48.160  36.670  0.86  3.21           O 0
+ATOM   4288  CD1 LEU   265       5.850  44.720  31.870  0.00  0.00           C 0
+ATOM   4235    N SER   262       7.710  47.680  35.300  0.00  0.00           N 0
+ATOM   4237   CA SER   262       6.700  48.500  34.680  0.00  0.00           C 0
+ATOM   1980  OE2 GLU   123       7.370  39.990  40.610  0.55  8.57           O 0
+ATOM   1979  OE1 GLU   123       6.690  41.720  41.740  0.45  1.07           O 0
+ATOM   4172   NZ LYS   258       4.240  42.610  42.260  0.50  3.28           N 0
+ATOM   4163   CG LYS   258       5.540  45.310  40.900  0.00  0.00           C 0
+ATOM   1978   CD GLU   123       7.560  41.160  41.030  0.00  0.00           C 0
+ATOM   1975   CG GLU   123       8.700  42.050  40.540  0.00  0.00           C 0
+ATOM   4158   CA LYS   258       7.970  45.870  40.530  0.00  0.00           C 0
+ATOM   4233    C LEU   261       8.440  46.760  34.660  0.00  0.00           C 0
+ATOM   4177    O LYS   258       7.400  47.060  38.540  0.00  0.00           O 0
+ATOM   4220   CB LEU   261       9.110  44.790  36.150  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,102 @@
+working_directory: 03_CompGen/
+prefix: ChemTS
+num_chemts_loops: 4
+c_val: 1.0
+threshold_type: time
+hours: 0.05
+generation_num: 0.05
+expansion_threshold: 0.995
+simulation_num: 5
+flush_threshold: -1
+policy_setting:
+  policy_module: policy.ucb1
+  policy_class: Ucb1
+save_checkpoint: false
+restart: false
+checkpoint_file: chemtsv2.ckpt.pkl
+use_lipinski_filter: false
+lipinski_filter:
+  module: filter.lipinski_filter
+  class: LipinskiFilter
+  type: rule_of_5
+use_radical_filter: false
+radical_filter:
+  module: filter.radical_filter
+  class: RadicalFilter
+use_pubchem_filter: false
+pubchem_filter:
+  module: filter.pubchem_filter
+  class: PubchemFilter
+use_sascore_filter: true
+sascore_filter:
+  module: filter.sascore_filter
+  class: SascoreFilter
+  threshold: 4.5
+use_ring_size_filter: false
+ring_size_filter:
+  module: filter.ring_size_filter
+  class: RingSizeFilter
+  threshold: 6
+use_pains_filter: false
+pains_filter:
+  module: filter.pains_filter
+  class: PainsFilter
+  type:
+  - pains_a
+use_donor_acceptor_filter: false
+donor_acceptor_filter:
+  module: filter.donor_acceptor_filter
+  class: Donor_Acceptor
+include_filter_result_in_reward: false
+use_QED_filter: true
+QED_filter:
+  module: filter.qed_filter
+  class: QEDFilter
+  type: none
+  threshold: 0.6
+reward_setting:
+  reward_module: reward.mw_logp_reward
+  reward_class: MW_LogP_reward
+output_dir: 03_CompGen/
+target_dirname: 03_CompGen/
+out_log_file_name: ChemTS.log
+Dscore_parameters:
+  SINCHO_MW:
+    type: trapezoid
+    top_range_left: 50
+    top_range_right: 50
+    bottom_range_left: 100
+    bottom_range_right: 100
+    weight: 1
+    center_value: 217.70335333380308
+    top_min: 167.70335333380308
+    bottom_min: 117.70335333380308
+    top_max: 267.7033533338031
+    bottom_max: 317.7033533338031
+  SINCHO_LogP:
+    type: trapezoid
+    top_range_left: 1
+    top_range_right: 1
+    bottom_range_left: 2
+    bottom_range_right: 2
+    weight: 1
+    center_value: 1.0477443480512063
+    top_min: 0.04774434805120631
+    bottom_min: -0.9522556519487937
+    top_max: 2.0477443480512063
+    bottom_max: 3.0477443480512063
+  acceptor:
+    max: 3
+    min: 0
+  donor:
+    max: 3
+    min: 0
+model_setting:
+  use_weight_model: false
+  model_json: model/riken/model_chembl220K_r_last.tf25.json
+  model_weight: model/riken/model_chembl220K_r_last.tf25.best.ckpt.h5
+token: model/riken/tokens_chembl220K_r_last.pkl
+init_mw: 188.069810876
+init_logP: 0.31089999999999984
+init_acceptor: 5
+init_donor: 4

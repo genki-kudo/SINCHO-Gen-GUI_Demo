@@ -1,0 +1,18 @@
+2025-07-28 17:58:17.308967
+Selected Mode
+>> LB
+Selected PDB protein file
+>> /mnt/4ZLY/02_MakeDec/trajectory_00/prot_00.pdb
+Selected PDB ligand file
+>> /mnt/4ZLY/02_MakeDec/trajectory_00/lig_00.pdb
+Distance of include pocket
+>> 10.0
+Clustering method in empty sites identification
+>> CENTROID
+Clustering threshold in empty sites identification
+>> 4.5
+###fpocket location###
+/usr/local/bin/fpocket
+###fpocket location###
+***** POCKET HUNTING BEGINS ***** 
+***** POCKET HUNTING ENDS ***** 

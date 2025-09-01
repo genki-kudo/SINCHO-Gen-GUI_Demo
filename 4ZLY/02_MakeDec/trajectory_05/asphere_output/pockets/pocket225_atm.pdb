@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   225:
+HEADER 0  - Pocket Score                      : -0.1438
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    15
+HEADER 3  - Mean alpha-sphere radius          : 4.0410
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6381
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -0.5000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 3.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 295.9125
+HEADER 10  -Pocket volume (convex hull)       : 6.7388
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 6.0000
+HEADER 13 - Number of apolar alpha sphere     :     7
+HEADER 14 - Proportion of apolar alpha sphere : 0.4667
+ATOM   4115   CB PRO   255      12.620  52.330  41.280  0.00  0.00           C 0
+ATOM   4184  CG2 ILE   259       8.640  52.610  40.190  0.00  0.00           C 0
+ATOM   3951   CB SER   245      15.600  55.940  38.970  0.00  0.00           C 0
+ATOM   4255  ND2 ASN   263      10.200  53.950  36.110  0.50  7.66           N 0
+ATOM   4083    O GLU   253      13.090  56.710  44.670  0.38  9.64           O 0
+ATOM   4118   CA PRO   255      12.520  52.550  42.790  0.00  0.00           C 0
+ATOM   4109   CD PRO   255      14.480  53.550  42.000  0.00  0.00           C 0
+ATOM   4006  CD2 HID   248      16.520  58.910  42.240  0.00  0.00           C 0
+ATOM   4005  NE2 HID   248      16.490  59.590  41.020  0.57  4.37           N 0
+ATOM   4080  OE1 GLU   253      13.340  61.240  44.310  0.64  5.36           O 0
+ATOM   3957    O SER   245      17.300  55.500  41.620  0.00  0.00           O 0
+ATOM   4108    N PRO   255      13.630  53.410  43.160  0.00  0.00           N 0
+ATOM   3954   OG SER   245      15.280  54.630  38.550  0.65  3.21           O 0
+TER
+END

@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    97:
+HEADER 0  - Pocket Score                      : 0.0067
+HEADER 1  - Drug Score                        : 0.0009
+HEADER 2  - Number of alpha spheres           :    15
+HEADER 3  - Mean alpha-sphere radius          : 3.6894
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6844
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 40.0000
+HEADER 7  - Polarity Score                    :     1
+HEADER 8  - Amino Acid based volume Score     : 3.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 256.3310
+HEADER 10  -Pocket volume (convex hull)       : 3.2416
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 11.0000
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.8000
+ATOM     52   CZ TYR     5      20.700   9.430  49.260  0.00  0.00           C 0
+ATOM     53   OH TYR     5      21.690   8.590  48.810  0.00  0.00           O 0
+ATOM     35   CA GLY     4      17.040   8.740  54.170  0.00  0.00           C 0
+ATOM     55  CE2 TYR     5      19.360   9.000  49.130  0.00  0.00           C 0
+ATOM     38    C GLY     4      17.500  10.150  53.840  0.00  0.00           C 0
+ATOM     14    N LEU     3      13.500   7.820  51.700  0.70  1.09           N 0
+ATOM     12    C GLY     2      14.140   8.420  50.700  0.00  0.00           C 0
+ATOM     33    N GLY     4      15.800   8.280  53.590  0.71  1.09           N 0
+ATOM      9   CA GLY     2      14.100   7.720  49.350  0.00  0.00           C 0
+ATOM     57  CD2 TYR     5      18.360   9.800  49.670  0.00  0.00           C 0
+ATOM     50  CE1 TYR     5      21.010  10.630  49.910  0.00  0.00           C 0
+ATOM     48  CD1 TYR     5      19.990  11.450  50.430  0.00  0.00           C 0
+ATOM     39    O GLY     4      18.340  10.670  54.570  0.00  0.00           O 0
+TER
+END

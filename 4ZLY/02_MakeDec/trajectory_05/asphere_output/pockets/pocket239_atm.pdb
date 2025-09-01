@@ -1,0 +1,59 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   239:
+HEADER 0  - Pocket Score                      : -0.2772
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    57
+HEADER 3  - Mean alpha-sphere radius          : 4.1214
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5641
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 14.9286
+HEADER 7  - Polarity Score                    :     9
+HEADER 8  - Amino Acid based volume Score     : 4.2857
+HEADER 9  - Pocket volume (Monte Carlo)       : 872.2469
+HEADER 10  -Pocket volume (convex hull)       : 144.0390
+HEADER 11 - Charge Score                      :    -2
+HEADER 12 - Local hydrophobic density Score   : 6.3333
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.2105
+ATOM   1726   CG GLN   107      18.210  44.020  16.800  0.00  0.00           C 0
+ATOM   1778  OE1 GLN   110      19.100  40.930  19.500  0.83  6.43           O 0
+ATOM   1771   CB GLN   110      17.990  42.550  21.440  0.00  0.00           C 0
+ATOM   1761  OE1 GLN   109      13.770  43.650  21.150  0.00  0.00           O 0
+ATOM   2351    C GLY   146      18.280  33.600  25.730  0.00  0.00           C 0
+ATOM   2363  CG2 VAL   147      14.690  32.390  27.010  0.00  0.00           C 0
+ATOM   2352    O GLY   146      18.400  34.820  25.730  0.86  1.07           O 0
+ATOM   2345    O GLN   145      16.360  31.950  23.290  0.68  4.29           O 0
+ATOM   1774   CG GLN   110      18.250  41.080  21.740  0.00  0.00           C 0
+ATOM   1829   CG GLU   113      13.860  41.960  24.740  0.00  0.00           C 0
+ATOM   1833  OE1 GLU   113      11.710  41.100  24.270  0.46  4.29           O 0
+ATOM   1769   CA GLN   110      17.250  43.190  22.620  0.00  0.00           C 0
+ATOM   1832   CD GLU   113      12.590  41.240  25.160  0.00  0.00           C 0
+ATOM   1779  NE2 GLN   110      18.900  39.000  20.510  0.00  0.00           N 0
+ATOM   1844   CG MET   114      19.930  40.180  27.310  0.00  0.00           C 0
+ATOM   1783    O GLN   110      18.170  42.250  24.570  0.74  1.07           O 0
+ATOM   1777   CD GLN   110      18.780  40.330  20.520  0.00  0.00           C 0
+ATOM   1723   CB GLN   107      18.150  44.790  18.120  0.00  0.00           C 0
+ATOM   1848   CE MET   114      21.750  39.180  25.710  0.00  0.00           C 0
+ATOM   1826   CB GLU   113      15.050  41.570  25.620  0.00  0.00           C 0
+ATOM   1837    N MET   114      17.240  41.540  27.950  0.00  0.00           N 0
+ATOM   1077   NZ LYS    69      11.610  36.240  30.290  0.00  0.00           N 0
+ATOM   1057  OE1 GLU    68       9.220  29.490  31.270  0.00  0.00           O 0
+ATOM   2340  OE1 GLN   145      12.730  28.650  24.930  0.70  8.57           O 0
+ATOM   2359  CG1 VAL   147      14.790  33.110  29.350  0.00  0.00           C 0
+ATOM   1074   CE LYS    69      11.950  35.150  31.230  0.00  0.00           C 0
+ATOM   1896  OD2 ASP   117      15.260  36.650  28.850  0.53  5.36           O 0
+ATOM   1895  OD1 ASP   117      13.650  38.020  29.260  0.19  2.14           O 0
+ATOM   2355   CA VAL   147      16.860  33.470  27.790  0.00  0.00           C 0
+ATOM   1836    O GLU   113      15.270  40.850  28.800  0.00  0.00           O 0
+ATOM   1835    C GLU   113      15.910  41.470  27.950  0.00  0.00           C 0
+ATOM   2379  CG2 VAL   148      19.210  37.100  29.590  0.00  0.00           C 0
+ATOM   1839   CA MET   114      18.060  40.890  28.960  0.00  0.00           C 0
+ATOM   1834  OE2 GLU   113      12.370  40.890  26.330  0.12  4.29           O 0
+ATOM   1551   OH TYR    98      21.920  34.800  22.850  0.48  9.64           O 0
+ATOM   1553  CE2 TYR    98      22.780  36.010  24.770  0.00  0.00           C 0
+ATOM   1709  CE1 PHE   106      23.120  38.880  21.590  0.00  0.00           C 0
+TER
+END

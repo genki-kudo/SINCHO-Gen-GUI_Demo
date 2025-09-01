@@ -1,0 +1,33 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   129:
+HEADER 0  - Pocket Score                      : -0.0066
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    10
+HEADER 3  - Mean alpha-sphere radius          : 3.9492
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7228
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -8.6000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 3.2000
+HEADER 9  - Pocket volume (Monte Carlo)       : 388.4160
+HEADER 10  -Pocket volume (convex hull)       : 2.2505
+HEADER 11 - Charge Score                      :    -3
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.2000
+ATOM   4345   CA ASP   269       6.600  51.460  24.650  0.00  0.00           C 0
+ATOM   4387  CH3 NME   272      10.260  50.040  20.570  0.00  0.00           C 0
+ATOM   4351  OD1 ASP   269       4.850  49.110  25.350  0.00  0.00           O 0
+ATOM   4354    O ASP   269       6.120  53.510  23.580  0.45  5.36           O 0
+ATOM   4342    O MET   268       8.600  49.730  23.900  0.00  0.00           O 0
+ATOM   4353    C ASP   269       6.990  52.820  24.090  0.00  0.00           C 0
+ATOM   4385    N NME   272      10.770  51.010  21.520  0.00  0.00           N 0
+ATOM   4369    O GLU   270      10.230  54.850  21.780  0.65  7.50           O 0
+ATOM   4384    O GLU   271      12.300  51.890  20.200  0.48  5.36           O 0
+ATOM   4368    C GLU   270      10.060  54.210  22.820  0.00  0.00           C 0
+ATOM   4355    N GLU   270       8.280  53.180  24.200  0.00  0.00           N 0
+TER
+END

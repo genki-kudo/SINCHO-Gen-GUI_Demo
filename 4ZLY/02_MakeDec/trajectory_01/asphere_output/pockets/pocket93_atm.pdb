@@ -1,0 +1,40 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    93:
+HEADER 0  - Pocket Score                      : 0.0506
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :    19
+HEADER 3  - Mean alpha-sphere radius          : 3.8476
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6737
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 8.1667
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 3.8333
+HEADER 9  - Pocket volume (Monte Carlo)       : 417.4012
+HEADER 10  -Pocket volume (convex hull)       : 33.9402
+HEADER 11 - Charge Score                      :    -3
+HEADER 12 - Local hydrophobic density Score   : 2.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.2105
+ATOM   2573  CD1 LEU   160      35.190  27.900  55.480  0.00  0.00           C 0
+ATOM    804  OE2 GLU    52      32.210  22.870  55.550  0.40  5.36           O 0
+ATOM    783   CA SER    51      30.540  27.110  56.010  0.00  0.00           C 0
+ATOM    780    O MET    50      32.460  25.850  54.670  0.48  4.29           O 0
+ATOM    816  OD2 ASP    53      28.670  20.810  59.970  0.00  0.00           O 0
+ATOM    796   CB GLU    52      29.370  22.480  54.800  0.00  0.00           C 0
+ATOM    815  OD1 ASP    53      27.440  20.460  58.190  0.67  3.21           O 0
+ATOM    817    C ASP    53      25.750  24.420  58.630  0.00  0.00           C 0
+ATOM    818    O ASP    53      24.660  24.270  59.180  0.64  5.36           O 0
+ATOM    811   CB ASP    53      26.980  22.410  59.460  0.00  0.00           C 0
+ATOM    826   CG GLU    54      26.690  28.170  60.080  0.00  0.00           C 0
+ATOM    819    N GLU    54      26.340  25.590  58.410  0.00  0.00           N 0
+ATOM    788   OG SER    51      29.570  27.840  58.050  0.00  0.00           O 0
+ATOM   2577  CD2 LEU   160      34.380  30.090  56.450  0.00  0.00           C 0
+ATOM    785   CB SER    51      30.080  28.320  56.820  0.00  0.00           C 0
+ATOM    792    N GLU    52      29.660  24.840  55.680  0.00  0.00           N 0
+ATOM    807    N ASP    53      27.570  23.500  57.330  0.43  1.09           N 0
+ATOM    814   CG ASP    53      27.800  21.170  59.150  0.00  0.00           C 0
+TER
+END

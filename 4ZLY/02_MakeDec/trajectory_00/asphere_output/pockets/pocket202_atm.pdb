@@ -1,0 +1,34 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   202:
+HEADER 0  - Pocket Score                      : -0.1115
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    14
+HEADER 3  - Mean alpha-sphere radius          : 4.4509
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6836
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -20.8000
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.6000
+HEADER 9  - Pocket volume (Monte Carlo)       : 477.6779
+HEADER 10  -Pocket volume (convex hull)       : 13.1065
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.1429
+ATOM   3830   CE LYS   238      11.420  56.910  24.390  0.00  0.00           C 0
+ATOM   4381  OE1 GLU   271      14.030  54.490  22.550  0.00  0.00           O 0
+ATOM   3833   NZ LYS   238      10.780  58.220  24.630  0.00  0.00           N 0
+ATOM   3814  OE2 GLU   237      17.340  62.120  26.180  0.00  0.00           O 0
+ATOM   3726  NH2 ARG   231      21.420  57.660  23.690  0.00  0.00           N 0
+ATOM   3806   CB GLU   237      17.410  59.320  26.650  0.00  0.00           C 0
+ATOM   3723  NH1 ARG   231      21.290  59.380  25.150  0.59  7.66           N 0
+ATOM   3802    N GLU   237      17.750  56.970  26.050  0.76  2.19           N 0
+ATOM   3793   CA SER   236      18.190  54.910  24.860  0.00  0.00           C 0
+ATOM   3795   CB SER   236      16.820  54.410  24.430  0.00  0.00           C 0
+ATOM   3824   CG LYS   238      12.790  56.660  26.510  0.00  0.00           C 0
+ATOM   3817    N LYS   238      15.640  56.740  27.630  0.60  1.09           N 0
+TER
+END

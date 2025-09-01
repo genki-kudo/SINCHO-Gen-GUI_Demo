@@ -1,0 +1,36 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   182:
+HEADER 0  - Pocket Score                      : -0.0826
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    16
+HEADER 3  - Mean alpha-sphere radius          : 4.2767
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.8012
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -24.3333
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 4.6667
+HEADER 9  - Pocket volume (Monte Carlo)       : 374.3536
+HEADER 10  -Pocket volume (convex hull)       : 2.8017
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.1250
+ATOM   1602    N GLU   101      30.930  37.560  23.460  0.00  0.00           N 0
+ATOM   1614  OE2 GLU   101      31.630  33.810  21.330  0.00  0.00           O 0
+ATOM   1604   CA GLU   101      30.850  36.960  22.140  0.00  0.00           C 0
+ATOM   1601    O ARG   100      32.750  38.780  23.030  0.55  6.43           O 0
+ATOM   1588   CD ARG   100      33.780  39.590  28.300  0.00  0.00           C 0
+ATOM   1526   CA ASN    97      31.170  35.650  28.590  0.00  0.00           C 0
+ATOM   1582   CB ARG   100      32.750  38.940  26.040  0.00  0.00           C 0
+ATOM   1532  OD1 ASN    97      33.190  34.740  30.470  0.76  8.57           O 0
+ATOM   1537    O ASN    97      30.740  36.060  26.210  0.61  1.07           O 0
+ATOM   1600    C ARG   100      31.810  38.520  23.770  0.00  0.00           C 0
+ATOM   1528   CB ASN    97      31.440  34.190  28.940  0.00  0.00           C 0
+ATOM   1613  OE1 GLU   101      31.090  32.440  22.880  0.46  6.43           O 0
+ATOM   1612   CD GLU   101      31.000  33.580  22.370  0.00  0.00           C 0
+ATOM   1609   CG GLU   101      30.200  34.650  23.100  0.00  0.00           C 0
+TER
+END

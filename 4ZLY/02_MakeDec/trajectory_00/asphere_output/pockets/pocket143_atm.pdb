@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   143:
+HEADER 0  - Pocket Score                      : -0.0372
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :    22
+HEADER 3  - Mean alpha-sphere radius          : 3.7150
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6233
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 24.0000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 5.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 203.3220
+HEADER 10  -Pocket volume (convex hull)       : 9.3903
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 3.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.1818
+ATOM    295   CB GLU    20      35.710  20.520  33.590  0.00  0.00           C 0
+ATOM    442   CE LYS    30      34.750  17.910  37.480  0.00  0.00           C 0
+ATOM    445   NZ LYS    30      35.420  16.600  37.360  0.00  0.00           N 0
+ATOM    303  OE2 GLU    20      38.290  20.970  35.620  0.69  6.43           O 0
+ATOM    439   CD LYS    30      33.350  17.840  36.860  0.00  0.00           C 0
+ATOM    291    N GLU    20      33.840  19.370  32.340  0.00  0.00           N 0
+ATOM    289    C LYS    19      32.620  18.840  32.270  0.00  0.00           C 0
+ATOM    433   CB LYS    30      31.190  19.110  36.380  0.00  0.00           C 0
+ATOM    234   CB PHE    17      30.520  13.910  35.830  0.00  0.00           C 0
+ATOM    290    O LYS    19      31.770  19.030  33.130  0.00  0.00           O 0
+ATOM    269    N LYS    19      31.320  16.900  31.540  0.00  0.00           N 0
+ATOM    271   CA LYS    19      32.310  17.870  31.130  0.00  0.00           C 0
+ATOM    268    O LEU    18      32.000  15.430  29.970  0.70  8.57           O 0
+ATOM    267    C LEU    18      31.260  15.730  30.900  0.00  0.00           C 0
+ATOM    249    O PHE    17      30.390  12.680  32.990  0.48  8.57           O 0
+ATOM    248    C PHE    17      29.920  13.720  33.440  0.00  0.00           C 0
+ATOM    250    N LEU    18      29.760  14.780  32.630  0.00  0.00           N 0
+TER
+END

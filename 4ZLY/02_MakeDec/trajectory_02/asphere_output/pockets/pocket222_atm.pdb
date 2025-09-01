@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   222:
+HEADER 0  - Pocket Score                      : -0.1595
+HEADER 1  - Drug Score                        : 0.0003
+HEADER 2  - Number of alpha spheres           :    31
+HEADER 3  - Mean alpha-sphere radius          : 4.3038
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6073
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 18.8000
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.1000
+HEADER 9  - Pocket volume (Monte Carlo)       : 666.7938
+HEADER 10  -Pocket volume (convex hull)       : 55.8431
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 6.2222
+HEADER 13 - Number of apolar alpha sphere     :     9
+HEADER 14 - Proportion of apolar alpha sphere : 0.2903
+ATOM    380  CE1 PHE    26      32.080  29.540  46.910  0.00  0.00           C 0
+ATOM    378  CD1 PHE    26      32.720  28.310  46.660  0.00  0.00           C 0
+ATOM    360   CG GLN    25      34.100  31.470  44.230  0.00  0.00           C 0
+ATOM    763    O SER    49      34.810  29.290  50.030  0.73  2.14           O 0
+ATOM    365  NE2 GLN    25      34.050  33.470  45.740  0.60  2.19           N 0
+ATOM    369    O GLN    25      36.200  28.920  43.670  0.00  0.00           O 0
+ATOM   2635   OH TYR   164      36.140  35.870  45.440  0.00  0.00           O 0
+ATOM   2729   NZ LYS   171      40.380  35.980  47.300  0.00  0.00           N 0
+ATOM    757   CB SER    49      36.600  27.170  48.380  0.00  0.00           C 0
+ATOM    755   CA SER    49      36.520  27.660  49.830  0.00  0.00           C 0
+ATOM    752    O GLY    48      38.490  27.830  51.940  0.73  5.36           O 0
+ATOM   2637  CE2 TYR   164      35.530  35.990  47.750  0.00  0.00           C 0
+ATOM   2554  CG1 VAL   159      33.450  33.210  49.140  0.00  0.00           C 0
+ATOM   2585   CA ASP   161      37.050  34.530  52.440  0.00  0.00           C 0
+ATOM   2582    O LEU   160      36.040  33.160  54.610  0.05  7.50           O 0
+ATOM   2577  CD2 LEU   160      37.560  30.330  54.770  0.00  0.00           C 0
+ATOM   2604  OD2 ASP   162      38.540  37.710  55.950  0.00  0.00           O 0
+ATOM   2591  OD1 ASP   161      39.080  36.460  51.900  0.09  9.64           O 0
+ATOM   2595    N ASP   162      36.650  36.480  53.930  0.00  0.00           N 0
+ATOM   2587   CB ASP   161      37.700  34.610  51.070  0.00  0.00           C 0
+ATOM   2592  OD2 ASP   161      39.150  36.050  49.820  0.58  2.14           O 0
+ATOM   2590   CG ASP   161      38.650  35.800  50.930  0.00  0.00           C 0
+TER
+END

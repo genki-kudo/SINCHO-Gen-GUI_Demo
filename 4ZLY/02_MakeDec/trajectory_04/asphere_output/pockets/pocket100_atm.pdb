@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   100:
+HEADER 0  - Pocket Score                      : 0.0023
+HEADER 1  - Drug Score                        : 0.0041
+HEADER 2  - Number of alpha spheres           :    24
+HEADER 3  - Mean alpha-sphere radius          : 3.3887
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4274
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 19.8000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 4.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 100.2946
+HEADER 10  -Pocket volume (convex hull)       : 3.1672
+HEADER 11 - Charge Score                      :    -2
+HEADER 12 - Local hydrophobic density Score   : 14.0000
+HEADER 13 - Number of apolar alpha sphere     :    15
+HEADER 14 - Proportion of apolar alpha sphere : 0.6250
+ATOM   1826   CB GLU   113      14.500  41.380  25.980  0.00  0.00           C 0
+ATOM   4337   CE MET   268      10.120  43.520  27.700  0.00  0.00           C 0
+ATOM   1822    N GLU   113      15.640  43.450  26.830  0.00  0.00           N 0
+ATOM   1766    O GLN   109      15.360  43.920  23.960  0.65  1.07           O 0
+ATOM   4330   CB MET   268       9.230  46.530  26.680  0.00  0.00           C 0
+ATOM   1762  NE2 GLN   109      11.440  44.100  20.430  0.62  8.75           N 0
+ATOM   4342    O MET   268       7.930  47.140  23.870  0.00  0.00           O 0
+ATOM   1757   CG GLN   109      13.350  45.010  21.610  0.00  0.00           C 0
+ATOM   1824   CA GLU   113      15.070  42.170  27.150  0.00  0.00           C 0
+ATOM   4374   CB GLU   271      11.640  48.730  22.210  0.00  0.00           C 0
+ATOM   4328   CA MET   268       9.240  47.760  25.790  0.00  0.00           C 0
+ATOM   1760   CD GLN   109      12.410  45.020  20.420  0.00  0.00           C 0
+ATOM   4333   CG MET   268      10.620  46.190  27.200  0.00  0.00           C 0
+ATOM   1816  CD2 LEU   112      13.470  47.650  26.050  0.00  0.00           C 0
+ATOM   1810   CG LEU   112      14.310  46.900  27.080  0.00  0.00           C 0
+ATOM   1834  OE2 GLU   113      12.600  40.050  24.400  0.11  8.57           O 0
+TER
+END

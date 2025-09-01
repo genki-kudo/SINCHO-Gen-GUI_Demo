@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   155:
+HEADER 0  - Pocket Score                      : -0.0327
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 4.3224
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.8055
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 10.8000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 5.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 531.2256
+HEADER 10  -Pocket volume (convex hull)       : 16.3740
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     0
+HEADER 14 - Proportion of apolar alpha sphere : 0.0000
+ATOM   3463   CA THR   215      40.460  50.930  41.110  0.00  0.00           C 0
+ATOM   3460    O PHE   214      38.990  50.910  38.670  0.53  2.14           O 0
+ATOM   3461    N THR   215      40.520  51.880  40.010  0.00  0.00           N 0
+ATOM   3467  CG2 THR   215      42.930  50.720  41.690  0.00  0.00           C 0
+ATOM   3459    C PHE   214      39.740  51.850  38.920  0.00  0.00           C 0
+ATOM   2804  NH2 ARG   175      37.920  48.380  39.470  0.41  6.56           N 0
+ATOM   3440    O ARG   213      40.900  54.480  35.870  0.75  5.36           O 0
+ATOM   3443   CA PHE   214      39.720  53.130  38.080  0.00  0.00           C 0
+ATOM   3441    N PHE   214      39.520  52.850  36.680  0.00  0.00           N 0
+ATOM   3416    O GLU   212      39.480  50.390  34.730  0.81  7.50           O 0
+ATOM   3439    C ARG   213      40.060  53.600  35.710  0.00  0.00           C 0
+ATOM   3432   CZ ARG   213      41.900  52.030  30.550  0.00  0.00           C 0
+ATOM   3436  NH2 ARG   213      41.930  50.680  30.440  0.53  8.75           N 0
+ATOM   3433  NH1 ARG   213      42.970  52.640  30.020  0.00  0.00           N 0
+ATOM   3427   CD ARG   213      40.650  54.050  31.290  0.00  0.00           C 0
+ATOM   3430   NE ARG   213      40.820  52.610  31.090  0.00  0.00           N 0
+ATOM   3419   CA ARG   213      39.620  53.200  34.320  0.00  0.00           C 0
+TER
+END

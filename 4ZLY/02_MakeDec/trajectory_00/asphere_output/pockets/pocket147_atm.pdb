@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   147:
+HEADER 0  - Pocket Score                      : -0.0411
+HEADER 1  - Drug Score                        : 0.0003
+HEADER 2  - Number of alpha spheres           :    18
+HEADER 3  - Mean alpha-sphere radius          : 4.2796
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6950
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 19.0000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 6.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 609.5275
+HEADER 10  -Pocket volume (convex hull)       : 9.0253
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 6.0000
+HEADER 13 - Number of apolar alpha sphere     :     7
+HEADER 14 - Proportion of apolar alpha sphere : 0.3889
+ATOM   3756  NE2 HIE   233      28.430  58.230  24.660  0.00  0.00           N 0
+ATOM   3717   CD ARG   231      22.410  57.800  27.220  0.00  0.00           C 0
+ATOM   3711   CB ARG   231      24.120  57.480  28.990  0.00  0.00           C 0
+ATOM   3723  NH1 ARG   231      21.290  59.380  25.150  0.59  7.66           N 0
+ATOM   3752   CG HIE   233      27.480  56.730  23.440  0.00  0.00           C 0
+ATOM   3754  CE1 HIE   233      29.170  58.100  23.540  0.00  0.00           C 0
+ATOM   3726  NH2 ARG   231      21.420  57.660  23.690  0.00  0.00           N 0
+ATOM   3730    O ARG   231      26.790  56.600  27.800  0.52  5.36           O 0
+ATOM   3690   CB TYR   230      28.590  58.490  31.860  0.00  0.00           C 0
+ATOM   3707    N ARG   231      25.830  57.290  30.720  0.82  2.19           N 0
+ATOM   3758  CD2 HIE   233      27.370  57.360  24.660  0.00  0.00           C 0
+ATOM   3722   CZ ARG   231      21.600  58.090  24.950  0.00  0.00           C 0
+ATOM   3747   CA HIE   233      25.410  55.160  23.770  0.00  0.00           C 0
+ATOM   3720   NE ARG   231      21.960  57.260  25.930  0.00  0.00           N 0
+ATOM   3749   CB HIE   233      26.550  55.680  22.900  0.00  0.00           C 0
+ATOM   3761    O HIE   233      23.670  54.630  22.230  0.00  0.00           O 0
+TER
+END

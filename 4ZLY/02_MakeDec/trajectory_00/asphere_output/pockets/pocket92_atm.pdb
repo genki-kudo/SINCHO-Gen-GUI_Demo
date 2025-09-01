@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    92:
+HEADER 0  - Pocket Score                      : 0.0128
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    20
+HEADER 3  - Mean alpha-sphere radius          : 3.6190
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4661
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 16.7000
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 266.4685
+HEADER 10  -Pocket volume (convex hull)       : 7.4893
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     1
+HEADER 14 - Proportion of apolar alpha sphere : 0.0500
+ATOM   1222    O THR    78      25.990  14.000  51.920  0.00  0.00           O 0
+ATOM     50  CE1 TYR     5      21.010  10.630  49.910  0.00  0.00           C 0
+ATOM    150   CD PRO    12      24.600  11.230  46.610  0.00  0.00           C 0
+ATOM     53   OH TYR     5      21.690   8.590  48.810  0.00  0.00           O 0
+ATOM   1219  OG1 THR    78      23.370  15.470  52.690  0.71  3.21           O 0
+ATOM   1209    N THR    78      24.930  16.110  50.420  0.00  0.00           N 0
+ATOM    153   CG PRO    12      26.100  10.930  46.460  0.00  0.00           C 0
+ATOM    179   NZ LYS    13      23.890   6.460  47.110  0.69  7.66           N 0
+ATOM   1244    O LYS    79      28.850  12.670  53.330  0.00  0.00           O 0
+ATOM   1256  OE1 GLN    80      28.290  13.000  48.130  0.92  8.57           O 0
+ATOM   1207    C CYS    77      25.610  16.120  49.260  0.00  0.00           C 0
+ATOM   1200   CA CYS    77      24.860  15.850  47.970  0.00  0.00           C 0
+ATOM   1202   CB CYS    77      25.740  15.230  46.870  0.00  0.00           C 0
+ATOM    136    O ILE    10      22.330  13.630  46.830  0.00  0.00           O 0
+ATOM   1197    O VAL    76      22.470  16.960  48.930  0.00  0.00           O 0
+ATOM     48  CD1 TYR     5      19.990  11.450  50.430  0.00  0.00           C 0
+ATOM    107   CB GLU     9      19.570  15.740  50.520  0.00  0.00           C 0
+TER
+END

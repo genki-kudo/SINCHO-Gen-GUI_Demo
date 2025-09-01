@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   154:
+HEADER 0  - Pocket Score                      : -0.0305
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    28
+HEADER 3  - Mean alpha-sphere radius          : 4.1182
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6799
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -2.2857
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.1429
+HEADER 9  - Pocket volume (Monte Carlo)       : 702.1180
+HEADER 10  -Pocket volume (convex hull)       : 66.0579
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 8.0000
+HEADER 13 - Number of apolar alpha sphere     :     9
+HEADER 14 - Proportion of apolar alpha sphere : 0.3214
+ATOM   1050   CB GLU    68      10.140  30.060  33.990  0.00  0.00           C 0
+ATOM   1040  NE2 HIE    67       9.440  35.210  37.560  0.00  0.00           N 0
+ATOM   1938  OE2 GLU   120      10.350  37.870  32.240  0.88  6.43           O 0
+ATOM   1057  OE1 GLU    68       9.220  29.490  31.270  0.00  0.00           O 0
+ATOM   1042  CD2 HIE    67       9.410  34.160  38.460  0.00  0.00           C 0
+ATOM   1046    N GLU    68      10.520  30.540  36.330  0.00  0.00           N 0
+ATOM   1038  CE1 HIE    67      10.540  34.980  36.850  0.00  0.00           C 0
+ATOM   1068   CG LYS    69      12.950  34.130  33.070  0.00  0.00           C 0
+ATOM   1061    N LYS    69      12.700  32.060  35.240  0.00  0.00           N 0
+ATOM   1936   CD GLU   120       9.830  38.960  32.560  0.00  0.00           C 0
+ATOM   1930   CB GLU   120      11.000  38.760  34.800  0.00  0.00           C 0
+ATOM   1933   CG GLU   120      10.230  39.680  33.840  0.00  0.00           C 0
+ATOM   1031   CA HIE    67      10.330  30.890  38.700  0.00  0.00           C 0
+ATOM   1028    O SER    66       8.320  30.300  40.630  0.00  0.00           O 0
+ATOM   4229  CD2 LEU   261       8.780  42.860  36.150  0.00  0.00           C 0
+ATOM   1928   CA GLU   120      11.310  39.440  36.120  0.00  0.00           C 0
+ATOM   1979  OE1 GLU   123       7.210  40.400  39.980  0.00  0.00           O 0
+ATOM   1937  OE1 GLU   120       9.020  39.560  31.820  0.80  6.43           O 0
+ATOM   1074   CE LYS    69      11.950  35.150  31.230  0.00  0.00           C 0
+ATOM   1077   NZ LYS    69      11.610  36.240  30.290  0.00  0.00           N 0
+ATOM   1940    O GLU   120      10.760  38.070  37.970  0.22  1.07           O 0
+ATOM   1071   CD LYS    69      12.870  35.500  32.390  0.00  0.00           C 0
+TER
+END

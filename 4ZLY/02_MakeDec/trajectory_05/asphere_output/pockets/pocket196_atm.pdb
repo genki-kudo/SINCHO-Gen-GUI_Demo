@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   196:
+HEADER 0  - Pocket Score                      : -0.0778
+HEADER 1  - Drug Score                        : 0.0007
+HEADER 2  - Number of alpha spheres           :    14
+HEADER 3  - Mean alpha-sphere radius          : 4.0585
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5768
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 11.6667
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 4.1667
+HEADER 9  - Pocket volume (Monte Carlo)       : 294.1277
+HEADER 10  -Pocket volume (convex hull)       : 8.4537
+HEADER 11 - Charge Score                      :    -2
+HEADER 12 - Local hydrophobic density Score   : 9.0000
+HEADER 13 - Number of apolar alpha sphere     :    10
+HEADER 14 - Proportion of apolar alpha sphere : 0.7143
+ATOM   2865   CB PRO   179      26.350  55.510  50.150  0.00  0.00           C 0
+ATOM   2862   CG PRO   179      26.330  55.770  48.640  0.00  0.00           C 0
+ATOM   4017   CG GLU   249      23.250  60.370  47.010  0.00  0.00           C 0
+ATOM   3599    O ALA   224      29.960  59.710  48.730  0.00  0.00           O 0
+ATOM   4014   CB GLU   249      22.330  59.480  47.830  0.00  0.00           C 0
+ATOM   4024    O GLU   249      21.230  56.890  49.100  0.00  0.00           O 0
+ATOM   2933   CE MET   183      27.490  56.850  53.730  0.00  0.00           C 0
+ATOM   2876   CB GLU   180      22.910  52.520  53.090  0.00  0.00           C 0
+ATOM   2949  CE1 TYR   184      25.810  55.900  57.070  0.00  0.00           C 0
+ATOM   2947  CD1 TYR   184      25.500  54.570  56.770  0.00  0.00           C 0
+ATOM   2874   CA GLU   180      24.430  52.500  52.960  0.00  0.00           C 0
+ATOM   2872    N GLU   180      24.850  53.110  51.710  0.60  2.19           N 0
+ATOM   2884  OE2 GLU   180      21.910  53.030  50.530  0.44  3.21           O 0
+TER
+END

@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   209:
+HEADER 0  - Pocket Score                      : -0.1321
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    16
+HEADER 3  - Mean alpha-sphere radius          : 4.5309
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7998
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -2.7500
+HEADER 7  - Polarity Score                    :     2
+HEADER 8  - Amino Acid based volume Score     : 4.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 428.1117
+HEADER 10  -Pocket volume (convex hull)       : 7.4251
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     1
+HEADER 14 - Proportion of apolar alpha sphere : 0.0625
+ATOM   3747   CA HIE   233      26.820  54.040  23.610  0.00  0.00           C 0
+ATOM   3744    O PRO   232      25.220  54.850  25.900  0.00  0.00           O 0
+ATOM   3730    O ARG   231      27.220  56.380  27.810  0.00  0.00           O 0
+ATOM   3726  NH2 ARG   231      21.300  58.700  24.400  0.00  0.00           N 0
+ATOM   3745    N HIE   233      27.050  53.790  25.020  0.78  2.19           N 0
+ATOM   3743    C PRO   232      26.260  54.210  26.010  0.00  0.00           C 0
+ATOM   3722   CZ ARG   231      21.590  59.160  25.620  0.00  0.00           C 0
+ATOM   3717   CD ARG   231      22.800  58.450  27.750  0.00  0.00           C 0
+ATOM   3723  NH1 ARG   231      21.360  60.450  25.900  0.61  7.66           N 0
+ATOM   3720   NE ARG   231      22.150  58.270  26.450  0.71  2.19           N 0
+ATOM   3761    O HIE   233      24.820  54.050  22.280  0.32  6.43           O 0
+ATOM   3753  ND1 HIE   233      27.760  54.590  20.500  0.00  0.00           N 0
+ATOM   3714   CG ARG   231      23.800  57.350  28.090  0.00  0.00           C 0
+ATOM   3711   CB ARG   231      24.860  57.820  29.090  0.00  0.00           C 0
+ATOM   3790    O ALA   235      22.090  55.570  25.320  0.59  1.07           O 0
+TER
+END

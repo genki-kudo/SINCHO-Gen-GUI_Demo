@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    87:
+HEADER 0  - Pocket Score                      : 0.0226
+HEADER 1  - Drug Score                        : 0.0015
+HEADER 2  - Number of alpha spheres           :    17
+HEADER 3  - Mean alpha-sphere radius          : 3.8134
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6405
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 20.3333
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 5.6667
+HEADER 9  - Pocket volume (Monte Carlo)       : 288.1024
+HEADER 10  -Pocket volume (convex hull)       : 23.8238
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 9.0000
+HEADER 13 - Number of apolar alpha sphere     :    10
+HEADER 14 - Proportion of apolar alpha sphere : 0.5882
+ATOM    259  CD1 LEU    18      26.960  12.970  29.890  0.00  0.00           C 0
+ATOM    492   CE LYS    33      23.350  13.660  28.580  0.00  0.00           C 0
+ATOM    464   OH TYR    31      24.270  17.020  27.990  0.00  0.00           O 0
+ATOM    263  CD2 LEU    18      29.060  12.400  28.650  0.00  0.00           C 0
+ATOM    463   CZ TYR    31      25.140  17.720  28.780  0.00  0.00           C 0
+ATOM    461  CE1 TYR    31      24.970  19.100  29.030  0.00  0.00           C 0
+ATOM    285   NZ LYS    19      28.730  19.510  25.570  0.00  0.00           N 0
+ATOM   1421  CE2 TYR    89      23.520  22.300  28.270  0.00  0.00           C 0
+ATOM    603  OD2 ASP    39      21.700  17.220  28.360  0.00  0.00           O 0
+ATOM    254   CB LEU    18      28.950  14.500  30.140  0.00  0.00           C 0
+ATOM    276   CG LYS    19      31.270  17.950  27.930  0.00  0.00           C 0
+ATOM    268    O LEU    18      32.130  15.240  29.730  0.44  7.50           O 0
+ATOM    466  CE2 TYR    31      26.290  17.080  29.290  0.00  0.00           C 0
+ATOM    282   CE LYS    19      29.260  19.180  26.910  0.00  0.00           C 0
+ATOM    279   CD LYS    19      30.730  18.780  26.780  0.00  0.00           C 0
+ATOM   1419   OH TYR    89      25.460  23.310  27.290  0.67  5.36           O 0
+TER
+END

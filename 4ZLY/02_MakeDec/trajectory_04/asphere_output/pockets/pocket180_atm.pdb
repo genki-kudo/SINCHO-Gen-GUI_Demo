@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   180:
+HEADER 0  - Pocket Score                      : -0.1327
+HEADER 1  - Drug Score                        : 0.0003
+HEADER 2  - Number of alpha spheres           :    19
+HEADER 3  - Mean alpha-sphere radius          : 4.2329
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7150
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 10.4000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 4.6000
+HEADER 9  - Pocket volume (Monte Carlo)       : 450.1611
+HEADER 10  -Pocket volume (convex hull)       : 22.0850
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 3.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.2105
+ATOM   3722   CZ ARG   231      21.280  58.730  25.990  0.00  0.00           C 0
+ATOM   3720   NE ARG   231      21.890  57.970  26.900  0.74  1.09           N 0
+ATOM   3726  NH2 ARG   231      21.010  58.210  24.780  0.00  0.00           N 0
+ATOM   3744    O PRO   232      24.820  54.940  26.080  0.54  2.14           O 0
+ATOM   3730    O ARG   231      26.910  56.540  28.080  0.00  0.00           O 0
+ATOM   3758  CD2 HIE   233      27.490  56.240  21.040  0.00  0.00           C 0
+ATOM   3723  NH1 ARG   231      20.910  60.000  26.200  0.00  0.00           N 0
+ATOM   3714   CG ARG   231      23.580  57.400  28.590  0.00  0.00           C 0
+ATOM   3749   CB HIE   233      27.550  54.580  22.940  0.00  0.00           C 0
+ATOM   3747   CA HIE   233      26.260  54.570  23.760  0.00  0.00           C 0
+ATOM   3761    O HIE   233      24.320  54.410  22.340  0.09  8.57           O 0
+ATOM   3717   CD ARG   231      22.500  58.380  28.170  0.00  0.00           C 0
+ATOM   3711   CB ARG   231      24.670  57.840  29.560  0.00  0.00           C 0
+ATOM   3745    N HIE   233      26.560  54.090  25.100  0.60  4.37           N 0
+ATOM   3701  CE2 TYR   230      31.180  55.010  29.050  0.00  0.00           C 0
+ATOM   3741   CA PRO   232      26.440  53.920  27.560  0.00  0.00           C 0
+ATOM   3790    O ALA   235      21.390  55.510  25.260  0.38  2.14           O 0
+TER
+END

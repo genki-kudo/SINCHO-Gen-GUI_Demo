@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   108:
+HEADER 0  - Pocket Score                      : -0.0115
+HEADER 1  - Drug Score                        : 0.0017
+HEADER 2  - Number of alpha spheres           :    18
+HEADER 3  - Mean alpha-sphere radius          : 3.4749
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4617
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 15.2857
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.1429
+HEADER 9  - Pocket volume (Monte Carlo)       : 70.6354
+HEADER 10  -Pocket volume (convex hull)       : 1.3359
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 11.0000
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.6667
+ATOM   2035  OE2 GLU   126      11.430  43.550  45.880  0.67  1.07           O 0
+ATOM   4124   CA THR   256      11.160  48.830  44.000  0.00  0.00           C 0
+ATOM   4126   CB THR   256       9.750  48.590  44.530  0.00  0.00           C 0
+ATOM   2034  OE1 GLU   126      10.480  43.930  47.740  0.60  7.50           O 0
+ATOM   3028   CB SER   189      14.900  45.470  49.040  0.00  0.00           C 0
+ATOM   4128  CG2 THR   256       9.630  49.600  45.680  0.00  0.00           C 0
+ATOM   3031   OG SER   189      14.570  46.600  49.810  0.58  2.14           O 0
+ATOM   3048   CE LYS   190      13.270  50.580  47.910  0.00  0.00           C 0
+ATOM   4136    N PHE   257      11.540  46.600  42.910  0.00  0.00           N 0
+ATOM   4152  CD2 PHE   257      14.140  44.180  43.630  0.00  0.00           C 0
+ATOM   3090  CG1 ILE   193      16.000  47.960  44.110  0.00  0.00           C 0
+ATOM   3093  CD1 ILE   193      15.020  47.730  42.960  0.00  0.00           C 0
+ATOM   3045   CD LYS   190      14.620  49.880  47.810  0.00  0.00           C 0
+ATOM   4121    O PRO   255      13.590  50.480  44.500  0.00  0.00           O 0
+ATOM   3034    O SER   189      17.290  46.340  47.020  0.00  0.00           O 0
+TER
+END

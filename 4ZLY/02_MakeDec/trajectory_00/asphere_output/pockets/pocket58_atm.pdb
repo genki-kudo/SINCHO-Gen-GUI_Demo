@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    58:
+HEADER 0  - Pocket Score                      : 0.1403
+HEADER 1  - Drug Score                        : 0.0025
+HEADER 2  - Number of alpha spheres           :    19
+HEADER 3  - Mean alpha-sphere radius          : 3.1479
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.3369
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 54.3333
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 5.2222
+HEADER 9  - Pocket volume (Monte Carlo)       : 64.4330
+HEADER 10  -Pocket volume (convex hull)       : 2.0515
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 13.0000
+HEADER 13 - Number of apolar alpha sphere     :    14
+HEADER 14 - Proportion of apolar alpha sphere : 0.7368
+ATOM   2471    C GLY   154      23.600  34.100  48.810  0.00  0.00           C 0
+ATOM    962   CE MET    62      21.150  28.440  49.320  0.00  0.00           C 0
+ATOM   2473    N LEU   155      24.160  33.330  47.870  0.00  0.00           N 0
+ATOM   2472    O GLY   154      23.890  34.030  49.990  0.00  0.00           O 0
+ATOM    961   SD MET    62      20.280  29.490  48.130  0.00  0.00           S 0
+ATOM   2100   CZ PHE   130      18.820  33.580  49.070  0.00  0.00           C 0
+ATOM   2465    O PHE   153      21.730  33.050  46.650  0.00  0.00           O 0
+ATOM   2475   CA LEU   155      25.150  32.310  48.080  0.00  0.00           C 0
+ATOM    895   CG GLU    58      20.160  30.210  52.770  0.00  0.00           C 0
+ATOM   2542  CE2 TYR   158      23.880  31.680  53.240  0.00  0.00           C 0
+ATOM   2522  NH2 ARG   157      20.880  34.650  52.270  0.85  6.56           N 0
+ATOM    900  OE2 GLU    58      19.620  32.470  53.260  0.63  5.36           O 0
+ATOM    892   CB GLU    58      20.700  28.980  53.480  0.00  0.00           C 0
+ATOM    842  CD1 PHE    55      24.130  26.530  50.830  0.00  0.00           C 0
+ATOM   2544  CD2 TYR   158      25.060  31.420  52.530  0.00  0.00           C 0
+ATOM   2482  CD1 LEU   155      25.820  29.360  47.930  0.00  0.00           C 0
+TER
+END

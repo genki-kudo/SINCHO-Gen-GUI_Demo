@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   104:
+HEADER 0  - Pocket Score                      : -0.0038
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :    13
+HEADER 3  - Mean alpha-sphere radius          : 3.6331
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6076
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 46.3750
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 3.8750
+HEADER 9  - Pocket volume (Monte Carlo)       : 226.6278
+HEADER 10  -Pocket volume (convex hull)       : 10.8598
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.1538
+ATOM   2921    O LEU   182      32.120  51.390  52.420  0.68  1.07           O 0
+ATOM   2685  CG1 VAL   168      35.820  48.990  54.310  0.00  0.00           C 0
+ATOM   2938    O MET   183      31.190  52.060  56.130  0.00  0.00           O 0
+ATOM   2672   CB SER   167      31.520  46.990  52.990  0.00  0.00           C 0
+ATOM   2967   OG SER   185      29.620  46.860  55.580  0.58  6.43           O 0
+ATOM   2902    O VAL   181      29.140  49.550  52.790  0.00  0.00           O 0
+ATOM   2958    C TYR   184      27.880  50.060  56.550  0.00  0.00           C 0
+ATOM   2959    O TYR   184      27.260  49.660  57.540  0.00  0.00           O 0
+ATOM   2689  CG2 VAL   168      36.550  46.940  55.350  0.00  0.00           C 0
+ATOM   2668    N SER   167      32.570  44.900  53.390  0.00  0.00           N 0
+ATOM   2664   OG SER   166      33.780  43.410  56.000  0.54  8.57           O 0
+ATOM   2941   CA TYR   184      28.490  51.450  56.610  0.00  0.00           C 0
+ATOM   2956  CD2 TYR   184      29.130  53.940  58.600  0.00  0.00           C 0
+ATOM   2679    N VAL   168      34.880  46.480  52.990  0.00  0.00           N 0
+ATOM   2964   CB SER   185      28.310  46.990  56.110  0.00  0.00           C 0
+TER
+END

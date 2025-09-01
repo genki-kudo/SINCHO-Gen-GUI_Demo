@@ -1,0 +1,43 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   114:
+HEADER 0  - Pocket Score                      : 0.0313
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    26
+HEADER 3  - Mean alpha-sphere radius          : 3.6983
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5593
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 10.0000
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.8571
+HEADER 9  - Pocket volume (Monte Carlo)       : 322.8011
+HEADER 10  -Pocket volume (convex hull)       : 37.4618
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 3.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.1538
+ATOM   1528   CB ASN    97      31.000  34.740  28.600  0.00  0.00           C 0
+ATOM   1613  OE1 GLU   101      30.150  34.560  20.400  0.00  0.00           O 0
+ATOM   1467    O ASN    92      27.060  31.290  27.900  0.00  0.00           O 0
+ATOM   1537    O ASN    97      30.010  36.470  25.960  0.00  0.00           O 0
+ATOM   1609   CG GLU   101      27.980  35.630  20.350  0.00  0.00           C 0
+ATOM   1653  NH2 ARG   103      26.220  30.470  19.250  0.00  0.00           N 0
+ATOM   1462  OD1 ASN    92      25.420  29.750  24.000  0.52  2.14           O 0
+ATOM   1647   NE ARG   103      26.960  32.340  18.070  0.00  0.00           N 0
+ATOM   1644   CD ARG   103      27.650  33.110  17.030  0.00  0.00           C 0
+ATOM   1650  NH1 ARG   103      27.620  30.150  17.490  0.59  7.66           N 0
+ATOM   1649   CZ ARG   103      26.880  31.000  18.210  0.00  0.00           C 0
+ATOM   1606   CB GLU   101      28.110  36.590  21.540  0.00  0.00           C 0
+ATOM   1540   CA TYR    98      27.340  35.880  26.170  0.00  0.00           C 0
+ATOM   1538    N TYR    98      28.320  35.890  27.230  0.00  0.00           N 0
+ATOM   1536    C ASN    97      29.620  36.180  27.090  0.00  0.00           C 0
+ATOM   1670  NE2 HID   104      24.840  33.940  19.480  0.48  1.09           N 0
+ATOM   1548  CE1 TYR    98      23.820  33.940  24.040  0.00  0.00           C 0
+ATOM   1671  CD2 HID   104      24.560  35.300  19.600  0.00  0.00           C 0
+ATOM   1711   CZ PHE   106      24.350  38.820  22.240  0.00  0.00           C 0
+ATOM   1546  CD1 TYR    98      24.900  34.140  24.910  0.00  0.00           C 0
+ATOM   1458   CB ASN    92      24.790  30.600  26.060  0.00  0.00           C 0
+TER
+END

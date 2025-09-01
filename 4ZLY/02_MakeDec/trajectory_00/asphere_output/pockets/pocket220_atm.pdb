@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   220:
+HEADER 0  - Pocket Score                      : -0.1541
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    16
+HEADER 3  - Mean alpha-sphere radius          : 4.4202
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5456
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 4.4000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.2000
+HEADER 9  - Pocket volume (Monte Carlo)       : 416.5550
+HEADER 10  -Pocket volume (convex hull)       : 2.1883
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 3.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.2500
+ATOM    114  OE1 GLU     9      21.070  15.840  53.780  0.60  3.21           O 0
+ATOM   1236   CE LYS    79      24.220  14.030  57.870  0.00  0.00           C 0
+ATOM   1239   NZ LYS    79      23.520  15.300  57.580  0.00  0.00           N 0
+ATOM    115  OE2 GLU     9      19.610  14.420  53.090  0.61  3.21           O 0
+ATOM   1233   CD LYS    79      24.930  13.470  56.630  0.00  0.00           C 0
+ATOM     50  CE1 TYR     5      21.010  10.630  49.910  0.00  0.00           C 0
+ATOM   1227   CB LYS    79      26.780  13.680  55.000  0.00  0.00           C 0
+ATOM     53   OH TYR     5      21.690   8.590  48.810  0.00  0.00           O 0
+ATOM   1222    O THR    78      25.990  14.000  51.920  0.00  0.00           O 0
+ATOM   1219  OG1 THR    78      23.370  15.470  52.690  0.71  3.21           O 0
+ATOM     48  CD1 TYR     5      19.990  11.450  50.430  0.00  0.00           C 0
+ATOM   1244    O LYS    79      28.850  12.670  53.330  0.00  0.00           O 0
+ATOM     39    O GLY     4      18.340  10.670  54.570  0.00  0.00           O 0
+TER
+END

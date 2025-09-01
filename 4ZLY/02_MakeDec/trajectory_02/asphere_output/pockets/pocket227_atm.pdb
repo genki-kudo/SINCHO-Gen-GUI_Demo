@@ -1,0 +1,59 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   227:
+HEADER 0  - Pocket Score                      : -0.2291
+HEADER 1  - Drug Score                        : 0.0032
+HEADER 2  - Number of alpha spheres           :    64
+HEADER 3  - Mean alpha-sphere radius          : 4.1611
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5515
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 35.8182
+HEADER 7  - Polarity Score                    :     7
+HEADER 8  - Amino Acid based volume Score     : 5.0909
+HEADER 9  - Pocket volume (Monte Carlo)       : 866.3449
+HEADER 10  -Pocket volume (convex hull)       : 166.2813
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 13.0000
+HEADER 13 - Number of apolar alpha sphere     :    20
+HEADER 14 - Proportion of apolar alpha sphere : 0.3125
+ATOM   3412   CD GLU   212      39.210  51.230  31.920  0.00  0.00           C 0
+ATOM   3413  OE1 GLU   212      40.310  50.660  31.980  0.00  0.00           O 0
+ATOM   3341   CE LYS   208      35.500  47.050  26.400  0.00  0.00           C 0
+ATOM   3414  OE2 GLU   212      39.080  52.350  31.380  0.50  7.50           O 0
+ATOM   3406   CB GLU   212      36.830  51.530  32.910  0.00  0.00           C 0
+ATOM   3409   CG GLU   212      37.920  50.570  32.430  0.00  0.00           C 0
+ATOM   3335   CG LYS   208      33.610  47.510  27.980  0.00  0.00           C 0
+ATOM   3332   CB LYS   208      33.170  47.760  29.420  0.00  0.00           C 0
+ATOM   3350    N MET   209      34.200  47.060  32.430  0.54  4.37           N 0
+ATOM   3366    O MET   209      33.580  49.660  33.340  0.63  2.14           O 0
+ATOM   3338   CD LYS   208      35.000  46.900  27.830  0.00  0.00           C 0
+ATOM   3699   OH TYR   230      32.700  54.470  29.700  0.00  0.00           O 0
+ATOM   3344   NZ LYS   208      34.600  46.530  25.350  0.00  0.00           N 0
+ATOM   3753  ND1 HIE   233      29.030  56.000  24.850  0.60  8.75           N 0
+ATOM   3298   OG SER   205      28.280  50.120  29.420  0.80  4.29           O 0
+ATOM   3696  CE1 TYR   230      30.790  55.860  29.130  0.00  0.00           C 0
+ATOM   3706    O TYR   230      26.760  55.830  31.320  0.00  0.00           O 0
+ATOM   3694  CD1 TYR   230      29.820  56.770  29.570  0.00  0.00           C 0
+ATOM   3222  NE1 TRP   201      27.380  52.980  31.910  0.00  0.00           N 0
+ATOM   3745    N HIE   233      26.340  54.330  25.080  0.71  4.37           N 0
+ATOM   3769   CG LEU   234      25.230  50.640  22.010  0.00  0.00           C 0
+ATOM   3290    O TYR   204      26.450  48.680  26.290  0.59  5.36           O 0
+ATOM   3762    N LEU   234      24.520  53.100  23.340  0.00  0.00           N 0
+ATOM   3749   CB HIE   233      27.420  55.120  22.980  0.00  0.00           C 0
+ATOM   3738   CB PRO   232      25.210  52.530  27.780  0.00  0.00           C 0
+ATOM   3771  CD1 LEU   234      25.660  49.190  22.220  0.00  0.00           C 0
+ATOM   3293   CA SER   205      28.510  48.230  28.110  0.00  0.00           C 0
+ATOM   3301    O SER   205      30.430  46.890  27.580  0.71  3.21           O 0
+ATOM   3311  CD1 LEU   206      28.420  45.120  23.150  0.00  0.00           C 0
+ATOM   3306   CB LEU   206      29.040  44.570  25.480  0.00  0.00           C 0
+ATOM   3309   CG LEU   206      27.900  45.010  24.580  0.00  0.00           C 0
+ATOM   3295   CB SER   205      29.170  49.050  29.210  0.00  0.00           C 0
+ATOM   3225  CZ2 TRP   201      29.730  52.010  31.990  0.00  0.00           C 0
+ATOM   3300    C SER   205      29.220  46.930  27.750  0.00  0.00           C 0
+ATOM   3227  CH2 TRP   201      30.450  50.880  32.390  0.00  0.00           C 0
+ATOM   3741   CA PRO   232      25.800  53.890  27.420  0.00  0.00           C 0
+ATOM   3731    N PRO   232      25.350  54.790  28.450  0.00  0.00           N 0
+TER
+END

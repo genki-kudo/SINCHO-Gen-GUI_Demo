@@ -1,0 +1,40 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   162:
+HEADER 0  - Pocket Score                      : -0.0384
+HEADER 1  - Drug Score                        : 0.0006
+HEADER 2  - Number of alpha spheres           :    24
+HEADER 3  - Mean alpha-sphere radius          : 3.6045
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4558
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 9.0000
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.2500
+HEADER 9  - Pocket volume (Monte Carlo)       : 476.7289
+HEADER 10  -Pocket volume (convex hull)       : 23.1854
+HEADER 11 - Charge Score                      :    -3
+HEADER 12 - Local hydrophobic density Score   : 2.0000
+HEADER 13 - Number of apolar alpha sphere     :     3
+HEADER 14 - Proportion of apolar alpha sphere : 0.1250
+ATOM   2307   CB ASN   143      18.630  29.040  29.660  0.00  0.00           C 0
+ATOM   1403  OE2 GLU    88      17.030  25.890  33.880  0.38  4.29           O 0
+ATOM   2312  ND2 ASN   143      16.260  28.860  29.110  0.00  0.00           N 0
+ATOM   2326  OD2 ASP   144      17.530  25.100  27.790  0.00  0.00           O 0
+ATOM   1448   CB ALA    91      22.680  25.260  27.280  0.00  0.00           C 0
+ATOM   1426    O TYR    89      20.970  24.660  32.530  0.67  9.64           O 0
+ATOM   1444    N ALA    91      23.220  26.100  29.430  0.00  0.00           N 0
+ATOM   1437   SD MET    90      20.780  28.290  33.570  0.00  0.00           S 0
+ATOM   1423  CD2 TYR    89      23.370  22.210  30.570  0.00  0.00           C 0
+ATOM    603  OD2 ASP    39      19.220  18.950  29.870  0.20  5.36           O 0
+ATOM   1421  CE2 TYR    89      24.210  22.440  29.470  0.00  0.00           C 0
+ATOM    464   OH TYR    31      23.910  17.710  28.760  0.00  0.00           O 0
+ATOM    601   CG ASP    39      20.280  18.720  30.490  0.00  0.00           C 0
+ATOM   2317    N ASP   144      19.360  27.590  27.100  0.00  0.00           N 0
+ATOM    598   CB ASP    39      20.580  19.430  31.790  0.00  0.00           C 0
+ATOM   2321   CB ASP   144      18.600  25.690  25.760  0.00  0.00           C 0
+ATOM    602  OD1 ASP    39      21.190  17.980  30.060  0.36  3.21           O 0
+ATOM   2305   CA ASN   143      19.980  29.080  28.950  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,34 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   132:
+HEADER 0  - Pocket Score                      : -0.0195
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    11
+HEADER 3  - Mean alpha-sphere radius          : 3.5484
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5373
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 16.8333
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.3333
+HEADER 9  - Pocket volume (Monte Carlo)       : 187.8486
+HEADER 10  -Pocket volume (convex hull)       : 9.9588
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 2.0000
+HEADER 13 - Number of apolar alpha sphere     :     3
+HEADER 14 - Proportion of apolar alpha sphere : 0.2727
+ATOM   2042   CB SER   127       7.590  38.810  45.150  0.00  0.00           C 0
+ATOM   1980  OE2 GLU   123       7.370  39.990  40.610  0.55  8.57           O 0
+ATOM   1991  CD1 TYR   124       8.980  34.350  42.350  0.00  0.00           C 0
+ATOM   2045   OG SER   127       6.310  38.400  45.590  0.00  0.00           O 0
+ATOM   4229  CD2 LEU   261       7.980  42.510  36.140  0.00  0.00           C 0
+ATOM   1933   CG GLU   120       9.880  38.550  35.140  0.00  0.00           C 0
+ATOM   1940    O GLU   120      11.010  38.690  38.340  0.66  2.14           O 0
+ATOM   1937  OE1 GLU   120       8.450  37.380  33.610  0.72  5.36           O 0
+ATOM   1985   CA TYR   124      10.330  37.400  42.490  0.00  0.00           C 0
+ATOM   1040  NE2 HIE    67       9.570  34.790  38.060  0.77  6.56           N 0
+ATOM   1042  CD2 HIE    67       9.410  33.840  39.040  0.00  0.00           C 0
+ATOM   1987   CB TYR   124      10.540  36.180  41.600  0.00  0.00           C 0
+TER
+END

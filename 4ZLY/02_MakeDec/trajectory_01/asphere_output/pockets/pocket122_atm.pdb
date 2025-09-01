@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   122:
+HEADER 0  - Pocket Score                      : 0.0005
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    14
+HEADER 3  - Mean alpha-sphere radius          : 4.1450
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5929
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 3.2500
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 5.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 297.8358
+HEADER 10  -Pocket volume (convex hull)       : 5.0847
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     1
+HEADER 14 - Proportion of apolar alpha sphere : 0.0714
+ATOM   2540   OH TYR   158      22.880  31.170  55.520  0.79  6.43           O 0
+ATOM   2526    O ARG   157      28.530  33.380  54.610  0.00  0.00           O 0
+ATOM   2519  NH1 ARG   157      22.210  34.220  54.660  0.00  0.00           N 0
+ATOM    830  OE1 GLU    54      27.140  30.360  60.830  0.00  0.00           O 0
+ATOM   2507   CB ARG   157      25.960  34.740  53.410  0.00  0.00           C 0
+ATOM   2513   CD ARG   157      24.030  36.450  53.710  0.00  0.00           C 0
+ATOM   2539   CZ TYR   158      24.010  30.730  54.880  0.00  0.00           C 0
+ATOM   2535  CD1 TYR   158      26.150  29.700  54.950  0.00  0.00           C 0
+ATOM    785   CB SER    51      30.080  28.320  56.820  0.00  0.00           C 0
+ATOM    831  OE2 GLU    54      28.670  29.590  59.580  0.55  5.36           O 0
+ATOM   2529   CA TYR   158      28.620  30.920  53.320  0.00  0.00           C 0
+ATOM   2537  CE1 TYR   158      24.950  29.980  55.600  0.00  0.00           C 0
+ATOM    829   CD GLU    54      27.590  29.390  60.190  0.00  0.00           C 0
+TER
+END

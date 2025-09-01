@@ -1,0 +1,17 @@
+
+source leaprc.protein.ff14SB
+source leaprc.gaff
+source leaprc.water.tip3p
+loadAmberPrep 4RU.prep
+loadamberparams 4RU.frcmod
+loadamberparams frcmod.ions1lm_1264_tip3p
+loadamberparams frcmod.ions234lm_1264_tip3p
+mol = loadpdb 4zly_prep.pdb
+addions2 mol Na+ 0
+addions2 mol Cl- 0
+solvatebox mol TIP3PBOX 15.0
+translate mol {-16.51, -15.928, -5.921 }
+saveamberparm mol ./complex_wat.prmtop ./complex_wat.inpcrd
+savepdb mol complex_wat.pdb
+charge mol
+quit

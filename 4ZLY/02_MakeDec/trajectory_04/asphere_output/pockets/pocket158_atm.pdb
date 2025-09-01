@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   158:
+HEADER 0  - Pocket Score                      : -0.0770
+HEADER 1  - Drug Score                        : 0.0018
+HEADER 2  - Number of alpha spheres           :    14
+HEADER 3  - Mean alpha-sphere radius          : 3.7706
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5506
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 9.6000
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 397.6575
+HEADER 10  -Pocket volume (convex hull)       : 11.3506
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 11.0000
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.8571
+ATOM   3934  CD1 TYR   244      19.440  59.760  37.130  0.00  0.00           C 0
+ATOM   3886  OG1 THR   241      16.110  58.700  32.140  0.82  7.50           O 0
+ATOM   3882  CG2 THR   241      14.600  57.870  33.910  0.00  0.00           C 0
+ATOM   3936  CE1 TYR   244      19.480  61.020  37.750  0.00  0.00           C 0
+ATOM   3878   CA THR   241      16.870  56.860  33.520  0.00  0.00           C 0
+ATOM   3813  OE1 GLU   237      18.910  61.210  30.530  0.44  5.36           O 0
+ATOM   4005  NE2 HID   248      15.600  59.200  41.800  0.00  0.00           N 0
+ATOM   4003  CE1 HID   248      16.570  60.120  41.900  0.00  0.00           C 0
+ATOM   3889    O THR   241      16.370  55.920  35.690  0.72  1.07           O 0
+ATOM   3949   CA SER   245      17.220  55.910  39.460  0.00  0.00           C 0
+ATOM   3951   CB SER   245      15.760  55.820  39.050  0.00  0.00           C 0
+ATOM   3946    O TYR   244      19.760  57.090  39.500  0.00  0.00           O 0
+ATOM   3947    N SER   245      18.150  56.090  38.360  0.00  0.00           N 0
+TER
+END

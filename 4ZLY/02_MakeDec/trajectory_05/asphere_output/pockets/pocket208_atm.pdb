@@ -1,0 +1,27 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   208:
+HEADER 0  - Pocket Score                      : -0.0951
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :     2
+HEADER 3  - Mean alpha-sphere radius          : 4.9916
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.9334
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 48.5000
+HEADER 7  - Polarity Score                    :     0
+HEADER 8  - Amino Acid based volume Score     : 3.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 190.5242
+HEADER 10  -Pocket volume (convex hull)       : 0.0000
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 1.0000
+ATOM     31    C LEU     3      15.030   8.000  56.330  0.00  0.00           C 0
+ATOM     35   CA GLY     4      16.100   8.370  54.190  0.00  0.00           C 0
+ATOM     18   CB LEU     3      14.320   6.300  58.010  0.00  0.00           C 0
+ATOM     32    O LEU     3      14.000   8.520  55.920  0.00  0.00           O 0
+ATOM     33    N GLY     4      16.130   7.970  55.580  0.00  0.00           N 0
+TER
+END

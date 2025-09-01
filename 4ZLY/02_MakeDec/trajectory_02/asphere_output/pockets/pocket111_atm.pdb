@@ -1,0 +1,51 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   111:
+HEADER 0  - Pocket Score                      : 0.0099
+HEADER 1  - Drug Score                        : 0.0007
+HEADER 2  - Number of alpha spheres           :    45
+HEADER 3  - Mean alpha-sphere radius          : 3.8896
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6212
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 8.6250
+HEADER 7  - Polarity Score                    :     7
+HEADER 8  - Amino Acid based volume Score     : 5.1250
+HEADER 9  - Pocket volume (Monte Carlo)       : 621.7622
+HEADER 10  -Pocket volume (convex hull)       : 87.1020
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 9.0000
+HEADER 13 - Number of apolar alpha sphere     :    10
+HEADER 14 - Proportion of apolar alpha sphere : 0.2222
+ATOM   4006  CD2 HID   248      17.480  59.080  41.220  0.00  0.00           C 0
+ATOM   3992    O TRP   247      21.900  57.130  42.640  0.53  2.14           O 0
+ATOM   3938   CZ TYR   244      20.460  61.420  37.810  0.00  0.00           C 0
+ATOM   3939   OH TYR   244      20.740  62.540  38.530  0.70  8.57           O 0
+ATOM   4021  OE1 GLU   249      25.380  60.610  47.960  0.67  3.21           O 0
+ATOM   3619   CA GLY   226      28.150  61.320  44.030  0.00  0.00           C 0
+ATOM   4020   CD GLU   249      24.140  60.820  47.930  0.00  0.00           C 0
+ATOM   4022  OE2 GLU   249      23.640  61.930  48.200  0.00  0.00           O 0
+ATOM   3995   CA HID   248      19.320  57.830  43.370  0.00  0.00           C 0
+ATOM   4010    N GLU   249      20.460  58.660  45.310  0.57  5.47           N 0
+ATOM   3656   NE ARG   228      24.450  57.980  41.810  0.75  2.19           N 0
+ATOM   3936  CE1 TYR   244      21.590  60.660  37.430  0.00  0.00           C 0
+ATOM   3650   CG ARG   228      25.180  58.850  39.630  0.00  0.00           C 0
+ATOM   3946    O TYR   244      19.750  57.060  38.880  0.00  0.00           O 0
+ATOM   3662  NH2 ARG   228      24.420  58.960  43.920  0.00  0.00           N 0
+ATOM   3623    O GLY   226      27.370  60.920  41.800  0.00  0.00           O 0
+ATOM   3658   CZ ARG   228      25.090  58.370  42.920  0.00  0.00           C 0
+ATOM   4000   CG HID   248      17.060  58.320  42.290  0.00  0.00           C 0
+ATOM   4081  OE2 GLU   253      12.600  60.820  45.190  0.00  0.00           O 0
+ATOM   4005  NE2 HID   248      16.360  59.370  40.440  0.71  5.47           N 0
+ATOM   4073   CB GLU   253      14.920  58.950  45.850  0.00  0.00           C 0
+ATOM   4076   CG GLU   253      14.410  60.110  46.700  0.00  0.00           C 0
+ATOM   4014   CB GLU   249      22.130  59.810  46.730  0.00  0.00           C 0
+ATOM   4029   CB LYS   250      17.540  59.540  49.150  0.00  0.00           C 0
+ATOM   3997   CB HID   248      17.800  57.810  43.490  0.00  0.00           C 0
+ATOM   4001  ND1 HID   248      15.720  58.020  42.070  0.79  1.09           N 0
+ATOM   4003  CE1 HID   248      15.380  58.600  40.910  0.00  0.00           C 0
+ATOM   3993    N HID   248      19.730  56.810  42.440  0.00  0.00           N 0
+ATOM   4025    N LYS   250      19.390  58.690  47.820  0.70  2.19           N 0
+TER
+END

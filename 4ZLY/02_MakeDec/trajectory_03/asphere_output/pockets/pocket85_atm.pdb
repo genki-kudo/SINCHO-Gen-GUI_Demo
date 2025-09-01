@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    85:
+HEADER 0  - Pocket Score                      : 0.0686
+HEADER 1  - Drug Score                        : 0.0042
+HEADER 2  - Number of alpha spheres           :    20
+HEADER 3  - Mean alpha-sphere radius          : 3.2628
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4199
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 40.0000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 4.4286
+HEADER 9  - Pocket volume (Monte Carlo)       : 66.8996
+HEADER 10  -Pocket volume (convex hull)       : 2.5123
+HEADER 11 - Charge Score                      :    -2
+HEADER 12 - Local hydrophobic density Score   : 14.0000
+HEADER 13 - Number of apolar alpha sphere     :    15
+HEADER 14 - Proportion of apolar alpha sphere : 0.7500
+ATOM   1962   CE MET   122      17.130  41.370  43.530  0.00  0.00           C 0
+ATOM   3034    O SER   189      16.370  46.200  46.180  0.00  0.00           O 0
+ATOM   3026   CA SER   189      16.010  45.060  48.170  0.00  0.00           C 0
+ATOM   3072   CB ASP   192      19.480  44.020  45.130  0.00  0.00           C 0
+ATOM   3077  OD2 ASP   192      19.500  42.240  46.710  0.55  1.07           O 0
+ATOM   2107    O PHE   130      16.300  39.330  47.920  0.71  4.29           O 0
+ATOM   2023    N GLU   126      12.080  40.060  45.510  0.00  0.00           N 0
+ATOM   2021    C LEU   125      12.620  38.920  45.950  0.00  0.00           C 0
+ATOM   3028   CB SER   189      14.530  44.860  48.470  0.00  0.00           C 0
+ATOM   4150  CE2 PHE   257      15.810  44.770  42.980  0.00  0.00           C 0
+ATOM   2025   CA GLU   126      11.550  41.130  46.320  0.00  0.00           C 0
+ATOM   2027   CB GLU   126      11.170  42.250  45.350  0.00  0.00           C 0
+ATOM   4152  CD2 PHE   257      14.410  44.700  42.950  0.00  0.00           C 0
+ATOM   1967    O MET   122      12.660  40.500  42.830  0.00  0.00           O 0
+ATOM   2034  OE1 GLU   126      11.400  45.500  44.970  0.74  3.21           O 0
+TER
+END

@@ -1,0 +1,40 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   205:
+HEADER 0  - Pocket Score                      : -0.0926
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :    24
+HEADER 3  - Mean alpha-sphere radius          : 4.2307
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6693
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -2.7143
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 3.2857
+HEADER 9  - Pocket volume (Monte Carlo)       : 574.2900
+HEADER 10  -Pocket volume (convex hull)       : 28.2627
+HEADER 11 - Charge Score                      :    -2
+HEADER 12 - Local hydrophobic density Score   : 9.0000
+HEADER 13 - Number of apolar alpha sphere     :    10
+HEADER 14 - Proportion of apolar alpha sphere : 0.4167
+ATOM   1750    N GLN   109      16.560  47.330  21.660  0.00  0.00           N 0
+ATOM   1754   CB GLN   109      14.340  46.480  21.330  0.00  0.00           C 0
+ATOM   4384    O GLU   271      14.340  50.520  20.370  0.44  3.21           O 0
+ATOM   1746  OG1 THR   108      17.630  49.920  20.340  0.58  6.43           O 0
+ATOM   4387  CH3 NME   272      12.180  49.520  18.530  0.00  0.00           C 0
+ATOM   1757   CG GLN   109      13.140  45.840  22.020  0.00  0.00           C 0
+ATOM   1761  OE1 GLN   109      13.770  43.650  21.150  0.00  0.00           O 0
+ATOM   1760   CD GLN   109      13.100  44.320  21.930  0.00  0.00           C 0
+ATOM   1726   CG GLN   107      18.210  44.020  16.800  0.00  0.00           C 0
+ATOM   1731  NE2 GLN   107      17.900  44.760  14.460  0.00  0.00           N 0
+ATOM   1736    N THR   108      18.800  47.210  20.060  0.72  3.28           N 0
+ATOM   4342    O MET   268       9.820  47.800  23.160  0.00  0.00           O 0
+ATOM   4385    N NME   272      12.230  49.860  19.930  0.00  0.00           N 0
+ATOM   4354    O ASP   269       7.520  49.830  20.900  0.57  5.36           O 0
+ATOM   1762  NE2 GLN   109      12.270  43.640  22.720  0.45  8.75           N 0
+ATOM   1723   CB GLN   107      18.150  44.790  18.120  0.00  0.00           C 0
+ATOM   1730  OE1 GLN   107      19.350  45.830  15.720  0.00  0.00           O 0
+ATOM   1729   CD GLN   107      18.510  44.940  15.630  0.00  0.00           C 0
+TER
+END

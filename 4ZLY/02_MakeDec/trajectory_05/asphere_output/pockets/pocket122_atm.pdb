@@ -1,0 +1,32 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   122:
+HEADER 0  - Pocket Score                      : 0.0045
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :    11
+HEADER 3  - Mean alpha-sphere radius          : 3.7689
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6172
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 38.6667
+HEADER 7  - Polarity Score                    :     1
+HEADER 8  - Amino Acid based volume Score     : 4.3333
+HEADER 9  - Pocket volume (Monte Carlo)       : 357.8109
+HEADER 10  -Pocket volume (convex hull)       : 0.6638
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 3.0000
+HEADER 13 - Number of apolar alpha sphere     :     4
+HEADER 14 - Proportion of apolar alpha sphere : 0.3636
+ATOM   4343    N ASP   269       8.290  48.990  24.240  0.00  0.00           N 0
+ATOM   4333   CG MET   268       8.590  46.570  26.620  0.00  0.00           C 0
+ATOM   4347   CB ASP   269       5.990  49.590  23.620  0.00  0.00           C 0
+ATOM   4351  OD1 ASP   269       4.720  47.960  22.430  0.00  0.00           O 0
+ATOM   4336   SD MET   268       8.400  44.950  27.390  0.00  0.00           S 0
+ATOM   4337   CE MET   268       8.570  43.770  26.030  0.00  0.00           C 0
+ATOM   4345   CA ASP   269       7.360  49.140  23.150  0.00  0.00           C 0
+ATOM   4342    O MET   268       9.820  47.800  23.160  0.00  0.00           O 0
+ATOM   4297    O LEU   265       6.200  48.150  28.260  0.55  7.50           O 0
+ATOM   4292  CD2 LEU   265       6.520  44.400  30.890  0.00  0.00           C 0
+TER
+END

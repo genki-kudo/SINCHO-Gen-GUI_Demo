@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   150:
+HEADER 0  - Pocket Score                      : -0.0422
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    11
+HEADER 3  - Mean alpha-sphere radius          : 3.6962
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5948
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -12.3333
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 5.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 226.9949
+HEADER 10  -Pocket volume (convex hull)       : 3.7462
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 2.0000
+HEADER 13 - Number of apolar alpha sphere     :     3
+HEADER 14 - Proportion of apolar alpha sphere : 0.2727
+ATOM   1666  ND1 HID   104      26.240  35.440  20.170  0.00  0.00           N 0
+ATOM   1647   NE ARG   103      30.900  33.210  17.000  0.60  7.66           N 0
+ATOM   1668  CE1 HID   104      27.020  34.480  20.680  0.00  0.00           C 0
+ATOM   1653  NH2 ARG   103      30.660  31.000  16.300  0.00  0.00           N 0
+ATOM   1641   CG ARG   103      30.350  35.470  17.980  0.00  0.00           C 0
+ATOM   1649   CZ ARG   103      31.170  31.910  17.150  0.00  0.00           C 0
+ATOM   1657    O ARG   103      27.780  37.380  16.470  0.44  5.36           O 0
+ATOM   1644   CD ARG   103      31.230  34.230  17.980  0.00  0.00           C 0
+ATOM   1650  NH1 ARG   103      32.030  31.410  18.060  0.00  0.00           N 0
+ATOM   1614  OE2 GLU   101      34.160  35.600  21.420  0.66  9.64           O 0
+ATOM   1609   CG GLU   101      32.320  35.760  23.000  0.00  0.00           C 0
+ATOM   1670  NE2 HID   104      27.990  35.000  21.460  0.86  5.47           N 0
+ATOM   1606   CB GLU   101      31.340  36.680  22.280  0.00  0.00           C 0
+TER
+END

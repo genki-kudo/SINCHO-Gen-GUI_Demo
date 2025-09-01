@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   106:
+HEADER 0  - Pocket Score                      : 0.0674
+HEADER 1  - Drug Score                        : 0.0015
+HEADER 2  - Number of alpha spheres           :    16
+HEADER 3  - Mean alpha-sphere radius          : 3.1410
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4633
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 80.8333
+HEADER 7  - Polarity Score                    :     0
+HEADER 8  - Amino Acid based volume Score     : 4.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 41.2538
+HEADER 10  -Pocket volume (convex hull)       : 0.5008
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 14.0000
+HEADER 13 - Number of apolar alpha sphere     :    15
+HEADER 14 - Proportion of apolar alpha sphere : 0.9375
+ATOM   1096  CD2 LEU    70      15.580  34.000  40.700  0.00  0.00           C 0
+ATOM   1951    N MET   122      14.240  39.090  39.670  0.00  0.00           N 0
+ATOM   2413  CG1 VAL   150      19.580  36.120  39.670  0.00  0.00           C 0
+ATOM   1945   CB ALA   121      14.760  36.520  37.890  0.00  0.00           C 0
+ATOM   2462  CD2 PHE   153      18.840  33.030  43.120  0.00  0.00           C 0
+ATOM   2017  CD2 LEU   125      16.850  36.970  44.640  0.00  0.00           C 0
+ATOM   2411   CB VAL   150      18.860  35.790  38.370  0.00  0.00           C 0
+ATOM   1961   SD MET   122      17.620  40.020  41.440  0.00  0.00           S 0
+ATOM   2008   CB LEU   125      14.420  37.170  43.920  0.00  0.00           C 0
+ATOM   1953   CA MET   122      14.500  39.900  40.840  0.00  0.00           C 0
+ATOM   1949    C ALA   121      13.610  37.920  39.640  0.00  0.00           C 0
+ATOM   1950    O ALA   121      13.090  37.420  40.630  0.00  0.00           O 0
+ATOM   2417  CG2 VAL   150      18.610  37.070  37.580  0.00  0.00           C 0
+TER
+END

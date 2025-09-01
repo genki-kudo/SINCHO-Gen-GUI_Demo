@@ -1,0 +1,32 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   119:
+HEADER 0  - Pocket Score                      : -0.0038
+HEADER 1  - Drug Score                        : 0.0007
+HEADER 2  - Number of alpha spheres           :     9
+HEADER 3  - Mean alpha-sphere radius          : 3.1627
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5045
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 35.0000
+HEADER 7  - Polarity Score                    :     2
+HEADER 8  - Amino Acid based volume Score     : 5.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 59.5016
+HEADER 10  -Pocket volume (convex hull)       : 0.0000
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 7.0000
+HEADER 13 - Number of apolar alpha sphere     :     8
+HEADER 14 - Proportion of apolar alpha sphere : 0.8889
+ATOM   1881   NZ LYS   116       8.570  39.650  30.960  0.62  5.47           N 0
+ATOM   4229  CD2 LEU   261       7.980  42.510  36.140  0.00  0.00           C 0
+ATOM   1878   CE LYS   116       9.130  41.010  30.890  0.00  0.00           C 0
+ATOM   4288  CD1 LEU   265       5.850  44.720  31.870  0.00  0.00           C 0
+ATOM   4223   CG LEU   261       8.620  43.620  35.300  0.00  0.00           C 0
+ATOM   1936   CD GLU   120       9.500  38.050  33.750  0.00  0.00           C 0
+ATOM   1933   CG GLU   120       9.880  38.550  35.140  0.00  0.00           C 0
+ATOM   1937  OE1 GLU   120       8.450  37.380  33.610  0.72  5.36           O 0
+ATOM   4292  CD2 LEU   265       7.140  44.180  29.900  0.00  0.00           C 0
+ATOM   4225  CD1 LEU   261       9.770  43.050  34.480  0.00  0.00           C 0
+TER
+END

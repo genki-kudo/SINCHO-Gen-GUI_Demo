@@ -1,0 +1,101 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   176:
+HEADER 0  - Pocket Score                      : -0.1293
+HEADER 1  - Drug Score                        : 0.1973
+HEADER 2  - Number of alpha spheres           :   141
+HEADER 3  - Mean alpha-sphere radius          : 4.0635
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5525
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 45.5455
+HEADER 7  - Polarity Score                    :    11
+HEADER 8  - Amino Acid based volume Score     : 5.5000
+HEADER 9  - Pocket volume (Monte Carlo)       : 2400.7729
+HEADER 10  -Pocket volume (convex hull)       : 1389.7780
+HEADER 11 - Charge Score                      :     3
+HEADER 12 - Local hydrophobic density Score   : 24.2090
+HEADER 13 - Number of apolar alpha sphere     :    67
+HEADER 14 - Proportion of apolar alpha sphere : 0.4752
+ATOM   1677   CA ARG   105      25.080  40.850  17.400  0.00  0.00           C 0
+ATOM   3311  CD1 LEU   206      27.990  45.100  22.870  0.00  0.00           C 0
+ATOM   1688   NE ARG   105      26.310  42.200  13.310  0.00  0.00           N 0
+ATOM   1718    O PHE   106      23.060  44.760  19.290  0.00  0.00           O 0
+ATOM   3402    N GLU   212      36.460  51.000  35.020  0.61  2.19           N 0
+ATOM   3696  CE1 TYR   230      32.710  55.130  30.980  0.00  0.00           C 0
+ATOM   3383   CA TYR   211      34.950  52.250  36.520  0.00  0.00           C 0
+ATOM   3417    N ARG   213      38.880  52.590  34.430  0.62  1.09           N 0
+ATOM   3699   OH TYR   230      33.090  53.530  29.300  0.80  4.29           O 0
+ATOM   3424   CG ARG   213      39.750  54.600  32.190  0.00  0.00           C 0
+ATOM   1690   CZ ARG   105      26.410  42.530  12.010  0.00  0.00           C 0
+ATOM   1731  NE2 GLN   107      18.310  42.880  15.550  0.00  0.00           N 0
+ATOM   1694  NH2 ARG   105      26.450  43.810  11.610  0.00  0.00           N 0
+ATOM   1691  NH1 ARG   105      26.240  41.650  11.020  0.00  0.00           N 0
+ATOM   1726   CG GLN   107      19.410  44.470  16.960  0.00  0.00           C 0
+ATOM   3414  OE2 GLU   212      39.510  50.830  31.440  0.00  0.00           O 0
+ATOM   3344   NZ LYS   208      34.660  49.740  25.340  0.00  0.00           N 0
+ATOM   3341   CE LYS   208      34.500  48.510  26.130  0.00  0.00           C 0
+ATOM   3413  OE1 GLU   212      40.840  49.150  31.450  0.00  0.00           O 0
+ATOM   3338   CD LYS   208      33.840  48.670  27.500  0.00  0.00           C 0
+ATOM   3330   CA LYS   208      33.260  45.900  30.200  0.00  0.00           C 0
+ATOM   3409   CG GLU   212      38.790  48.920  32.720  0.00  0.00           C 0
+ATOM   1597  NH2 ARG   100      34.910  41.040  31.510  0.00  0.00           N 0
+ATOM   1793  CD1 LEU   111      22.780  45.830  23.940  0.00  0.00           C 0
+ATOM   3771  CD1 LEU   234      25.450  48.320  22.780  0.00  0.00           C 0
+ATOM   3455  CE2 PHE   214      37.070  56.500  36.400  0.00  0.00           C 0
+ATOM   3453   CZ PHE   214      37.710  57.740  36.350  0.00  0.00           C 0
+ATOM   3400    C TYR   211      36.330  51.730  36.120  0.00  0.00           C 0
+ATOM   3694  CD1 TYR   230      31.930  56.110  31.610  0.00  0.00           C 0
+ATOM   3637  CD2 LEU   227      33.710  59.060  38.550  0.00  0.00           C 0
+ATOM   3633  CD1 LEU   227      32.200  60.880  37.850  0.00  0.00           C 0
+ATOM   3389  CD1 TYR   211      33.630  54.790  38.620  0.00  0.00           C 0
+ATOM   3227  CH2 TRP   201      31.230  50.530  31.890  0.00  0.00           C 0
+ATOM   3366    O MET   209      33.950  49.000  33.720  0.00  0.00           O 0
+ATOM   3332   CB LYS   208      33.120  47.260  29.530  0.00  0.00           C 0
+ATOM   1679   CB ARG   105      24.960  40.910  15.870  0.00  0.00           C 0
+ATOM   1685   CD ARG   105      26.410  40.810  13.760  0.00  0.00           C 0
+ATOM   1682   CG ARG   105      26.320  40.540  15.250  0.00  0.00           C 0
+ATOM   1697    C ARG   105      23.940  41.590  18.080  0.00  0.00           C 0
+ATOM   1698    O ARG   105      22.990  41.980  17.400  0.48  5.36           O 0
+ATOM   1619   CA MET   102      30.820  38.910  19.360  0.00  0.00           C 0
+ATOM   1621   CB MET   102      32.190  38.980  18.680  0.00  0.00           C 0
+ATOM   1601    O ARG   100      32.170  38.890  23.320  0.00  0.00           O 0
+ATOM   3412   CD GLU   212      39.770  49.660  31.820  0.00  0.00           C 0
+ATOM   1627   SD MET   102      31.570  40.690  16.540  0.00  0.00           S 0
+ATOM   1628   CE MET   102      30.530  39.900  15.290  0.00  0.00           C 0
+ATOM   3335   CG LYS   208      33.730  47.270  28.130  0.00  0.00           C 0
+ATOM   3421   CB ARG   213      39.920  54.760  33.700  0.00  0.00           C 0
+ATOM   1699    N PHE   106      23.950  41.820  19.390  0.53  1.09           N 0
+ATOM   1703   CB PHE   106      23.170  42.430  21.590  0.00  0.00           C 0
+ATOM   3775  CD2 LEU   234      24.250  49.510  20.990  0.00  0.00           C 0
+ATOM   3381    N TYR   211      33.810  51.470  36.080  0.68  3.28           N 0
+ATOM   3680  CD2 LEU   229      30.440  53.030  36.030  0.00  0.00           C 0
+ATOM   3388   CG TYR   211      33.590  53.410  38.410  0.00  0.00           C 0
+ATOM   3350    N MET   209      34.160  46.300  32.480  0.61  4.37           N 0
+ATOM   3327    O GLY   207      33.050  43.100  30.590  0.64  1.07           O 0
+ATOM   1577    O LEU    99      28.850  40.870  24.930  0.46  2.14           O 0
+ATOM   3666    O ARG   228      29.540  58.310  36.510  0.61  8.57           O 0
+ATOM   3690   CB TYR   230      29.890  57.700  31.390  0.00  0.00           C 0
+ATOM   3686    N TYR   230      29.090  56.620  33.400  0.54  1.09           N 0
+ATOM   3391  CE1 TYR   211      32.540  55.490  39.140  0.00  0.00           C 0
+ATOM   1633    O MET   102      28.910  39.390  18.010  0.60  2.14           O 0
+ATOM   3225  CZ2 TRP   201      30.570  51.730  31.590  0.00  0.00           C 0
+ATOM   3361   CE MET   209      38.420  45.620  35.520  0.00  0.00           C 0
+ATOM   3354   CB MET   209      35.500  46.320  34.480  0.00  0.00           C 0
+ATOM   3406   CB GLU   212      37.570  49.690  33.230  0.00  0.00           C 0
+ATOM   3328    N LYS   208      32.310  44.990  29.600  0.00  0.00           N 0
+ATOM   1585   CG ARG   100      32.790  40.330  27.240  0.00  0.00           C 0
+ATOM   1588   CD ARG   100      33.890  39.840  28.170  0.00  0.00           C 0
+ATOM   1675    N ARG   105      25.410  39.530  17.880  0.00  0.00           N 0
+ATOM   1616    O GLU   101      29.030  38.510  21.480  0.53  3.21           O 0
+ATOM   1591   NE ARG   100      34.180  40.670  29.340  0.67  6.56           N 0
+ATOM   1715  CD2 PHE   106      24.980  41.050  22.600  0.00  0.00           C 0
+ATOM   3320    O LEU   206      31.020  43.080  26.890  0.60  6.43           O 0
+ATOM   1580   CA ARG   100      31.180  39.400  25.450  0.00  0.00           C 0
+ATOM   3326    C GLY   207      32.170  43.720  29.990  0.00  0.00           C 0
+ATOM   3669   CA LEU   229      28.850  55.640  35.640  0.00  0.00           C 0
+ATOM   3306   CB LEU   206      29.080  44.390  25.090  0.00  0.00           C 0
+ATOM   3315  CD2 LEU   206      26.620  43.810  24.600  0.00  0.00           C 0
+TER
+END

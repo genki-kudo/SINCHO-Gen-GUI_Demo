@@ -1,0 +1,29 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   101:
+HEADER 0  - Pocket Score                      : 0.0019
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :     5
+HEADER 3  - Mean alpha-sphere radius          : 3.0695
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.3300
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 83.5000
+HEADER 7  - Polarity Score                    :     1
+HEADER 8  - Amino Acid based volume Score     : 5.7500
+HEADER 9  - Pocket volume (Monte Carlo)       : 18.2972
+HEADER 10  -Pocket volume (convex hull)       : 0.0000
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 4.0000
+HEADER 13 - Number of apolar alpha sphere     :     5
+HEADER 14 - Proportion of apolar alpha sphere : 1.0000
+ATOM    842  CD1 PHE    55      24.130  26.530  50.830  0.00  0.00           C 0
+ATOM   2531   CB TYR   158      27.440  30.690  52.470  0.00  0.00           C 0
+ATOM    841   CG PHE    55      25.050  25.910  51.690  0.00  0.00           C 0
+ATOM   2482  CD1 LEU   155      25.820  29.360  47.930  0.00  0.00           C 0
+ATOM    774   SD MET    50      29.150  26.200  49.960  0.00  0.00           S 0
+ATOM    838   CB PHE    55      25.420  26.530  53.020  0.00  0.00           C 0
+ATOM    775   CE MET    50      28.900  27.200  48.470  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,48 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   247:
+HEADER 0  - Pocket Score                      : -0.1837
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :    35
+HEADER 3  - Mean alpha-sphere radius          : 4.2049
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6498
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 22.6250
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 5.3750
+HEADER 9  - Pocket volume (Monte Carlo)       : 913.5361
+HEADER 10  -Pocket volume (convex hull)       : 69.5050
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 8.6000
+HEADER 13 - Number of apolar alpha sphere     :    10
+HEADER 14 - Proportion of apolar alpha sphere : 0.2857
+ATOM    941  CG1 VAL    61      15.180  30.440  51.670  0.00  0.00           C 0
+ATOM    945  CG2 VAL    61      14.490  29.110  53.640  0.00  0.00           C 0
+ATOM    899  OE1 GLU    58      19.160  31.190  55.600  0.00  0.00           O 0
+ATOM   2098  CE1 PHE   130      17.270  33.720  51.390  0.00  0.00           C 0
+ATOM    898   CD GLU    58      19.610  31.360  54.440  0.00  0.00           C 0
+ATOM    900  OE2 GLU    58      19.790  32.550  54.090  0.63  5.36           O 0
+ATOM   2070    O LYS   128      11.340  36.470  50.730  0.00  0.00           O 0
+ATOM   2096  CD1 PHE   130      16.240  34.620  51.100  0.00  0.00           C 0
+ATOM   2087    O GLN   129      13.670  38.630  52.170  0.59  3.21           O 0
+ATOM   2522  NH2 ARG   157      20.780  34.870  53.000  0.67  9.84           N 0
+ATOM    939   CB VAL    61      15.510  29.200  52.500  0.00  0.00           C 0
+ATOM   2117  CD1 LEU   131      18.800  42.160  52.140  0.00  0.00           C 0
+ATOM   2115   CG LEU   131      18.050  41.320  51.110  0.00  0.00           C 0
+ATOM   2112   CB LEU   131      19.060  40.440  50.400  0.00  0.00           C 0
+ATOM   2160  NH1 ARG   133      24.450  41.390  54.040  0.36  5.47           N 0
+ATOM   2513   CD ARG   157      24.030  36.450  53.710  0.00  0.00           C 0
+ATOM   2519  NH1 ARG   157      22.210  34.220  54.660  0.00  0.00           N 0
+ATOM   2518   CZ ARG   157      21.970  35.020  53.610  0.00  0.00           C 0
+ATOM   2108    N LEU   131      17.410  38.690  49.790  0.68  1.09           N 0
+ATOM   2126    O LEU   131      19.970  37.800  48.890  0.65  2.14           O 0
+ATOM   2100   CZ PHE   130      18.490  33.750  50.700  0.00  0.00           C 0
+ATOM   2102  CE2 PHE   130      18.490  34.550  49.550  0.00  0.00           C 0
+ATOM   2095   CG PHE   130      16.280  35.470  49.990  0.00  0.00           C 0
+ATOM   2154   CD ARG   133      23.150  40.090  51.760  0.00  0.00           C 0
+ATOM   2516   NE ARG   157      22.830  35.910  53.100  0.68  2.19           N 0
+ATOM   2090   CA PHE   130      15.180  37.740  50.070  0.00  0.00           C 0
+TER
+END

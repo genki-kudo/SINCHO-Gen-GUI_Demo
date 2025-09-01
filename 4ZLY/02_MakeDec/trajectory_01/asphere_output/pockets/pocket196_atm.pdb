@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   196:
+HEADER 0  - Pocket Score                      : -0.0807
+HEADER 1  - Drug Score                        : 0.0008
+HEADER 2  - Number of alpha spheres           :    27
+HEADER 3  - Mean alpha-sphere radius          : 3.8836
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6390
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 22.8571
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.5714
+HEADER 9  - Pocket volume (Monte Carlo)       : 538.6236
+HEADER 10  -Pocket volume (convex hull)       : 58.4127
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 12.8571
+HEADER 13 - Number of apolar alpha sphere     :    14
+HEADER 14 - Proportion of apolar alpha sphere : 0.5185
+ATOM    920   CG LYS    60      16.480  22.560  53.940  0.00  0.00           C 0
+ATOM    979   CE MET    63      13.140  22.390  48.580  0.00  0.00           C 0
+ATOM    915   CA LYS    60      16.450  24.330  52.160  0.00  0.00           C 0
+ATOM     83   CB TRP     8      17.540  20.470  50.900  0.00  0.00           C 0
+ATOM     75   OG SER     7      12.850  18.630  52.100  0.69  9.64           O 0
+ATOM    917   CB LYS    60      16.020  23.970  53.570  0.00  0.00           C 0
+ATOM    934    O LYS    60      14.730  25.250  50.920  0.69  3.21           O 0
+ATOM    989   CB ASN    64      11.830  26.610  49.340  0.00  0.00           C 0
+ATOM    993  OD1 ASN    64       9.570  25.860  49.150  0.00  0.00           O 0
+ATOM    937   CA VAL    61      15.320  27.970  51.630  0.00  0.00           C 0
+ATOM    945  CG2 VAL    61      14.490  29.110  53.640  0.00  0.00           C 0
+ATOM    992   CG ASN    64      10.330  26.740  49.530  0.00  0.00           C 0
+ATOM    994  ND2 ASN    64       9.910  27.860  50.110  0.29  4.37           N 0
+ATOM     77    C SER     7      15.030  18.650  49.670  0.00  0.00           C 0
+ATOM    933    C LYS    60      15.680  25.540  51.660  0.00  0.00           C 0
+ATOM    935    N VAL    61      15.980  26.770  52.090  0.00  0.00           N 0
+ATOM    923   CD LYS    60      16.050  22.080  55.330  0.00  0.00           C 0
+ATOM    887    O GLU    57      18.160  25.620  55.730  0.61  6.43           O 0
+ATOM    926   CE LYS    60      16.710  22.990  56.350  0.00  0.00           C 0
+ATOM    929   NZ LYS    60      16.530  22.540  57.740  0.00  0.00           N 0
+ATOM     98  CE3 TRP     8      15.830  18.920  53.410  0.00  0.00           C 0
+ATOM     96  CZ3 TRP     8      15.340  18.080  54.430  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,35 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   222:
+HEADER 0  - Pocket Score                      : -0.1306
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    17
+HEADER 3  - Mean alpha-sphere radius          : 4.6223
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7723
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -2.7500
+HEADER 7  - Polarity Score                    :     2
+HEADER 8  - Amino Acid based volume Score     : 4.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 513.9531
+HEADER 10  -Pocket volume (convex hull)       : 4.3718
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 0.0000
+HEADER 13 - Number of apolar alpha sphere     :     1
+HEADER 14 - Proportion of apolar alpha sphere : 0.0588
+ATOM   3722   CZ ARG   231      21.210  58.450  24.930  0.00  0.00           C 0
+ATOM   3717   CD ARG   231      22.370  58.010  27.080  0.00  0.00           C 0
+ATOM   3730    O ARG   231      26.680  56.340  27.530  0.67  2.14           O 0
+ATOM   3723  NH1 ARG   231      20.950  59.740  25.190  0.00  0.00           N 0
+ATOM   3711   CB ARG   231      24.240  57.610  28.540  0.00  0.00           C 0
+ATOM   3714   CG ARG   231      23.320  56.900  27.560  0.00  0.00           C 0
+ATOM   3753  ND1 HIE   233      27.950  55.250  20.610  0.37  7.66           N 0
+ATOM   3761    O HIE   233      24.890  54.290  22.230  0.07  9.64           O 0
+ATOM   3726  NH2 ARG   231      20.830  57.960  23.740  0.52  7.66           N 0
+ATOM   3720   NE ARG   231      21.820  57.610  25.780  0.71  1.09           N 0
+ATOM   3790    O ALA   235      21.520  55.000  24.250  0.64  1.07           O 0
+ATOM   3744    O PRO   232      25.000  54.730  25.540  0.55  2.14           O 0
+ATOM   3747   CA HIE   233      26.880  54.130  23.550  0.00  0.00           C 0
+TER
+END

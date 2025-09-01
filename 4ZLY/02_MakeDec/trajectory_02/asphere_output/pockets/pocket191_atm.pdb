@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   191:
+HEADER 0  - Pocket Score                      : -0.0916
+HEADER 1  - Drug Score                        : 0.0012
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 3.9655
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6882
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 7.2000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 405.8264
+HEADER 10  -Pocket volume (convex hull)       : 22.0189
+HEADER 11 - Charge Score                      :    -1
+HEADER 12 - Local hydrophobic density Score   : 8.0000
+HEADER 13 - Number of apolar alpha sphere     :     9
+HEADER 14 - Proportion of apolar alpha sphere : 0.4286
+ATOM   3507   CG GLU   218      40.980  56.400  43.100  0.00  0.00           C 0
+ATOM   3543   CB GLU   221      36.400  57.880  47.720  0.00  0.00           C 0
+ATOM   3514    O GLU   218      36.890  56.410  44.240  0.73  2.14           O 0
+ATOM   3502   CA GLU   218      39.050  55.480  44.290  0.00  0.00           C 0
+ATOM   3563  CE1 HIE   222      36.430  60.170  41.460  0.00  0.00           C 0
+ATOM   3562  ND1 HIE   222      35.240  59.950  42.020  0.58  6.56           N 0
+ATOM   3554    N HIE   222      34.430  57.820  45.070  0.81  1.09           N 0
+ATOM   3552    C GLU   221      34.300  58.050  46.380  0.00  0.00           C 0
+ATOM   3546   CG GLU   221      36.360  59.030  48.730  0.00  0.00           C 0
+ATOM   3565  NE2 HIE   222      37.070  59.030  41.210  0.00  0.00           N 0
+ATOM   3512  OE2 GLU   218      42.330  57.410  41.420  0.00  0.00           O 0
+ATOM   3451  CE1 PHE   214      38.850  58.780  38.660  0.00  0.00           C 0
+ATOM   3607   CG GLN   225      33.270  62.020  47.590  0.00  0.00           C 0
+ATOM   3553    O GLU   221      33.430  58.870  46.640  0.00  0.00           O 0
+ATOM   3504   CB GLU   218      39.620  55.720  42.890  0.00  0.00           C 0
+ATOM   3604   CB GLN   225      32.510  62.080  46.260  0.00  0.00           C 0
+ATOM   3556   CA HIE   222      33.510  58.380  44.100  0.00  0.00           C 0
+TER
+END

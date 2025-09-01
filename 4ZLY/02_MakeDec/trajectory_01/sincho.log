@@ -1,0 +1,22 @@
+Ligand file>> lig_01.pdb >>OK.
+Pocket cluster directory>> ./p2c_output/cluster/
+Fpocket output directory>> ./asphere_output/
+Output directory>> ./sincho-output/
+Output directory: ./sincho-output/ will be generated.
+(A) P2C execution is skipped
+Candidate pockets were selected>> ./p2c_output/cluster//*.pqr
+(B) extend score is calculating ...
+##### RESULTS #####
+cluster10.pqr_20_N1 estimate-mw: 225.08242673455635 estimate-logp: 1.687949761203936
+cluster10.pqr_4_C8 estimate-mw: 270.4571852116168 estimate-logp: 1.687949761203936
+cluster16.pqr_4_C8 estimate-mw: 159.3448409042475 estimate-logp: 0.8575614617521836
+cluster16.pqr_6_C9 estimate-mw: 176.21629630633507 estimate-logp: 0.8575614617521836
+cluster13.pqr_4_C8 estimate-mw: 262.3384407443615 estimate-logp: 0.9384818489009146
+cluster17.pqr_20_N1 estimate-mw: 184.76409112584523 estimate-logp: 1.4608760155646214
+cluster13.pqr_6_C9 estimate-mw: 274.29159481620917 estimate-logp: 0.9384818489009146
+cluster19.pqr_4_C8 estimate-mw: 108.33761070270917 estimate-logp: 0.43401431932411855
+cluster17.pqr_4_C8 estimate-mw: 178.08372880728746 estimate-logp: 1.4608760155646214
+cluster19.pqr_6_C9 estimate-mw: 112.82677477086274 estimate-logp: 0.43401431932411855
+##### RESULTS #####
+SINCHO FINISHED
+PSE visualization...

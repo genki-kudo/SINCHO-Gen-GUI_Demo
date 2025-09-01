@@ -1,0 +1,40 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   233:
+HEADER 0  - Pocket Score                      : -0.3316
+HEADER 1  - Drug Score                        : 0.0000
+HEADER 2  - Number of alpha spheres           :    20
+HEADER 3  - Mean alpha-sphere radius          : 5.0396
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6146
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 15.7778
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Amino Acid based volume Score     : 4.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 532.0553
+HEADER 10  -Pocket volume (convex hull)       : 6.9006
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 2.0000
+HEADER 13 - Number of apolar alpha sphere     :     3
+HEADER 14 - Proportion of apolar alpha sphere : 0.1500
+ATOM   2635   OH TYR   164      36.020  35.930  43.380  0.00  0.00           O 0
+ATOM    357   CB GLN    25      33.290  31.650  43.390  0.00  0.00           C 0
+ATOM    364  OE1 GLN    25      31.940  34.090  43.920  0.46  9.64           O 0
+ATOM   2229   CD ARG   138      31.560  38.720  39.030  0.00  0.00           C 0
+ATOM   2251  OD1 ASN   139      28.950  35.840  39.630  0.58  4.29           O 0
+ATOM   2223   CB ARG   138      30.420  38.140  36.780  0.00  0.00           C 0
+ATOM   2242    O ARG   138      28.910  35.510  36.380  0.67  7.50           O 0
+ATOM   1479   CB CYS    94      28.970  33.680  32.490  0.00  0.00           C 0
+ATOM   1518  CD2 LEU    96      32.290  38.540  33.290  0.00  0.00           C 0
+ATOM   1482   SG CYS    94      28.870  35.250  33.390  0.00  0.00           S 0
+ATOM   1532  OD1 ASN    97      33.140  35.380  29.790  0.83  5.36           O 0
+ATOM    355   CA GLN    25      34.280  30.580  42.940  0.00  0.00           C 0
+ATOM    351    C GLY    24      34.730  29.260  40.880  0.00  0.00           C 0
+ATOM    352    O GLY    24      35.810  28.780  41.240  0.88  2.14           O 0
+ATOM    348   CA GLY    24      34.200  29.020  39.470  0.00  0.00           C 0
+ATOM    353    N GLN    25      33.930  29.940  41.700  0.00  0.00           N 0
+ATOM    345    O THR    23      34.360  28.230  36.760  0.44  6.43           O 0
+ATOM   1533  ND2 ASN    97      33.380  33.290  29.170  0.00  0.00           N 0
+TER
+END

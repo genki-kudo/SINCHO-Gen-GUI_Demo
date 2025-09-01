@@ -1,0 +1,59 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket   229:
+HEADER 0  - Pocket Score                      : -0.3924
+HEADER 1  - Drug Score                        : 0.0123
+HEADER 2  - Number of alpha spheres           :    59
+HEADER 3  - Mean alpha-sphere radius          : 4.2186
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5833
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 33.9091
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 5.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 1052.2521
+HEADER 10  -Pocket volume (convex hull)       : 111.9386
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 14.0000
+HEADER 13 - Number of apolar alpha sphere     :    24
+HEADER 14 - Proportion of apolar alpha sphere : 0.4068
+ATOM   3771  CD1 LEU   234      25.660  49.190  22.220  0.00  0.00           C 0
+ATOM   1685   CD ARG   105      28.970  41.830  15.420  0.00  0.00           C 0
+ATOM   3775  CD2 LEU   234      25.090  50.900  20.510  0.00  0.00           C 0
+ATOM   1691  NH1 ARG   105      31.660  42.340  15.960  0.00  0.00           N 0
+ATOM   1585   CG ARG   100      32.890  40.680  28.000  0.00  0.00           C 0
+ATOM   3344   NZ LYS   208      34.600  46.530  25.350  0.00  0.00           N 0
+ATOM   3341   CE LYS   208      35.500  47.050  26.400  0.00  0.00           C 0
+ATOM   1588   CD ARG   100      33.770  40.160  29.140  0.00  0.00           C 0
+ATOM   1601    O ARG   100      32.710  40.300  23.820  0.00  0.00           O 0
+ATOM   3320    O LEU   206      30.880  43.130  27.220  0.78  2.14           O 0
+ATOM   1591   NE ARG   100      33.960  41.170  30.190  0.62  5.47           N 0
+ATOM   1627   SD MET   102      34.650  43.110  19.690  0.00  0.00           S 0
+ATOM   1624   CG MET   102      33.450  41.850  20.190  0.00  0.00           C 0
+ATOM   1582   CB ARG   100      32.630  39.600  26.960  0.00  0.00           C 0
+ATOM   1613  OE1 GLU   101      34.630  35.880  23.510  0.00  0.00           O 0
+ATOM   3338   CD LYS   208      35.000  46.900  27.830  0.00  0.00           C 0
+ATOM   1718    O PHE   106      23.650  45.290  19.880  0.00  0.00           O 0
+ATOM   1731  NE2 GLN   107      22.620  45.310  16.590  0.45  5.47           N 0
+ATOM   1619   CA MET   102      31.530  40.500  19.580  0.00  0.00           C 0
+ATOM   1577    O LEU    99      29.230  40.900  24.800  0.49  1.07           O 0
+ATOM   3326    C GLY   207      32.040  44.350  30.490  0.00  0.00           C 0
+ATOM   3327    O GLY   207      32.880  43.840  31.230  0.57  2.14           O 0
+ATOM   1617    N MET   102      31.950  39.630  20.650  0.66  2.19           N 0
+ATOM   1615    C GLU   101      31.090  38.970  21.420  0.00  0.00           C 0
+ATOM   1616    O GLU   101      29.860  39.010  21.330  0.65  1.07           O 0
+ATOM   1697    C ARG   105      25.120  42.540  17.940  0.00  0.00           C 0
+ATOM   1698    O ARG   105      24.170  42.690  17.180  0.00  0.00           O 0
+ATOM   1679   CB ARG   105      26.440  41.670  15.810  0.00  0.00           C 0
+ATOM   1677   CA ARG   105      26.350  41.890  17.310  0.00  0.00           C 0
+ATOM   1699    N PHE   106      25.160  42.740  19.270  0.48  4.37           N 0
+ATOM   1633    O MET   102      29.730  40.500  18.020  0.00  0.00           O 0
+ATOM   1675    N ARG   105      26.750  40.650  17.950  0.00  0.00           N 0
+ATOM   3311  CD1 LEU   206      28.420  45.120  23.150  0.00  0.00           C 0
+ATOM   1621   CB MET   102      32.690  41.310  18.980  0.00  0.00           C 0
+ATOM   3306   CB LEU   206      29.040  44.570  25.480  0.00  0.00           C 0
+ATOM   3328    N LYS   208      32.120  45.600  30.020  0.00  0.00           N 0
+ATOM   1715  CD2 PHE   106      26.010  41.350  22.470  0.00  0.00           C 0
+TER
+END
