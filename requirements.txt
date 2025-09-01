@@ -1,0 +1,9 @@
+streamlit==1.49.1
+pandas
+numpy
+matplotlib
+pyyaml
+biopython
+py3Dmol
+# RDKit は pip だと 'rdkit-pypi'（公式ではないビルド）。Python 3.13 未対応が多いので注意。
+rdkit-pypi
