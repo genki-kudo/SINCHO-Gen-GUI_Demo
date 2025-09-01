@@ -49,7 +49,7 @@ class OutputController:
             st.title("General Settings")
             st.write("出力ディレクトリを設定し、他タブで結果を可視化できるようにします。")
 
-            st.session_state.output_settings["output_dir"] = st.text_input("出力ディレクトリ", value="6Z0R")
+            st.session_state.output_settings["output_dir"] = st.text_input("出力ディレクトリ", value="4ZLY")
             if not os.path.isdir(os.path.join(os.getcwd(), st.session_state.output_settings["output_dir"])):
                 st.warning(f"出力ディレクトリ {st.session_state.output_settings['output_dir']} が存在しません")
                 WARN_FLAG = True
