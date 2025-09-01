@@ -483,7 +483,6 @@ class OutputController:
     
         items = []
         idx = start + 1
-        # サブ構造ハイライトのために、対象の分子を RDKit 側でマッチして index を作る
         for mol in mols:
             try:
                 AllChem.Compute2DCoords(mol)
@@ -505,7 +504,7 @@ class OutputController:
                     highlight_atoms = []
     
             items.append({
-                "smiles": Chem.MolToSmiles(mol),
+                "smiles": Chem.MolToSmiles(mol, canonical=True),
                 "legend": legend,
                 "highlightAtoms": highlight_atoms
             })
@@ -518,28 +517,18 @@ class OutputController:
             "tileHeight": 150
         }
     
-        # SmilesDrawer（純JS）で描画。WASM不要、iframeでも安定。
         html(f"""
-    <div id="sd-status" style="font:12px sans-serif;color:#555;margin-bottom:8px">Rendering molecules…</div>
     <div id="sd-grid" style="
       display:grid;
       grid-template-columns: repeat({payload['perColumn']}, {payload['tileWidth']}px);
-      gap:12px;">
-    </div>
+      gap:12px;"></div>
     
-    <!-- SmilesDrawer CDN -->
     <script src="https://unpkg.com/smiles-drawer@2.0.1/dist/smiles-drawer.min.js"></script>
     <script>
       const payload = {json.dumps(payload)};
       const W = payload.tileWidth, H = payload.tileHeight;
     
-      // テーマにハイライト色を追加（原子ごとに適用）
-      const theme = SmilesDrawer.Drawer.getTheme('light'); // ベーステーマ
-      theme.CUSTOM_HIGHLIGHT = '#ff7b00';
-    
-      const grid = document.getElementById('sd-grid');
-      const status = document.getElementById('sd-status');
-    
+      // タイル追加 & 描画
       function addTile(smiles, legend, highlightAtoms) {{
         const wrap = document.createElement('div');
         wrap.style.width = W + 'px';
@@ -556,38 +545,26 @@ class OutputController:
         cap.style.marginTop = '4px';
         wrap.appendChild(cap);
     
-        grid.appendChild(wrap);
+        document.getElementById('sd-grid').appendChild(wrap);
     
-        // パース → 描画
+        // 解析 → 描画
         SmilesDrawer.parse(smiles, (tree) => {{
-          // ハイライト対象原子の配色設定
-          const opts = {{
-            width: W,
-            height: H,
-            themes: {{
-              custom: theme
-            }},
-            // atomVisualization: 'default'
-          }};
-          const drawer = new SmilesDrawer.Drawer(opts);
-          // 描画完了後にハイライトを重ねる
-          drawer.draw(tree, cvs, 'custom').then(() => {{
+          const drawer = new SmilesDrawer.Drawer({{ width: W, height: H }});
+          drawer.draw(tree, cvs, 'light').then(() => {{
+            // サブ構造ハイライト（簡易オーバーレイ）
             if (highlightAtoms && highlightAtoms.length) {{
               const ctx = cvs.getContext('2d');
               ctx.save();
               ctx.lineWidth = 3;
-              ctx.strokeStyle = theme.CUSTOM_HIGHLIGHT;
-              // SmilesDrawer の内部座標は drawer.graph.atoms に格納される
-              // index は SMILES の原子順に概ね一致するが、キラリティ等で差が出る場合がある点は留意
+              ctx.strokeStyle = '#ff7b00';
+              // SmilesDrawer の atom 配列
+              const atoms = drawer.graph.atoms || [];
               highlightAtoms.forEach((ai) => {{
-                const atom = drawer.graph.atoms[ai];
-                if (atom) {{
-                  const x = atom.x, y = atom.y;
-                  // 目立つように円で囲む
-                  ctx.beginPath();
-                  ctx.arc(x, y, 7, 0, Math.PI*2);
-                  ctx.stroke();
-                }}
+                const a = atoms[ai];
+                if (!a) return;
+                ctx.beginPath();
+                ctx.arc(a.x, a.y, 7, 0, Math.PI*2);
+                ctx.stroke();
               }});
               ctx.restore();
             }}
@@ -607,16 +584,16 @@ class OutputController:
         }});
       }}
     
-      (function renderAll(){{
+      // 一括描画
+      (function() {{
+        const grid = document.getElementById('sd-grid');
         grid.innerHTML = '';
         payload.items.forEach(it => addTile(it.smiles, it.legend, it.highlightAtoms));
-        if (status) status.textContent = '';
       }})();
     </script>
     """,
           height=((len(items)+payload["perColumn"]-1)//payload["perColumn"])*(payload["tileHeight"]+34)+20
         )
-
 
 
     
