@@ -13,7 +13,15 @@ import glob
 import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import AllChem
-from rdkit.Chem import Draw
+#from rdkit.Chem import Draw
+try:
+    from rdkit.Chem import Draw
+    # 明示的に rdMolDraw2D まで試す（ここで失敗する環境がある）
+    from rdkit.Chem.Draw import rdMolDraw2D  # noqa: F401
+    RDRAW_AVAILABLE = True
+except Exception as e:
+    RDRAW_AVAILABLE = False
+    DRAW_IMPORT_ERROR = e
 import matplotlib.pyplot as plt
 import numpy as np
 
