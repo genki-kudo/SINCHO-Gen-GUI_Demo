@@ -528,7 +528,7 @@ class OutputController:
     
         # RDKit.js (WASM) を使って各 SMILES を <canvas> に描画
         # 外部スクリプトは unpkg の MinimalLib を利用
-        html(f'
+        html(f'''
     <div id="rdkit-grid" style="display:grid;grid-template-columns: repeat({per_column}, {payload['width']}px); gap: 12px;"></div>
     <link rel="preload" href="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.wasm" as="fetch" crossorigin>
     <script src="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.js"></script>
@@ -594,7 +594,7 @@ class OutputController:
         }}
       }});
     </script>
-    ', height=((len(data) + payload["perColumn"] - 1)//payload["perColumn"])*(payload["height"] + 34) + 10)
+    ''', height=((len(data) + payload["perColumn"] - 1)//payload["perColumn"])*(payload["height"] + 34) + 10)
 
     
     def _sincho_3dview(self, sincho_row):
