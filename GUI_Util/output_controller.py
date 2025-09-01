@@ -475,126 +475,138 @@ class OutputController:
         return"""
     def _summary_2Dview(self, suppl, start, end, states, hl_mol=None, per_column=5):
         import json
-        import streamlit as st
         from streamlit.components.v1 import html
         from rdkit import Chem
         from rdkit.Chem import AllChem
+        import streamlit as st
     
         mols = list(suppl)[start:end]
     
-        # ラベル（legend）と SMILES, ハイライト原子IDを準備
-        data = []
-        ind = start + 1
-        hl_query = hl_mol  # サブ構造ハイライト用（任意）
+        items = []
+        idx = start + 1
         for mol in mols:
-            # 2D座標（後段のJSでは不要だが一応）
             try:
                 AllChem.Compute2DCoords(mol)
             except Exception:
                 pass
     
-            legend = None
-            if states == "General":
-                legend = f"rank{ind}: {float(mol.GetProp('AAScore')):.3f} kcal/mol" if mol.HasProp("AAScore") else f"rank{ind}"
-            elif states == "Ligand Efficiency":
-                legend = f"rank{ind}: {float(mol.GetProp('AAScore_LE')):.3f}" if mol.HasProp("AAScore_LE") else f"rank{ind}"
+            if states == "General" and mol.HasProp("AAScore"):
+                legend = f"rank{idx}: {float(mol.GetProp('AAScore')):.3f} kcal/mol"
+            elif states == "Ligand Efficiency" and mol.HasProp("AAScore_LE"):
+                legend = f"rank{idx}: {float(mol.GetProp('AAScore_LE')):.3f}"
             else:
-                legend = f"rank{ind}"
+                legend = f"rank{idx}"
     
-            # サブ構造ハイライト（インデックス配列）
             highlight_atoms = []
-            if hl_query is not None and mol.HasSubstructMatch(hl_query):
+            if hl_mol is not None and mol.HasSubstructMatch(hl_mol):
                 try:
-                    match = mol.GetSubstructMatch(hl_query)
+                    match = mol.GetSubstructMatch(hl_mol)
                     highlight_atoms = list(match)
                 except Exception:
                     highlight_atoms = []
     
             smi = Chem.MolToSmiles(mol)
-            data.append({
+            items.append({
                 "smiles": smi,
                 "legend": legend,
                 "highlightAtoms": highlight_atoms
             })
-            ind += 1
+            idx += 1
     
-        # JSに渡すデータ
         payload = {
-            "items": data,
+            "items": items,
             "perColumn": per_column,
-            "width": 200,
-            "height": 150
+            "tileWidth": 200,
+            "tileHeight": 150
         }
     
-        # RDKit.js (WASM) を使って各 SMILES を <canvas> に描画
-        # 外部スクリプトは unpkg の MinimalLib を利用
+        # SVGで描いて <div> に流し込みます（Canvas は使いません）
         html(f'''
-    <div id="rdkit-grid" style="display:grid;grid-template-columns: repeat({per_column}, {payload['width']}px); gap: 12px;"></div>
+    <div id="rdk-grid" style="
+      display:grid;
+      grid-template-columns: repeat({payload['perColumn']}, {payload['tileWidth']}px);
+      gap:12px;">
+    </div>
+    
     <link rel="preload" href="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.wasm" as="fetch" crossorigin>
     <script src="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.js"></script>
     <script>
       const payload = {json.dumps(payload)};
-      const container = document.getElementById("rdkit-grid");
+      const W = payload.tileWidth, H = payload.tileHeight;
     
-      function drawGrid(RDKit) {{
-        const W = payload.width, H = payload.height;
-        payload.items.forEach((item, idx) => {{
-          // wrapper
+      function setSvgSize(svgEl, w, h) {{
+        // RDKitのSVGには width/height がpxで入るので、CSSでサイズ固定
+        svgEl.setAttribute('width', w + 'px');
+        svgEl.setAttribute('height', h + 'px');
+        svgEl.style.background = 'white';
+        svgEl.style.display = 'block';
+        svgEl.style.margin = '0 auto';
+      }}
+    
+      function draw(RDKit) {{
+        const grid = document.getElementById('rdk-grid');
+        grid.innerHTML = '';
+        for (const item of payload.items) {{
           const wrap = document.createElement('div');
           wrap.style.width = W + 'px';
           wrap.style.textAlign = 'center';
     
-          // canvas
-          const cv = document.createElement('canvas');
-          cv.width = W;
-          cv.height = H;
-          cv.style.border = '1px solid #eee';
-          wrap.appendChild(cv);
+          // SVGを入れる領域
+          const svgHolder = document.createElement('div');
+          svgHolder.style.width = W + 'px';
+          svgHolder.style.height = H + 'px';
+          svgHolder.style.border = '1px solid #eee';
+          svgHolder.style.boxSizing = 'border-box';
+          wrap.appendChild(svgHolder);
     
-          // legend
+          // キャプション
           const cap = document.createElement('div');
           cap.textContent = item.legend || '';
           cap.style.fontSize = '12px';
           cap.style.marginTop = '4px';
           wrap.appendChild(cap);
     
-          container.appendChild(wrap);
+          grid.appendChild(wrap);
     
           try {{
             const mol = RDKit.get_mol(item.smiles);
-            const drawer = new RDKit.CanvasMolDrawer(W, H);
-            const opts = {{
-              'backgroundColour': 'white',
-              'addAtomIndices': false,
-              'highlightColour': [1.0, 0.4, 0.0], // オレンジ
-              'kekulize': true
-            }};
-            drawer.draw_mol(mol, ' ', item.highlightAtoms || [], [], opts);
-            drawer.finish_drawing();
-            drawer.canvas = cv;  // CanvasMolDrawerは内部 canvas を持つため書き出し
-            const ctx = cv.getContext('2d');
-            ctx.drawImage(drawer.canvas, 0, 0);
+            let svg;
+            if (item.highlightAtoms && item.highlightAtoms.length) {{
+              // シンプルに原子のみハイライト（オレンジ）
+              const hi = {{
+                atoms: item.highlightAtoms,
+                bonds: [],
+                atomHighlights: Object.fromEntries(
+                  item.highlightAtoms.map(i => [i, [1.0, 0.4, 0.0]])
+                )
+              }};
+              svg = mol.get_svg_with_highlights(JSON.stringify(hi));
+            }} else {{
+              svg = mol.get_svg();
+            }}
+            // SVG文字列をDOMに差し込み
+            svgHolder.innerHTML = svg;
+            const svgEl = svgHolder.querySelector('svg');
+            if (svgEl) setSvgSize(svgEl, W, H);
             mol.delete();
-            drawer.delete();
           }} catch (e) {{
-            // 失敗時はテキストを表示
-            const ctx = cv.getContext('2d');
-            ctx.font = '12px sans-serif';
-            ctx.fillText('Render error', 10, 20);
+            svgHolder.innerHTML = '<div style="padding:8px;color:#a00;font:12px sans-serif">Render error</div>';
+            console.error(e);
           }}
-        }});
+        }}
       }}
     
-      // RDKit wasm 初期化
-      window.initRDKitModule().then((RDKit) => {{
-        try {{
-          drawGrid(RDKit);
-        }} catch (e) {{
-          console.error(e);
-        }}
+      window.initRDKitModule().then(RDKit => {{
+        try {{ draw(RDKit); }} catch (e) {{ console.error(e); }}
       }});
     </script>
-    ''', height=((len(data) + payload["perColumn"] - 1)//payload["perColumn"])*(payload["height"] + 34) + 10)
+    ''',
+          height=((len(items)+payload["perColumn"]-1)//payload["perColumn"])*(payload["tileHeight"]+34)+10
+        )
+    
+        # ここではPNG保存は省略（必要ならSVG→PNG変換のボタンも追加可能）
+        return
+
 
     
     def _sincho_3dview(self, sincho_row):
