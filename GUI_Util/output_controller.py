@@ -26,13 +26,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-
+"""
 class OutputController:
     def __init__(self):
         # Streamlitのセッション状態を初期化
         if "output_data" not in st.session_state:
             st.session_state.output_data = None
-
+"""
 
 
 class OutputController:
