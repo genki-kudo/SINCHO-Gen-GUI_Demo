@@ -5,7 +5,6 @@ import tempfile
 import io
 from Bio.PDB import PDBParser
 from fractions import Fraction
-from stmol import showmol
 import py3Dmol
 from streamlit.components.v1 import html
 
