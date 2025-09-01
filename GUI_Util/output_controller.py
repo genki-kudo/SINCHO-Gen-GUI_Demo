@@ -478,7 +478,6 @@ class OutputController:
         from streamlit.components.v1 import html
         from rdkit import Chem
         from rdkit.Chem import AllChem
-        import streamlit as st
     
         mols = list(suppl)[start:end]
     
@@ -505,9 +504,8 @@ class OutputController:
                 except Exception:
                     highlight_atoms = []
     
-            smi = Chem.MolToSmiles(mol)
             items.append({
-                "smiles": smi,
+                "smiles": Chem.MolToSmiles(mol),
                 "legend": legend,
                 "highlightAtoms": highlight_atoms
             })
@@ -520,22 +518,23 @@ class OutputController:
             "tileHeight": 150
         }
     
-        # SVGで描いて <div> に流し込みます（Canvas は使いません）
+        cdn = "https://unpkg.com/@rdkit/rdkit@2022.9.5/Code/MinimalLib/dist"
+    
         html(f'''
+    <div id="rdk-status" style="font:12px sans-serif;color:#555;margin-bottom:8px">Loading RDKit...</div>
     <div id="rdk-grid" style="
       display:grid;
       grid-template-columns: repeat({payload['perColumn']}, {payload['tileWidth']}px);
       gap:12px;">
     </div>
     
-    <link rel="preload" href="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.wasm" as="fetch" crossorigin>
-    <script src="https://unpkg.com/rdkit@2022.9.5/Code/MinimalLib/dist/RDKit_minimal.js"></script>
+    <link rel="preload" href="{cdn}/RDKit_minimal.wasm" as="fetch" crossorigin>
+    <script src="{cdn}/RDKit_minimal.js"></script>
     <script>
       const payload = {json.dumps(payload)};
       const W = payload.tileWidth, H = payload.tileHeight;
     
       function setSvgSize(svgEl, w, h) {{
-        // RDKitのSVGには width/height がpxで入るので、CSSでサイズ固定
         svgEl.setAttribute('width', w + 'px');
         svgEl.setAttribute('height', h + 'px');
         svgEl.style.background = 'white';
@@ -545,13 +544,15 @@ class OutputController:
     
       function draw(RDKit) {{
         const grid = document.getElementById('rdk-grid');
+        const status = document.getElementById('rdk-status');
         grid.innerHTML = '';
-        for (const item of payload.items) {{
+        if (status) status.textContent = '';
+    
+        payload.items.forEach(item => {{
           const wrap = document.createElement('div');
           wrap.style.width = W + 'px';
           wrap.style.textAlign = 'center';
     
-          // SVGを入れる領域
           const svgHolder = document.createElement('div');
           svgHolder.style.width = W + 'px';
           svgHolder.style.height = H + 'px';
@@ -559,7 +560,6 @@ class OutputController:
           svgHolder.style.boxSizing = 'border-box';
           wrap.appendChild(svgHolder);
     
-          // キャプション
           const cap = document.createElement('div');
           cap.textContent = item.legend || '';
           cap.style.fontSize = '12px';
@@ -572,19 +572,17 @@ class OutputController:
             const mol = RDKit.get_mol(item.smiles);
             let svg;
             if (item.highlightAtoms && item.highlightAtoms.length) {{
-              // シンプルに原子のみハイライト（オレンジ）
               const hi = {{
                 atoms: item.highlightAtoms,
                 bonds: [],
                 atomHighlights: Object.fromEntries(
-                  item.highlightAtoms.map(i => [i, [1.0, 0.4, 0.0]])
+                  item.highlightAtoms.map(i => [i, [1.0, 0.4, 0.0]]) // オレンジ
                 )
               }};
               svg = mol.get_svg_with_highlights(JSON.stringify(hi));
             }} else {{
               svg = mol.get_svg();
             }}
-            // SVG文字列をDOMに差し込み
             svgHolder.innerHTML = svg;
             const svgEl = svgHolder.querySelector('svg');
             if (svgEl) setSvgSize(svgEl, W, H);
@@ -593,19 +591,29 @@ class OutputController:
             svgHolder.innerHTML = '<div style="padding:8px;color:#a00;font:12px sans-serif">Render error</div>';
             console.error(e);
           }}
-        }}
+        }});
       }}
     
-      window.initRDKitModule().then(RDKit => {{
-        try {{ draw(RDKit); }} catch (e) {{ console.error(e); }}
+      // 重要：.wasm の場所を明示
+      window.initRDKitModule({{
+        locateFile: (file) => "{cdn}/" + file
+      }}).then((RDKit) => {{
+        try {{
+          draw(RDKit);
+        }} catch (e) {{
+          console.error(e);
+          const status = document.getElementById('rdk-status');
+          if (status) status.textContent = 'RDKit initialized but drawing failed.';
+        }}
+      }}).catch(err => {{
+        console.error('RDKit init failed', err);
+        const status = document.getElementById('rdk-status');
+        if (status) status.textContent = 'Failed to load RDKit.';
       }});
     </script>
     ''',
-          height=((len(items)+payload["perColumn"]-1)//payload["perColumn"])*(payload["tileHeight"]+34)+10
+          height=((len(items)+payload["perColumn"]-1)//payload["perColumn"])*(payload["tileHeight"]+34)+30
         )
-    
-        # ここではPNG保存は省略（必要ならSVG→PNG変換のボタンも追加可能）
-        return
 
 
     
